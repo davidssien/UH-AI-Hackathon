@@ -72,7 +72,9 @@ export function createDealsPanel(map, { onPick }) {
     const list = $('deals-list')
     list.replaceChildren()
     const best = inView
-      .filter((l) => (deal ? true : l.deal === 'UNDERPRICED'))
+      .filter(
+        (l) => (deal ? true : l.deal === 'UNDERPRICED') && l.conf !== 'LOW',
+      )
       .sort((a, c) => a.gap - c.gap)
       .slice(0, 12)
     if (!best.length) {

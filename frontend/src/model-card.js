@@ -94,8 +94,16 @@ export function renderModelExtras(container, l) {
   list.style.background = DEAL_COLORS[l.deal]
   bar.append(band, fair, list)
   const badge = el('span', `mc-badge ${l.deal.toLowerCase()}`, l.deal)
+  const conf = l.conf || 'MEDIUM'
+  const confText = {
+    HIGH: 'High confidence · typically within ±4%',
+    MEDIUM: 'Medium confidence · typically within ±7%',
+    LOW: 'Low confidence · unusual home, trust the range more than the single number',
+  }[conf]
+  const confPill = el('span', `mc-conf ${conf.toLowerCase()}`, confText)
   verdict.append(
     badge,
+    confPill,
     bar,
     el(
       'p',
