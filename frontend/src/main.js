@@ -23,7 +23,12 @@ import { createSiteSelector } from './site-selector.js'
 import { updateLocation, setSearchedAddress } from './location.js'
 import { createLocationSearch } from './search.js'
 import { createPropertyDetails } from './property-details.js'
-import { installListings, listingById, LISTING_LAYER } from './listings.js'
+import {
+  installListings,
+  listingById,
+  LISTING_LAYERS,
+  renderMapKey,
+} from './listings.js'
 import { createDealsPanel } from './deals.js'
 setWorkerUrl(workerUrl)
 
@@ -113,7 +118,8 @@ function transformCamera(next) {
 let map
 map = new MapLibreMap({
   container: 'map',
-  style: 'https://tiles.openfreemap.org/styles/positron',
+  // PermitWatch look: dark basemap with glowing markers
+  style: 'https://tiles.openfreemap.org/styles/dark',
   center: HOUSTON,
   zoom: minimumZoom(innerWidth, innerHeight),
   minZoom: minimumZoom(innerWidth, innerHeight),
@@ -471,9 +477,11 @@ function setBuildMode(value) {
 }
 map.on('click', (event) => {
   if (!ready || buildMode) return
-  const layers = [...DEMO_LAYERS, LISTING_LAYER, 'proposed-sites-fill'].filter(
-    (id) => map.getLayer(id),
-  )
+  const layers = [
+    ...DEMO_LAYERS,
+    ...LISTING_LAYERS,
+    'proposed-sites-fill',
+  ].filter((id) => map.getLayer(id))
   const hit = map.queryRenderedFeatures(event.point, { layers })[0]
   selectBuilding(hit?.properties.id || null)
 })
@@ -483,7 +491,7 @@ map.on('dblclick', (event) => {
   const home = hits.find((f) =>
     [
       ...DEMO_LAYERS,
-      LISTING_LAYER,
+      ...LISTING_LAYERS,
       'demo-selected',
       'proposed-sites-fill',
     ].includes(f.layer.id),
@@ -635,14 +643,15 @@ $('layers-button').addEventListener('click', () => {
 const deals = createDealsPanel(map, {
   onPick: (id) => zoomToBuilding(listingById.get(id)),
 })
-$('listings-toggle').addEventListener('change', () => {
-  if (map.getLayer(LISTING_LAYER))
-    map.setLayoutProperty(
-      LISTING_LAYER,
-      'visibility',
-      $('listings-toggle').checked ? 'visible' : 'none',
-    )
-})
+function setListingsVisible(visible) {
+  for (const id of LISTING_LAYERS)
+    if (map.getLayer(id))
+      map.setLayoutProperty(id, 'visibility', visible ? 'visible' : 'none')
+  $('map-key').hidden = !visible
+}
+$('listings-toggle').addEventListener('change', () =>
+  setListingsVisible($('listings-toggle').checked),
+)
 $('demo-toggle').addEventListener('change', () => {
   setDemoVisibility(map, $('demo-toggle').checked)
   updateZoomUI()
@@ -730,11 +739,8 @@ map.on('style.load', () => {
     .then(() => {
       deals.applyFilter()
       deals.refresh()
-      map.setLayoutProperty(
-        LISTING_LAYER,
-        'visibility',
-        $('listings-toggle').checked ? 'visible' : 'none',
-      )
+      renderMapKey($('map-key'))
+      setListingsVisible($('listings-toggle').checked)
     })
     .catch((error) => console.warn(error))
   loadPlanning()

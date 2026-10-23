@@ -1,1 +1,3161 @@
-{"source":"OpenStreetMap contributors via Photon","sourceUrl":"https://photon.komoot.io/","license":"ODbL-1.0","accessedAt":"2026-10-23T18:58:48.305Z","bounds":[[-95.9906746513856,29.21777696022573],[-94.74892534861439,30.30302303977427]],"scope":"Name-search sample of schools, hospitals, supermarkets and pharmacies within the playable Greater Houston region. Photon caps each category response; this is not a complete amenity inventory. Nearest means nearest within this sample, using straight-line distance.","sources":[{"file":"houston-schools","sha256":"d90a453c9fa88c1c8966a66ee264c4eb2eb3a847c80fc59dc9ba0af883130d96","queryUrl":"https://photon.komoot.io/api/?q=school&osm_tag=amenity%3Aschool&lon=-95.3698&lat=29.7604&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"houston-hospitals","sha256":"ccf3915a7e5fe13a669bbd5e6f599f95438692598ff1c6c11f1d154e99ffbe39","queryUrl":"https://photon.komoot.io/api/?q=hospital&osm_tag=amenity%3Ahospital&lon=-95.3698&lat=29.7604&limit=50&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"houston-supermarkets","sha256":"fe83ba2a71a9da33d31b7a3b8e8ac1c4a6c273b748e6a2e4a9f063cf6aa599a3","queryUrl":"https://photon.komoot.io/api/?q=supermarket&osm_tag=shop%3Asupermarket&lon=-95.3698&lat=29.7604&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"houston-pharmacies","sha256":"51ff1361b10a95b35966df9cbbb589609e61cf062825978d341fa6a9dc1c1cdf","queryUrl":"https://photon.komoot.io/api/?q=pharmacy&osm_tag=amenity%3Apharmacy&lon=-95.3698&lat=29.7604&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"sugar-land-schools","sha256":"950ef30f979790f30426e66c33f1c9da3f5cdd8d74760d1d68ab4f415e432ad3","queryUrl":"https://photon.komoot.io/api/?q=school&osm_tag=amenity%3Aschool&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"sugar-land-hospitals","sha256":"1e2f662d6c0c2586e03c6dfa7f361d4ab4f5ca8faf8300e7f76141cd0846baa2","queryUrl":"https://photon.komoot.io/api/?q=hospital&osm_tag=amenity%3Ahospital&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"sugar-land-pharmacies","sha256":"620f359cd464e83db62fef1130a7678c6a7c0fdafd278af0bbc49eb8145e16b0","queryUrl":"https://photon.komoot.io/api/?q=pharmacy&osm_tag=amenity%3Apharmacy&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"sugar-land-heb","sha256":"7caae0850c4d4d8124dd2725beb3781ce671f54cbb0805a817c21e9d83e1107a","queryUrl":"https://photon.komoot.io/api/?q=H-E-B&osm_tag=shop%3Asupermarket&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"sugar-land-kroger","sha256":"7e4dbf733bc49303dac19d8fb788e4132c6dd1b4897d450138555012669c0022","queryUrl":"https://photon.komoot.io/api/?q=Kroger&osm_tag=shop%3Asupermarket&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"},{"file":"sugar-land-aldi","sha256":"db503b79a3bae47814e88402cc70cb1e10f0e184977d2991ffe9e08bc7aacfc9","queryUrl":"https://photon.komoot.io/api/?q=ALDI&osm_tag=shop%3Asupermarket&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"}],"facilities":[{"id":"osm-node-1935628499","category":"school","name":"School of the Woods","lng":-95.4855202,"lat":29.7936734,"sourceUrl":"https://www.openstreetmap.org/node/1935628499"},{"id":"osm-way-45767298","category":"school","name":"Yates High School","lng":-95.3538887,"lat":29.722801,"sourceUrl":"https://www.openstreetmap.org/way/45767298"},{"id":"osm-way-191511611","category":"school","name":"Wheatley High School","lng":-95.3202578,"lat":29.7712713,"sourceUrl":"https://www.openstreetmap.org/way/191511611"},{"id":"osm-way-230736630","category":"school","name":"Heights High School","lng":-95.3927102,"lat":29.794885,"sourceUrl":"https://www.openstreetmap.org/way/230736630"},{"id":"osm-way-585167455","category":"school","name":"Northside High School","lng":-95.3576253,"lat":29.7840935,"sourceUrl":"https://www.openstreetmap.org/way/585167455"},{"id":"osm-way-231661239","category":"school","name":"Austin High School","lng":-95.3320317,"lat":29.7316404,"sourceUrl":"https://www.openstreetmap.org/way/231661239"},{"id":"osm-way-610628249","category":"school","name":"Kashmere High School","lng":-95.3150983,"lat":29.8227324,"sourceUrl":"https://www.openstreetmap.org/way/610628249"},{"id":"osm-way-48131931","category":"school","name":"Milby High School","lng":-95.2762299,"lat":29.7105411,"sourceUrl":"https://www.openstreetmap.org/way/48131931"},{"id":"osm-way-316491998","category":"school","name":"Waltrip High School","lng":-95.4323189,"lat":29.8187625,"sourceUrl":"https://www.openstreetmap.org/way/316491998"},{"id":"osm-way-123419425","category":"school","name":"Saint Thomas High School","lng":-95.4075736,"lat":29.7635779,"sourceUrl":"https://www.openstreetmap.org/way/123419425"},{"id":"osm-node-356805489","category":"school","name":"High School for the Performing & Visual Arts","lng":-95.3884265,"lat":29.7369586,"sourceUrl":"https://www.openstreetmap.org/node/356805489"},{"id":"osm-way-438927606","category":"school","name":"Carnegie Vanguard High School","lng":-95.384837,"lat":29.7544044,"sourceUrl":"https://www.openstreetmap.org/way/438927606"},{"id":"osm-way-520285359","category":"school","name":"Lamar High School","lng":-95.4263076,"lat":29.7409401,"sourceUrl":"https://www.openstreetmap.org/way/520285359"},{"id":"osm-way-147080378","category":"school","name":"Margaret Long Wisdom High School","lng":-95.4985373,"lat":29.7288289,"sourceUrl":"https://www.openstreetmap.org/way/147080378"},{"id":"osm-way-144275855","category":"school","name":"Furr High School","lng":-95.2491296,"lat":29.7794628,"sourceUrl":"https://www.openstreetmap.org/way/144275855"},{"id":"osm-way-297982413","category":"school","name":"Scarborough High School","lng":-95.471089,"lat":29.8291503,"sourceUrl":"https://www.openstreetmap.org/way/297982413"},{"id":"osm-way-1360442510","category":"school","name":"Michael E. DeBakey High School for Health Professions","lng":-95.4082997,"lat":29.7049372,"sourceUrl":"https://www.openstreetmap.org/way/1360442510"},{"id":"osm-way-310069129","category":"school","name":"Sterling High School","lng":-95.3222848,"lat":29.6358352,"sourceUrl":"https://www.openstreetmap.org/way/310069129"},{"id":"osm-way-656841068","category":"school","name":"César E. Chávez High School","lng":-95.2564323,"lat":29.6879386,"sourceUrl":"https://www.openstreetmap.org/way/656841068"},{"id":"osm-way-309979052","category":"school","name":"Worthing High School","lng":-95.3665658,"lat":29.6570306,"sourceUrl":"https://www.openstreetmap.org/way/309979052"},{"id":"osm-way-53103721","category":"school","name":"Galena Park High School","lng":-95.2372358,"lat":29.7382323,"sourceUrl":"https://www.openstreetmap.org/way/53103721"},{"id":"osm-way-620141768","category":"school","name":"Sharpstown High School","lng":-95.5155624,"lat":29.6848622,"sourceUrl":"https://www.openstreetmap.org/way/620141768"},{"id":"osm-way-1393280670","category":"school","name":"East Early College High School","lng":-95.3335012,"lat":29.7520943,"sourceUrl":"https://www.openstreetmap.org/way/1393280670"},{"id":"osm-way-191640624","category":"school","name":"Eisenhower Senior High School","lng":-95.4707608,"lat":29.8821206,"sourceUrl":"https://www.openstreetmap.org/way/191640624"},{"id":"osm-way-1123567011","category":"school","name":"North Forest High School","lng":-95.260444,"lat":29.8672768,"sourceUrl":"https://www.openstreetmap.org/way/1123567011"},{"id":"osm-way-231640338","category":"school","name":"Energy Institute High School","lng":-95.3585397,"lat":29.7137236,"sourceUrl":"https://www.openstreetmap.org/way/231640338"},{"id":"osm-way-550433958","category":"school","name":"Episcopal High School","lng":-95.4582889,"lat":29.7143301,"sourceUrl":"https://www.openstreetmap.org/way/550433958"},{"id":"osm-way-218923244","category":"school","name":"Northbrook High School","lng":-95.5307938,"lat":29.8173395,"sourceUrl":"https://www.openstreetmap.org/way/218923244"},{"id":"osm-way-456460074","category":"school","name":"Aldine Senior High School","lng":-95.4089734,"lat":29.9165921,"sourceUrl":"https://www.openstreetmap.org/way/456460074"},{"id":"osm-way-725188194","category":"school","name":"Spring Woods High School","lng":-95.5470877,"lat":29.8109909,"sourceUrl":"https://www.openstreetmap.org/way/725188194"},{"id":"osm-node-356799014","category":"school","name":"Barbara Jordan High School","lng":-95.3339362,"lat":29.8157887,"sourceUrl":"https://www.openstreetmap.org/node/356799014"},{"id":"osm-way-48603308","category":"school","name":"Pasadena High School","lng":-95.2127377,"lat":29.7094745,"sourceUrl":"https://www.openstreetmap.org/way/48603308"},{"id":"osm-way-617432917","category":"school","name":"Saint Pius X High School","lng":-95.4137526,"lat":29.8428251,"sourceUrl":"https://www.openstreetmap.org/way/617432917"},{"id":"osm-way-620133194","category":"school","name":"T. H. Rogers School","lng":-95.4806468,"lat":29.7512807,"sourceUrl":"https://www.openstreetmap.org/way/620133194"},{"id":"osm-way-400863564","category":"school","name":"James Madison High School","lng":-95.4361742,"lat":29.6296202,"sourceUrl":"https://www.openstreetmap.org/way/400863564"},{"id":"osm-way-456856494","category":"school","name":"Nottingham Elementary School","lng":-95.6117941,"lat":29.7682851,"sourceUrl":"https://www.openstreetmap.org/way/456856494"},{"id":"osm-way-620982268","category":"school","name":"Booker T Washington High School","lng":-95.3979065,"lat":29.8231267,"sourceUrl":"https://www.openstreetmap.org/way/620982268"},{"id":"osm-way-503236461","category":"school","name":"C.E. King High School","lng":-95.2066858,"lat":29.8494254,"sourceUrl":"https://www.openstreetmap.org/way/503236461"},{"id":"osm-way-457272350","category":"school","name":"Alief Elsik High School","lng":-95.6024667,"lat":29.7091219,"sourceUrl":"https://www.openstreetmap.org/way/457272350"},{"id":"osm-way-457272345","category":"school","name":"Alief Hastings High School","lng":-95.5975651,"lat":29.7083952,"sourceUrl":"https://www.openstreetmap.org/way/457272345"},{"id":"osm-way-610071901","category":"school","name":"Sam Rayburn High School","lng":-95.1823807,"lat":29.6786817,"sourceUrl":"https://www.openstreetmap.org/way/610071901"},{"id":"osm-way-668524722","category":"school","name":"South Houston High School","lng":-95.2122554,"lat":29.6520246,"sourceUrl":"https://www.openstreetmap.org/way/668524722"},{"id":"osm-way-320851002","category":"school","name":"J. Frank Dobie High School","lng":-95.250606,"lat":29.5912006,"sourceUrl":"https://www.openstreetmap.org/way/320851002"},{"id":"osm-way-456856492","category":"school","name":"Stratford High School","lng":-95.604258,"lat":29.7730985,"sourceUrl":"https://www.openstreetmap.org/way/456856492"},{"id":"osm-way-458352038","category":"school","name":"Summer Creek High School","lng":-95.2087318,"lat":29.9259651,"sourceUrl":"https://www.openstreetmap.org/way/458352038"},{"id":"osm-way-262778800","category":"school","name":"Pasadena Memorial High School","lng":-95.174842,"lat":29.6376315,"sourceUrl":"https://www.openstreetmap.org/way/262778800"},{"id":"osm-way-260532245","category":"school","name":"Poe Elementary School","lng":-95.408006,"lat":29.7272024,"sourceUrl":"https://www.openstreetmap.org/way/260532245"},{"id":"osm-way-297368218","category":"school","name":"Deer Park High School - South Campus","lng":-95.128488,"lat":29.6878998,"sourceUrl":"https://www.openstreetmap.org/way/297368218"},{"id":"osm-way-456403824","category":"school","name":"Klein Forest High School","lng":-95.4991158,"lat":29.9650606,"sourceUrl":"https://www.openstreetmap.org/way/456403824"},{"id":"osm-way-52461152","category":"school","name":"Channelview High School","lng":-95.1217658,"lat":29.7965416,"sourceUrl":"https://www.openstreetmap.org/way/52461152"},{"id":"osm-way-597306771","category":"hospital","name":"Houston Methodist Hospital","lng":-95.399264,"lat":29.7108167,"sourceUrl":"https://www.openstreetmap.org/way/597306771"},{"id":"osm-way-43035587","category":"hospital","name":"Ben Taub General Hospital","lng":-95.3934046,"lat":29.7106052,"sourceUrl":"https://www.openstreetmap.org/way/43035587"},{"id":"osm-way-567983582","category":"hospital","name":"Memorial Hermann Southwest Hospital","lng":-95.5221634,"lat":29.6938503,"sourceUrl":"https://www.openstreetmap.org/way/567983582"},{"id":"osm-way-567918848","category":"hospital","name":"Memorial Hermann Katy Hospital","lng":-95.7852442,"lat":29.7875104,"sourceUrl":"https://www.openstreetmap.org/way/567918848"},{"id":"osm-way-129131939","category":"hospital","name":"The Woman's Hospital of Texas","lng":-95.4027926,"lat":29.6933775,"sourceUrl":"https://www.openstreetmap.org/way/129131939"},{"id":"osm-way-506737198","category":"hospital","name":"Houston Methodist Sugar Land Hospital","lng":-95.6303337,"lat":29.5896185,"sourceUrl":"https://www.openstreetmap.org/way/506737198"},{"id":"osm-way-229203752","category":"hospital","name":"US Pain & Spine Hospital","lng":-95.3840095,"lat":29.7242054,"sourceUrl":"https://www.openstreetmap.org/way/229203752"},{"id":"osm-way-567613307","category":"hospital","name":"Park Plaza Hospital","lng":-95.3870177,"lat":29.7234578,"sourceUrl":"https://www.openstreetmap.org/way/567613307"},{"id":"osm-node-356816038","category":"hospital","name":"Plaza Specialty Hospital","lng":-95.386876,"lat":29.7233769,"sourceUrl":"https://www.openstreetmap.org/node/356816038"},{"id":"osm-way-567588337","category":"hospital","name":"Quentin Mease Hospital","lng":-95.3594983,"lat":29.7112702,"sourceUrl":"https://www.openstreetmap.org/way/567588337"},{"id":"osm-way-51812681","category":"hospital","name":"Children's Memorial Hermann Hospital","lng":-95.3955032,"lat":29.7138173,"sourceUrl":"https://www.openstreetmap.org/way/51812681"},{"id":"osm-way-568022244","category":"hospital","name":"The Heights Hospital","lng":-95.4042191,"lat":29.8033906,"sourceUrl":"https://www.openstreetmap.org/way/568022244"},{"id":"osm-way-207815845","category":"hospital","name":"Kindred Hospital Houston Medical Center","lng":-95.3990926,"lat":29.7129629,"sourceUrl":"https://www.openstreetmap.org/way/207815845"},{"id":"osm-way-567866262","category":"hospital","name":"Texas Orthopedic Hospital","lng":-95.4090834,"lat":29.7002235,"sourceUrl":"https://www.openstreetmap.org/way/567866262"},{"id":"osm-way-568037942","category":"hospital","name":"Lyndon B. Johnson General Hospital","lng":-95.3130453,"lat":29.8115032,"sourceUrl":"https://www.openstreetmap.org/way/568037942"},{"id":"osm-way-568016147","category":"hospital","name":"Kindred Hospital The Heights","lng":-95.4308754,"lat":29.8089874,"sourceUrl":"https://www.openstreetmap.org/way/568016147"},{"id":"osm-way-267238505","category":"hospital","name":"Memorial Hermann Greater Heights Hospital","lng":-95.4313193,"lat":29.810626,"sourceUrl":"https://www.openstreetmap.org/way/267238505"},{"id":"osm-way-511771474","category":"hospital","name":"Houston Methodist Willowbrook Hospital","lng":-95.55113,"lat":29.9671381,"sourceUrl":"https://www.openstreetmap.org/way/511771474"},{"id":"osm-node-13986638445","category":"hospital","name":"Independence Heights Hospital","lng":-95.4084103,"lat":29.8479999,"sourceUrl":"https://www.openstreetmap.org/node/13986638445"},{"id":"osm-node-10917045362","category":"hospital","name":"First Surgical Hospital","lng":-95.4626713,"lat":29.7099774,"sourceUrl":"https://www.openstreetmap.org/node/10917045362"},{"id":"osm-way-693330110","category":"hospital","name":"Behavioral Hospital of Bellaire","lng":-95.4733724,"lat":29.708365,"sourceUrl":"https://www.openstreetmap.org/way/693330110"},{"id":"osm-node-356815851","category":"hospital","name":"Cornerstone Hospital Houston – Bellaire","lng":-95.47327,"lat":29.70801,"sourceUrl":"https://www.openstreetmap.org/node/356815851"},{"id":"osm-way-693331308","category":"hospital","name":"West Oaks Hospital","lng":-95.4979601,"lat":29.7095543,"sourceUrl":"https://www.openstreetmap.org/way/693331308"},{"id":"osm-way-602271176","category":"hospital","name":"Advanced Diagnostics East Hospital & 24 Hour Emergency Center","lng":-95.2004521,"lat":29.7707261,"sourceUrl":"https://www.openstreetmap.org/way/602271176"},{"id":"osm-way-568006578","category":"hospital","name":"Houston Behavioral Healthcare Hospital","lng":-95.5467544,"lat":29.8239329,"sourceUrl":"https://www.openstreetmap.org/way/568006578"},{"id":"osm-node-10917051808","category":"hospital","name":"West Chase Houston Hospital","lng":-95.5561649,"lat":29.7114513,"sourceUrl":"https://www.openstreetmap.org/node/10917051808"},{"id":"osm-way-598873005","category":"hospital","name":"Nexus Children's Hospital","lng":-95.5797148,"lat":29.7326357,"sourceUrl":"https://www.openstreetmap.org/way/598873005"},{"id":"osm-node-10917048870","category":"hospital","name":"Encompass Health Rehabilitation Hospital Of Pearland","lng":-95.3898333,"lat":29.5729058,"sourceUrl":"https://www.openstreetmap.org/node/10917048870"},{"id":"osm-node-10916919400","category":"hospital","name":"Oceans Behavioral Hospital Of Pasadena","lng":-95.1700085,"lat":29.6508561,"sourceUrl":"https://www.openstreetmap.org/node/10916919400"},{"id":"osm-way-567552123","category":"hospital","name":"Kindred Hospital (Bay Area)","lng":-95.1606986,"lat":29.6375276,"sourceUrl":"https://www.openstreetmap.org/way/567552123"},{"id":"osm-way-520636303","category":"hospital","name":"Memorial Hermann Southeast Hospital","lng":-95.2081997,"lat":29.5822951,"sourceUrl":"https://www.openstreetmap.org/way/520636303"},{"id":"osm-way-568498513","category":"hospital","name":"Houston Methodist The Woodlands Hospital","lng":-95.452096,"lat":30.2055971,"sourceUrl":"https://www.openstreetmap.org/way/568498513"},{"id":"osm-way-568266702","category":"hospital","name":"HealthSouth Rehabilitation Hospital of Humble","lng":-95.2775361,"lat":29.9934453,"sourceUrl":"https://www.openstreetmap.org/way/568266702"},{"id":"osm-way-568266703","category":"hospital","name":"Memorial Hermann Northeast Hospital","lng":-95.2765699,"lat":29.9953006,"sourceUrl":"https://www.openstreetmap.org/way/568266703"},{"id":"osm-way-568396887","category":"hospital","name":"Kindred Hospital (Houston Northwest)","lng":-95.5880278,"lat":29.9243915,"sourceUrl":"https://www.openstreetmap.org/way/568396887"},{"id":"osm-way-549599412","category":"hospital","name":"Bayou City ER & Hospital","lng":-95.2762927,"lat":29.9985909,"sourceUrl":"https://www.openstreetmap.org/way/549599412"},{"id":"osm-way-318219153","category":"hospital","name":"BMC North Hospital","lng":-95.4405904,"lat":30.0143944,"sourceUrl":"https://www.openstreetmap.org/way/318219153"},{"id":"osm-way-602573050","category":"hospital","name":"Townsen Memorial Hospital - Humble","lng":-95.2524437,"lat":30.0049057,"sourceUrl":"https://www.openstreetmap.org/way/602573050"},{"id":"osm-way-693690160","category":"hospital","name":"TOPS Surgical Specialty Hospital","lng":-95.4441335,"lat":30.0185245,"sourceUrl":"https://www.openstreetmap.org/way/693690160"},{"id":"osm-way-567896262","category":"hospital","name":"CHI Saint Luke's Health–Sugar Land Hospital","lng":-95.6201832,"lat":29.6051166,"sourceUrl":"https://www.openstreetmap.org/way/567896262"},{"id":"osm-way-840370690","category":"hospital","name":"Intracare North Hospital","lng":-95.4403049,"lat":30.0237245,"sourceUrl":"https://www.openstreetmap.org/way/840370690"},{"id":"osm-way-568335740","category":"hospital","name":"Kindred Hospital Spring","lng":-95.4357867,"lat":30.0252663,"sourceUrl":"https://www.openstreetmap.org/way/568335740"},{"id":"osm-way-568335750","category":"hospital","name":"Cypress Creek Hospital","lng":-95.4448608,"lat":30.024716,"sourceUrl":"https://www.openstreetmap.org/way/568335750"},{"id":"osm-node-14077642809","category":"hospital","name":"Texas Children's Hospital","lng":-95.188284,"lat":29.988884,"sourceUrl":"https://www.openstreetmap.org/node/14077642809"},{"id":"osm-way-567931772","category":"hospital","name":"Texas Children's Hospital West Campus","lng":-95.6916129,"lat":29.7872914,"sourceUrl":"https://www.openstreetmap.org/way/567931772"},{"id":"osm-way-567896261","category":"hospital","name":"Kindred Hospital Sugar Land","lng":-95.6381387,"lat":29.6004146,"sourceUrl":"https://www.openstreetmap.org/way/567896261"},{"id":"osm-way-567931778","category":"hospital","name":"Houston Methodist West Hospital","lng":-95.6981067,"lat":29.7872914,"sourceUrl":"https://www.openstreetmap.org/way/567931778"},{"id":"osm-way-543404992","category":"hospital","name":"CHI Saint Luke's Health - The Vintage Hospital","lng":-95.5683146,"lat":29.9892995,"sourceUrl":"https://www.openstreetmap.org/way/543404992"},{"id":"osm-way-597561726","category":"hospital","name":"Memorial Hermann Surgical Hospital First Colony","lng":-95.6361016,"lat":29.58991,"sourceUrl":"https://www.openstreetmap.org/way/597561726"},{"id":"osm-node-10916992315","category":"hospital","name":"PAM Health Rehabilitation Hospital of Sugar Land","lng":-95.642451,"lat":29.5878308,"sourceUrl":"https://www.openstreetmap.org/node/10916992315"},{"id":"osm-way-1083939984","category":"supermarket","name":"Sing-On Supermarket","lng":-95.3317164,"lat":29.80065,"sourceUrl":"https://www.openstreetmap.org/way/1083939984"},{"id":"osm-way-379430064","category":"supermarket","name":"El Ahorro Supermarket","lng":-95.3043261,"lat":29.734494,"sourceUrl":"https://www.openstreetmap.org/way/379430064"},{"id":"osm-way-315695424","category":"supermarket","name":"El Ahorro Supermarket","lng":-95.3859226,"lat":29.8606057,"sourceUrl":"https://www.openstreetmap.org/way/315695424"},{"id":"osm-way-771572288","category":"supermarket","name":"O-Lan O Supermarket","lng":-95.4211868,"lat":29.858226,"sourceUrl":"https://www.openstreetmap.org/way/771572288"},{"id":"osm-way-984985123","category":"supermarket","name":"Almadina Supermarket","lng":-95.5018056,"lat":29.730794,"sourceUrl":"https://www.openstreetmap.org/way/984985123"},{"id":"osm-node-11851106592","category":"supermarket","name":"El Ahorro Supermarket","lng":-95.5048882,"lat":29.8345011,"sourceUrl":"https://www.openstreetmap.org/node/11851106592"},{"id":"osm-way-1332484598","category":"supermarket","name":"Great Wall Supermarket","lng":-95.5543436,"lat":29.7029719,"sourceUrl":"https://www.openstreetmap.org/way/1332484598"},{"id":"osm-way-818633025","category":"supermarket","name":"A-1 Supermarket","lng":-95.2656303,"lat":29.9568773,"sourceUrl":"https://www.openstreetmap.org/way/818633025"},{"id":"osm-node-7076543858","category":"supermarket","name":"Jusgo Supermarket","lng":-95.5999945,"lat":29.5888138,"sourceUrl":"https://www.openstreetmap.org/node/7076543858"},{"id":"osm-node-3004832757","category":"supermarket","name":"Food Fair Supermarket","lng":-95.3883542,"lat":30.0486965,"sourceUrl":"https://www.openstreetmap.org/node/3004832757"},{"id":"osm-node-4297111829","category":"supermarket","name":"Texas Food Supermarket","lng":-95.70857,"lat":29.8316729,"sourceUrl":"https://www.openstreetmap.org/node/4297111829"},{"id":"osm-way-129485673","category":"supermarket","name":"Katy Supermarket","lng":-95.7498669,"lat":29.759726,"sourceUrl":"https://www.openstreetmap.org/way/129485673"},{"id":"osm-node-9765882245","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3628385,"lat":29.7632412,"sourceUrl":"https://www.openstreetmap.org/node/9765882245"},{"id":"osm-node-3198079052","category":"pharmacy","name":"Randalls Pharmacy","lng":-95.3748243,"lat":29.7489076,"sourceUrl":"https://www.openstreetmap.org/node/3198079052"},{"id":"osm-node-3782651017","category":"pharmacy","name":"Mid Town Specialty RX Pharmacy","lng":-95.3655938,"lat":29.7444269,"sourceUrl":"https://www.openstreetmap.org/node/3782651017"},{"id":"osm-node-7160970955","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3850593,"lat":29.7740478,"sourceUrl":"https://www.openstreetmap.org/node/7160970955"},{"id":"osm-node-3782607316","category":"pharmacy","name":"Elgin Pharmacy","lng":-95.3752504,"lat":29.7401037,"sourceUrl":"https://www.openstreetmap.org/node/3782607316"},{"id":"osm-node-9509504134","category":"pharmacy","name":"Iridium Pharmacy","lng":-95.3475537,"lat":29.7578023,"sourceUrl":"https://www.openstreetmap.org/node/9509504134"},{"id":"osm-node-6818164814","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3974451,"lat":29.756967,"sourceUrl":"https://www.openstreetmap.org/node/6818164814"},{"id":"osm-node-7103799259","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.3966627,"lat":29.7687258,"sourceUrl":"https://www.openstreetmap.org/node/7103799259"},{"id":"osm-node-6983086172","category":"pharmacy","name":"Walmart Pharmacy","lng":-95.4010032,"lat":29.7732205,"sourceUrl":"https://www.openstreetmap.org/node/6983086172"},{"id":"osm-node-1569261269","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3915423,"lat":29.7337441,"sourceUrl":"https://www.openstreetmap.org/node/1569261269"},{"id":"osm-way-375333625","category":"pharmacy","name":"Mobile Care Pharmacy","lng":-95.342027,"lat":29.7378795,"sourceUrl":"https://www.openstreetmap.org/way/375333625"},{"id":"osm-node-2642233544","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.4031022,"lat":29.737967,"sourceUrl":"https://www.openstreetmap.org/node/2642233544"},{"id":"osm-node-8095770651","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3298651,"lat":29.742905,"sourceUrl":"https://www.openstreetmap.org/node/8095770651"},{"id":"osm-node-9518889974","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4099016,"lat":29.7412122,"sourceUrl":"https://www.openstreetmap.org/node/9518889974"},{"id":"osm-node-9903514220","category":"pharmacy","name":"CVS Pharmacy","lng":-95.411472,"lat":29.7381741,"sourceUrl":"https://www.openstreetmap.org/node/9903514220"},{"id":"osm-node-11419445619","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4169542,"lat":29.7701229,"sourceUrl":"https://www.openstreetmap.org/node/11419445619"},{"id":"osm-node-11569524540","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3604436,"lat":29.8037678,"sourceUrl":"https://www.openstreetmap.org/node/11569524540"},{"id":"osm-node-7103761935","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.3764494,"lat":29.7141767,"sourceUrl":"https://www.openstreetmap.org/node/7103761935"},{"id":"osm-node-11308510643","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4218942,"lat":29.7425863,"sourceUrl":"https://www.openstreetmap.org/node/11308510643"},{"id":"osm-node-7045314354","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3989221,"lat":29.8035615,"sourceUrl":"https://www.openstreetmap.org/node/7045314354"},{"id":"osm-way-311017315","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4192405,"lat":29.7296916,"sourceUrl":"https://www.openstreetmap.org/way/311017315"},{"id":"osm-node-6252570644","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.4088301,"lat":29.8072402,"sourceUrl":"https://www.openstreetmap.org/node/6252570644"},{"id":"osm-node-9748078240","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3603008,"lat":29.7027804,"sourceUrl":"https://www.openstreetmap.org/node/9748078240"},{"id":"osm-node-1975476326","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4014478,"lat":29.7093604,"sourceUrl":"https://www.openstreetmap.org/node/1975476326"},{"id":"osm-node-7719107612","category":"pharmacy","name":"Essentials Pharmacy","lng":-95.3562135,"lat":29.7021404,"sourceUrl":"https://www.openstreetmap.org/node/7719107612"},{"id":"osm-way-1083946136","category":"pharmacy","name":"East End Pharmacy","lng":-95.3027873,"lat":29.744765,"sourceUrl":"https://www.openstreetmap.org/way/1083946136"},{"id":"osm-node-3702278989","category":"pharmacy","name":"Cullen Care Pharmacy","lng":-95.3450811,"lat":29.7045315,"sourceUrl":"https://www.openstreetmap.org/node/3702278989"},{"id":"osm-node-2641614795","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.4268225,"lat":29.7268006,"sourceUrl":"https://www.openstreetmap.org/node/2641614795"},{"id":"osm-node-10028418267","category":"pharmacy","name":"Costco Pharmacy","lng":-95.4391439,"lat":29.7342063,"sourceUrl":"https://www.openstreetmap.org/node/10028418267"},{"id":"osm-node-1975638982","category":"pharmacy","name":"CVS Pharmacy","lng":-95.412015,"lat":29.70681,"sourceUrl":"https://www.openstreetmap.org/node/1975638982"},{"id":"osm-node-7140176397","category":"pharmacy","name":"Loving Care Pharmacy","lng":-95.3839445,"lat":29.829955,"sourceUrl":"https://www.openstreetmap.org/node/7140176397"},{"id":"osm-node-3198074653","category":"pharmacy","name":"Randalls Pharmacy","lng":-95.4257078,"lat":29.7050017,"sourceUrl":"https://www.openstreetmap.org/node/3198074653"},{"id":"osm-node-4040987267","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4286264,"lat":29.8117779,"sourceUrl":"https://www.openstreetmap.org/node/4040987267"},{"id":"osm-node-8049554353","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4527754,"lat":29.7445797,"sourceUrl":"https://www.openstreetmap.org/node/8049554353"},{"id":"osm-way-378141087","category":"pharmacy","name":"Southside Pharmacy","lng":-95.4130526,"lat":29.6967582,"sourceUrl":"https://www.openstreetmap.org/way/378141087"},{"id":"osm-node-3198055533","category":"pharmacy","name":"Randalls Pharmacy","lng":-95.4422632,"lat":29.7215167,"sourceUrl":"https://www.openstreetmap.org/node/3198055533"},{"id":"osm-node-7176618084","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4097708,"lat":29.8268471,"sourceUrl":"https://www.openstreetmap.org/node/7176618084"},{"id":"osm-node-6983065767","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4574173,"lat":29.7402601,"sourceUrl":"https://www.openstreetmap.org/node/6983065767"},{"id":"osm-node-8637653161","category":"pharmacy","name":"CVS Pharmacy","lng":-95.2954571,"lat":29.7166053,"sourceUrl":"https://www.openstreetmap.org/node/8637653161"},{"id":"osm-node-10909821301","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4188268,"lat":29.6932951,"sourceUrl":"https://www.openstreetmap.org/node/10909821301"},{"id":"osm-node-7122288482","category":"pharmacy","name":"Cedra Pharmacy","lng":-95.4626579,"lat":29.7512595,"sourceUrl":"https://www.openstreetmap.org/node/7122288482"},{"id":"osm-way-229323150","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4396742,"lat":29.7053562,"sourceUrl":"https://www.openstreetmap.org/way/229323150"},{"id":"osm-node-3198067914","category":"pharmacy","name":"Randalls Pharmacy","lng":-95.4656019,"lat":29.7489292,"sourceUrl":"https://www.openstreetmap.org/node/3198067914"},{"id":"osm-node-7624221195","category":"pharmacy","name":"Tidwell Professional Pharmacy","lng":-95.3493185,"lat":29.8477316,"sourceUrl":"https://www.openstreetmap.org/node/7624221195"},{"id":"osm-node-815003126","category":"pharmacy","name":"CVS Pharmacy","lng":-95.467379,"lat":29.7320188,"sourceUrl":"https://www.openstreetmap.org/node/815003126"},{"id":"osm-node-2641610263","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.2949338,"lat":29.6988948,"sourceUrl":"https://www.openstreetmap.org/node/2641610263"},{"id":"osm-node-9913142433","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4712679,"lat":29.7397869,"sourceUrl":"https://www.openstreetmap.org/node/9913142433"},{"id":"osm-node-12495528878","category":"pharmacy","name":"Walmart Pharmacy","lng":-95.4653952,"lat":29.722365,"sourceUrl":"https://www.openstreetmap.org/node/12495528878"},{"id":"osm-node-12016134990","category":"pharmacy","name":"CVS Pharmacy","lng":-95.3354385,"lat":29.8492735,"sourceUrl":"https://www.openstreetmap.org/node/12016134990"},{"id":"osm-node-4419638797","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.484647,"lat":29.7482233,"sourceUrl":"https://www.openstreetmap.org/node/4419638797"},{"id":"osm-relation-20692550","category":"school","name":"Kempner High School","lng":-95.6452863,"lat":29.641768,"sourceUrl":"https://www.openstreetmap.org/relation/20692550"},{"id":"osm-way-293308150","category":"school","name":"Clements High School","lng":-95.6334224,"lat":29.5752422,"sourceUrl":"https://www.openstreetmap.org/way/293308150"},{"id":"osm-way-457328707","category":"school","name":"Dulles High School","lng":-95.5846641,"lat":29.6192118,"sourceUrl":"https://www.openstreetmap.org/way/457328707"},{"id":"osm-way-204419677","category":"school","name":"Taylor High School","lng":-95.6315165,"lat":29.6945417,"sourceUrl":"https://www.openstreetmap.org/way/204419677"},{"id":"osm-way-293308174","category":"school","name":"Elkins High School","lng":-95.5584121,"lat":29.5468568,"sourceUrl":"https://www.openstreetmap.org/way/293308174"},{"id":"osm-way-457328709","category":"school","name":"Bush High School","lng":-95.6846318,"lat":29.7054307,"sourceUrl":"https://www.openstreetmap.org/way/457328709"},{"id":"osm-way-661818043","category":"school","name":"George Ranch High School","lng":-95.6896531,"lat":29.51692,"sourceUrl":"https://www.openstreetmap.org/way/661818043"},{"id":"osm-way-457328706","category":"school","name":"Hightower High School","lng":-95.4970055,"lat":29.5323264,"sourceUrl":"https://www.openstreetmap.org/way/457328706"},{"id":"osm-way-661881358","category":"school","name":"Lamar Consolidated High School","lng":-95.7801148,"lat":29.5600929,"sourceUrl":"https://www.openstreetmap.org/way/661881358"},{"id":"osm-relation-1985374","category":"school","name":"James E Taylor High School","lng":-95.7317842,"lat":29.7769666,"sourceUrl":"https://www.openstreetmap.org/relation/1985374"},{"id":"osm-way-567914684","category":"school","name":"B. F. Terry High School","lng":-95.77513,"lat":29.545436,"sourceUrl":"https://www.openstreetmap.org/way/567914684"},{"id":"osm-way-116061922","category":"school","name":"Seven Lakes High School","lng":-95.8076432,"lat":29.706545,"sourceUrl":"https://www.openstreetmap.org/way/116061922"},{"id":"osm-relation-13117566","category":"school","name":"Mayde Creek High School","lng":-95.6956943,"lat":29.8067914,"sourceUrl":"https://www.openstreetmap.org/relation/13117566"},{"id":"osm-way-457328705","category":"school","name":"Ridge Point High School","lng":-95.5149635,"lat":29.4838774,"sourceUrl":"https://www.openstreetmap.org/way/457328705"},{"id":"osm-way-116291041","category":"school","name":"Morton Ranch High School","lng":-95.745331,"lat":29.804448,"sourceUrl":"https://www.openstreetmap.org/way/116291041"},{"id":"osm-way-106994433","category":"school","name":"Cinco Ranch High School","lng":-95.7777117,"lat":29.7466408,"sourceUrl":"https://www.openstreetmap.org/way/106994433"},{"id":"osm-relation-4453793","category":"school","name":"Obra D. Tompkins High School","lng":-95.8149659,"lat":29.7355177,"sourceUrl":"https://www.openstreetmap.org/relation/4453793"},{"id":"osm-way-457272354","category":"school","name":"Alief Early College High School","lng":-95.574438,"lat":29.7342564,"sourceUrl":"https://www.openstreetmap.org/way/457272354"},{"id":"osm-way-608428081","category":"school","name":"Memorial Private High School","lng":-95.5981179,"lat":29.7743628,"sourceUrl":"https://www.openstreetmap.org/way/608428081"},{"id":"osm-way-620145414","category":"school","name":"Sharpstown International School","lng":-95.5316894,"lat":29.6988483,"sourceUrl":"https://www.openstreetmap.org/way/620145414"},{"id":"osm-way-116288271","category":"school","name":"Katy High School","lng":-95.8333504,"lat":29.783063,"sourceUrl":"https://www.openstreetmap.org/way/116288271"},{"id":"osm-way-1122683023","category":"school","name":"Almeta Crawford High School","lng":-95.4636866,"lat":29.4746872,"sourceUrl":"https://www.openstreetmap.org/way/1122683023"},{"id":"osm-way-1350783858","category":"school","name":"Jordan High School","lng":-95.8555543,"lat":29.7234223,"sourceUrl":"https://www.openstreetmap.org/way/1350783858"},{"id":"osm-way-126160809","category":"school","name":"Houston Christian High School","lng":-95.56111,"lat":29.8203997,"sourceUrl":"https://www.openstreetmap.org/way/126160809"},{"id":"osm-way-396267256","category":"school","name":"Bellaire High School","lng":-95.4698567,"lat":29.6920998,"sourceUrl":"https://www.openstreetmap.org/way/396267256"},{"id":"osm-way-1360378068","category":"school","name":"Fulshear High School","lng":-95.8858117,"lat":29.6975231,"sourceUrl":"https://www.openstreetmap.org/way/1360378068"},{"id":"osm-way-399464969","category":"school","name":"Glenda Dawson High School","lng":-95.3534265,"lat":29.5731385,"sourceUrl":"https://www.openstreetmap.org/way/399464969"},{"id":"osm-way-48727031","category":"hospital","name":"Memorial Hermann Sugar Land Hospital","lng":-95.6903101,"lat":29.5652376,"sourceUrl":"https://www.openstreetmap.org/way/48727031"},{"id":"osm-way-567931781","category":"hospital","name":"Houston Methodist Saint Catherine Hospital","lng":-95.7158733,"lat":29.7772315,"sourceUrl":"https://www.openstreetmap.org/way/567931781"},{"id":"osm-node-10917030811","category":"hospital","name":"Memorial Hermann Rehabilitation Hospital Katy","lng":-95.7457993,"lat":29.7757655,"sourceUrl":"https://www.openstreetmap.org/node/10917030811"},{"id":"osm-node-10916981577","category":"hospital","name":"Oceans Behavioral Hospital Of Katy","lng":-95.7485405,"lat":29.7779641,"sourceUrl":"https://www.openstreetmap.org/node/10916981577"},{"id":"osm-node-13724313501","category":"hospital","name":"Houston Methodist Cypress Hospital","lng":-95.6817787,"lat":29.9612605,"sourceUrl":"https://www.openstreetmap.org/node/13724313501"},{"id":"osm-way-568408539","category":"hospital","name":"Memorial Hermann Cypress Hospital","lng":-95.7325752,"lat":29.9868063,"sourceUrl":"https://www.openstreetmap.org/way/568408539"},{"id":"osm-way-600323650","category":"hospital","name":"Memorial Hermann Tomball Hospital","lng":-95.6062041,"lat":30.0370359,"sourceUrl":"https://www.openstreetmap.org/way/600323650"},{"id":"osm-node-2641609426","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.6452284,"lat":29.6076732,"sourceUrl":"https://www.openstreetmap.org/node/2641609426"},{"id":"osm-node-8591858835","category":"pharmacy","name":"CVS Pharmacy","lng":-95.6275615,"lat":29.5960685,"sourceUrl":"https://www.openstreetmap.org/node/8591858835"},{"id":"osm-node-4515613744","category":"pharmacy","name":"CVS Pharmacy","lng":-95.5988879,"lat":29.6213873,"sourceUrl":"https://www.openstreetmap.org/node/4515613744"},{"id":"osm-node-12607693970","category":"pharmacy","name":"CVS Pharmacy","lng":-95.6230389,"lat":29.5880656,"sourceUrl":"https://www.openstreetmap.org/node/12607693970"},{"id":"osm-node-12604694260","category":"pharmacy","name":"MediOAK Pharmacy","lng":-95.6070404,"lat":29.5933959,"sourceUrl":"https://www.openstreetmap.org/node/12604694260"},{"id":"osm-way-229952056","category":"pharmacy","name":"CVS Pharmacy","lng":-95.6770807,"lat":29.5909357,"sourceUrl":"https://www.openstreetmap.org/way/229952056"},{"id":"osm-way-1352238591","category":"pharmacy","name":"Relicare Pharmacy","lng":-95.6778277,"lat":29.6483459,"sourceUrl":"https://www.openstreetmap.org/way/1352238591"},{"id":"osm-way-468655948","category":"pharmacy","name":"CVS Pharmacy","lng":-95.6440543,"lat":29.6675985,"sourceUrl":"https://www.openstreetmap.org/way/468655948"},{"id":"osm-node-2641607010","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.5821301,"lat":29.5785367,"sourceUrl":"https://www.openstreetmap.org/node/2641607010"},{"id":"osm-node-1559985040","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.6848656,"lat":29.5647124,"sourceUrl":"https://www.openstreetmap.org/node/1559985040"},{"id":"osm-way-1320818006","category":"pharmacy","name":"Meta RX Pharmacy","lng":-95.7067824,"lat":29.6518361,"sourceUrl":"https://www.openstreetmap.org/way/1320818006"},{"id":"osm-node-6981749754","category":"pharmacy","name":"Walmart Pharmacy","lng":-95.5683292,"lat":29.5739917,"sourceUrl":"https://www.openstreetmap.org/node/6981749754"},{"id":"osm-node-9861962717","category":"pharmacy","name":"CVS Pharmacy","lng":-95.5681586,"lat":29.5659266,"sourceUrl":"https://www.openstreetmap.org/node/9861962717"},{"id":"osm-node-6299470907","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.7139674,"lat":29.6598513,"sourceUrl":"https://www.openstreetmap.org/node/6299470907"},{"id":"osm-node-8372605075","category":"pharmacy","name":"CVS Pharmacy","lng":-95.5859027,"lat":29.5478983,"sourceUrl":"https://www.openstreetmap.org/node/8372605075"},{"id":"osm-node-12814137676","category":"pharmacy","name":"CVS Pharmacy","lng":-95.5859014,"lat":29.5478539,"sourceUrl":"https://www.openstreetmap.org/node/12814137676"},{"id":"osm-node-3199560972","category":"pharmacy","name":"Randalls Pharmacy","lng":-95.7425948,"lat":29.6222103,"sourceUrl":"https://www.openstreetmap.org/node/3199560972"},{"id":"osm-node-2641611368","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.5593592,"lat":29.6911403,"sourceUrl":"https://www.openstreetmap.org/node/2641611368"},{"id":"osm-way-426513592","category":"pharmacy","name":"CVS Pharmacy","lng":-95.5268244,"lat":29.584145,"sourceUrl":"https://www.openstreetmap.org/way/426513592"},{"id":"osm-node-1806646854","category":"pharmacy","name":"Kroger Pharmacy","lng":-95.6860677,"lat":29.7083045,"sourceUrl":"https://www.openstreetmap.org/node/1806646854"},{"id":"osm-node-12543011007","category":"pharmacy","name":"Sterling Pharmacy","lng":-95.5562621,"lat":29.7065315,"sourceUrl":"https://www.openstreetmap.org/node/12543011007"},{"id":"osm-node-9536809068","category":"pharmacy","name":"CVS Pharmacy","lng":-95.6270661,"lat":29.7328663,"sourceUrl":"https://www.openstreetmap.org/node/9536809068"},{"id":"osm-node-12540894199","category":"pharmacy","name":"Park Place Pharmacy","lng":-95.5463898,"lat":29.7053204,"sourceUrl":"https://www.openstreetmap.org/node/12540894199"},{"id":"osm-node-12540894198","category":"pharmacy","name":"Evergreen Pharmacy","lng":-95.544923,"lat":29.7066023,"sourceUrl":"https://www.openstreetmap.org/node/12540894198"},{"id":"osm-node-5595009169","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.7480231,"lat":29.5514584,"sourceUrl":"https://www.openstreetmap.org/node/5595009169"},{"id":"osm-node-2641609941","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.5358082,"lat":29.5365496,"sourceUrl":"https://www.openstreetmap.org/node/2641609941"},{"id":"osm-node-2641601448","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.5866853,"lat":29.7353057,"sourceUrl":"https://www.openstreetmap.org/node/2641601448"},{"id":"osm-node-8267827503","category":"pharmacy","name":"CVS Pharmacy","lng":-95.7513803,"lat":29.5481899,"sourceUrl":"https://www.openstreetmap.org/node/8267827503"},{"id":"osm-node-10711715695","category":"pharmacy","name":"CVS Pharmacy","lng":-95.5109393,"lat":29.6927009,"sourceUrl":"https://www.openstreetmap.org/node/10711715695"},{"id":"osm-node-9847083779","category":"pharmacy","name":"CVS Pharmacy","lng":-95.5674202,"lat":29.7351418,"sourceUrl":"https://www.openstreetmap.org/node/9847083779"},{"id":"osm-way-792472360","category":"pharmacy","name":"CVS Pharmacy","lng":-95.7729187,"lat":29.5588587,"sourceUrl":"https://www.openstreetmap.org/way/792472360"},{"id":"osm-node-7925067420","category":"pharmacy","name":"CVS Pharmacy","lng":-95.6054011,"lat":29.7544045,"sourceUrl":"https://www.openstreetmap.org/node/7925067420"},{"id":"osm-node-3198054061","category":"pharmacy","name":"Randalls Pharmacy","lng":-95.53687,"lat":29.7384997,"sourceUrl":"https://www.openstreetmap.org/node/3198054061"},{"id":"osm-way-1386631947","category":"pharmacy","name":"Vallbona Pharmacy","lng":-95.5001508,"lat":29.7082844,"sourceUrl":"https://www.openstreetmap.org/way/1386631947"},{"id":"osm-node-9941249921","category":"pharmacy","name":"CVS Pharmacy","lng":-95.52549,"lat":29.7380542,"sourceUrl":"https://www.openstreetmap.org/node/9941249921"},{"id":"osm-node-3198088966","category":"pharmacy","name":"Randalls Pharmacy","lng":-95.6069406,"lat":29.7714759,"sourceUrl":"https://www.openstreetmap.org/node/3198088966"},{"id":"osm-node-3114183243","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.775178,"lat":29.7126272,"sourceUrl":"https://www.openstreetmap.org/node/3114183243"},{"id":"osm-node-9434507268","category":"pharmacy","name":"CVS Pharmacy","lng":-95.5180684,"lat":29.7349659,"sourceUrl":"https://www.openstreetmap.org/node/9434507268"},{"id":"osm-way-848788208","category":"pharmacy","name":"Piney Point Pharmacy","lng":-95.5216696,"lat":29.7392125,"sourceUrl":"https://www.openstreetmap.org/way/848788208"},{"id":"osm-way-1088029492","category":"pharmacy","name":"CVS Pharmacy","lng":-95.4638547,"lat":29.6708245,"sourceUrl":"https://www.openstreetmap.org/way/1088029492"},{"id":"osm-way-609645262","category":"pharmacy","name":"CVS Pharmacy","lng":-95.6187834,"lat":29.77877,"sourceUrl":"https://www.openstreetmap.org/way/609645262"},{"id":"osm-node-2916278501","category":"pharmacy","name":"CVS Pharmacy","lng":-95.475731,"lat":29.704422,"sourceUrl":"https://www.openstreetmap.org/node/2916278501"},{"id":"osm-node-7215102835","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.4639306,"lat":29.6885083,"sourceUrl":"https://www.openstreetmap.org/node/7215102835"},{"id":"osm-node-5881936654","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.4700166,"lat":29.7075368,"sourceUrl":"https://www.openstreetmap.org/node/5881936654"},{"id":"osm-node-3198089204","category":"pharmacy","name":"Randalls Pharmacy","lng":-95.5595341,"lat":29.7735146,"sourceUrl":"https://www.openstreetmap.org/node/3198089204"},{"id":"osm-node-11142476616","category":"pharmacy","name":"CVS Pharmacy","lng":-95.8135517,"lat":29.6851881,"sourceUrl":"https://www.openstreetmap.org/node/11142476616"},{"id":"osm-node-8591836525","category":"pharmacy","name":"CVS Pharmacy","lng":-95.7755149,"lat":29.7364146,"sourceUrl":"https://www.openstreetmap.org/node/8591836525"},{"id":"osm-way-609628256","category":"pharmacy","name":"MCA Pharmacy","lng":-95.6617566,"lat":29.7861587,"sourceUrl":"https://www.openstreetmap.org/way/609628256"},{"id":"osm-node-2641605609","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.7508656,"lat":29.7571781,"sourceUrl":"https://www.openstreetmap.org/node/2641605609"},{"id":"osm-node-7828209272","category":"pharmacy","name":"H-E-B Pharmacy","lng":-95.8159912,"lat":29.6960378,"sourceUrl":"https://www.openstreetmap.org/node/7828209272"},{"id":"osm-way-850505505","category":"supermarket","name":"H-E-B","lng":-95.645919,"lat":29.6079805,"sourceUrl":"https://www.openstreetmap.org/way/850505505"},{"id":"osm-node-12695453859","category":"supermarket","name":"H-E-B","lng":-95.5826764,"lat":29.5785263,"sourceUrl":"https://www.openstreetmap.org/node/12695453859"},{"id":"osm-way-209292903","category":"supermarket","name":"H-E-B","lng":-95.6852717,"lat":29.5651051,"sourceUrl":"https://www.openstreetmap.org/way/209292903"},{"id":"osm-way-503510975","category":"supermarket","name":"H-E-B","lng":-95.713376,"lat":29.6599404,"sourceUrl":"https://www.openstreetmap.org/way/503510975"},{"id":"osm-way-543835680","category":"supermarket","name":"H-E-B","lng":-95.6416255,"lat":29.705946,"sourceUrl":"https://www.openstreetmap.org/way/543835680"},{"id":"osm-way-306783734","category":"supermarket","name":"H-E-B","lng":-95.5598224,"lat":29.6911797,"sourceUrl":"https://www.openstreetmap.org/way/306783734"},{"id":"osm-way-308679505","category":"supermarket","name":"H-E-B","lng":-95.5365054,"lat":29.5367317,"sourceUrl":"https://www.openstreetmap.org/way/308679505"},{"id":"osm-way-658338903","category":"supermarket","name":"H-E-B","lng":-95.7476173,"lat":29.5518978,"sourceUrl":"https://www.openstreetmap.org/way/658338903"},{"id":"osm-way-49418509","category":"supermarket","name":"H-E-B","lng":-95.5872591,"lat":29.7351335,"sourceUrl":"https://www.openstreetmap.org/way/49418509"},{"id":"osm-way-615216975","category":"supermarket","name":"H-E-B","lng":-95.4640853,"lat":29.6885871,"sourceUrl":"https://www.openstreetmap.org/way/615216975"},{"id":"osm-way-280287748","category":"supermarket","name":"H-E-B","lng":-95.4697763,"lat":29.7073672,"sourceUrl":"https://www.openstreetmap.org/way/280287748"},{"id":"osm-way-257038638","category":"supermarket","name":"H-E-B","lng":-95.7504436,"lat":29.7569997,"sourceUrl":"https://www.openstreetmap.org/way/257038638"},{"id":"osm-node-3905103773","category":"supermarket","name":"H-E-B","lng":-95.7167418,"lat":29.7892877,"sourceUrl":"https://www.openstreetmap.org/node/3905103773"},{"id":"osm-way-129370941","category":"supermarket","name":"H-E-B","lng":-95.5324549,"lat":29.7878089,"sourceUrl":"https://www.openstreetmap.org/way/129370941"},{"id":"osm-way-221922460","category":"supermarket","name":"H-E-B","lng":-95.4271669,"lat":29.727043,"sourceUrl":"https://www.openstreetmap.org/way/221922460"},{"id":"osm-way-851949728","category":"supermarket","name":"H-E-B","lng":-95.8484201,"lat":29.7197961,"sourceUrl":"https://www.openstreetmap.org/way/851949728"},{"id":"osm-way-123415134","category":"supermarket","name":"H-E-B","lng":-95.5473612,"lat":29.821398,"sourceUrl":"https://www.openstreetmap.org/way/123415134"},{"id":"osm-way-257524046","category":"supermarket","name":"H-E-B","lng":-95.3903881,"lat":29.559269,"sourceUrl":"https://www.openstreetmap.org/way/257524046"},{"id":"osm-way-257110581","category":"supermarket","name":"H-E-B","lng":-95.8224297,"lat":29.773357,"sourceUrl":"https://www.openstreetmap.org/way/257110581"},{"id":"osm-way-428980716","category":"supermarket","name":"H-E-B","lng":-95.6476744,"lat":29.8472686,"sourceUrl":"https://www.openstreetmap.org/way/428980716"},{"id":"osm-way-175042793","category":"supermarket","name":"H-E-B","lng":-95.4027673,"lat":29.7380441,"sourceUrl":"https://www.openstreetmap.org/way/175042793"},{"id":"osm-way-1366382930","category":"supermarket","name":"H-E-B","lng":-95.4058166,"lat":29.4864182,"sourceUrl":"https://www.openstreetmap.org/way/1366382930"},{"id":"osm-way-826816157","category":"supermarket","name":"H-E-B","lng":-95.3768317,"lat":29.7139677,"sourceUrl":"https://www.openstreetmap.org/way/826816157"},{"id":"osm-way-1259173759","category":"supermarket","name":"H-E-B","lng":-95.8055331,"lat":29.8189295,"sourceUrl":"https://www.openstreetmap.org/way/1259173759"},{"id":"osm-node-14142568001","category":"supermarket","name":"H-E-B","lng":-95.882885,"lat":29.753849,"sourceUrl":"https://www.openstreetmap.org/node/14142568001"},{"id":"osm-node-6840644122","category":"supermarket","name":"H-E-B","lng":-95.3966726,"lat":29.7688039,"sourceUrl":"https://www.openstreetmap.org/node/6840644122"},{"id":"osm-node-6252570645","category":"supermarket","name":"H-E-B","lng":-95.4088622,"lat":29.8073613,"sourceUrl":"https://www.openstreetmap.org/node/6252570645"},{"id":"osm-way-308673109","category":"supermarket","name":"H-E-B","lng":-95.586036,"lat":29.9109634,"sourceUrl":"https://www.openstreetmap.org/way/308673109"},{"id":"osm-way-45493255","category":"supermarket","name":"H-E-B","lng":-95.294894,"lat":29.6984809,"sourceUrl":"https://www.openstreetmap.org/way/45493255"},{"id":"osm-way-621646896","category":"supermarket","name":"H-E-B","lng":-95.7251895,"lat":29.92709,"sourceUrl":"https://www.openstreetmap.org/way/621646896"},{"id":"osm-way-602724576","category":"supermarket","name":"H-E-B","lng":-95.2649776,"lat":29.5582043,"sourceUrl":"https://www.openstreetmap.org/way/602724576"},{"id":"osm-way-257047336","category":"supermarket","name":"H-E-B","lng":-95.2501689,"lat":29.6017771,"sourceUrl":"https://www.openstreetmap.org/way/257047336"},{"id":"osm-way-1356236811","category":"supermarket","name":"H-E-B","lng":-95.7601017,"lat":29.9393202,"sourceUrl":"https://www.openstreetmap.org/way/1356236811"},{"id":"osm-way-293729626","category":"supermarket","name":"H-E-B","lng":-95.6733408,"lat":29.9576583,"sourceUrl":"https://www.openstreetmap.org/way/293729626"},{"id":"osm-way-228678949","category":"supermarket","name":"H-E-B","lng":-95.57623,"lat":29.9953234,"sourceUrl":"https://www.openstreetmap.org/way/228678949"},{"id":"osm-way-265697553","category":"supermarket","name":"H-E-B","lng":-95.7444884,"lat":29.9925408,"sourceUrl":"https://www.openstreetmap.org/way/265697553"},{"id":"osm-way-256389390","category":"supermarket","name":"H-E-B","lng":-95.2425303,"lat":29.410036,"sourceUrl":"https://www.openstreetmap.org/way/256389390"},{"id":"osm-way-256986701","category":"supermarket","name":"H-E-B","lng":-95.1909084,"lat":29.5054496,"sourceUrl":"https://www.openstreetmap.org/way/256986701"},{"id":"osm-way-847364920","category":"supermarket","name":"H-E-B","lng":-95.5273891,"lat":30.0223761,"sourceUrl":"https://www.openstreetmap.org/way/847364920"},{"id":"osm-way-257323890","category":"supermarket","name":"H-E-B","lng":-95.1444313,"lat":29.6486347,"sourceUrl":"https://www.openstreetmap.org/way/257323890"},{"id":"osm-way-1080833054","category":"supermarket","name":"H-E-B","lng":-95.1486376,"lat":29.5525298,"sourceUrl":"https://www.openstreetmap.org/way/1080833054"},{"id":"osm-way-257489227","category":"supermarket","name":"H-E-B Plus!","lng":-95.7758771,"lat":29.7127645,"sourceUrl":"https://www.openstreetmap.org/way/257489227"},{"id":"osm-way-759085631","category":"supermarket","name":"H-E-B","lng":-95.1268658,"lat":29.6062686,"sourceUrl":"https://www.openstreetmap.org/way/759085631"},{"id":"osm-way-706808181","category":"supermarket","name":"H-E-B","lng":-95.5018275,"lat":30.0717641,"sourceUrl":"https://www.openstreetmap.org/way/706808181"},{"id":"osm-way-257708003","category":"supermarket","name":"H-E-B","lng":-95.6291742,"lat":30.0886326,"sourceUrl":"https://www.openstreetmap.org/way/257708003"},{"id":"osm-way-851665938","category":"supermarket","name":"H-E-B","lng":-95.0967963,"lat":29.6669507,"sourceUrl":"https://www.openstreetmap.org/way/851665938"},{"id":"osm-way-257705675","category":"supermarket","name":"H-E-B","lng":-95.4498978,"lat":30.0687022,"sourceUrl":"https://www.openstreetmap.org/way/257705675"},{"id":"osm-way-173380102","category":"supermarket","name":"H-E-B","lng":-95.1969807,"lat":29.9228665,"sourceUrl":"https://www.openstreetmap.org/way/173380102"},{"id":"osm-way-302446191","category":"supermarket","name":"H-E-B","lng":-95.0944778,"lat":29.4662344,"sourceUrl":"https://www.openstreetmap.org/way/302446191"},{"id":"osm-node-13936855947","category":"supermarket","name":"H-E-B","lng":-95.2072633,"lat":29.9573283,"sourceUrl":"https://www.openstreetmap.org/node/13936855947"},{"id":"osm-way-314352698","category":"supermarket","name":"Kroger","lng":-95.6493973,"lat":29.6479558,"sourceUrl":"https://www.openstreetmap.org/way/314352698"},{"id":"osm-way-314359398","category":"supermarket","name":"Kroger","lng":-95.633233,"lat":29.5853135,"sourceUrl":"https://www.openstreetmap.org/way/314359398"},{"id":"osm-way-314341833","category":"supermarket","name":"Kroger","lng":-95.6410218,"lat":29.6782696,"sourceUrl":"https://www.openstreetmap.org/way/314341833"},{"id":"osm-node-4227549173","category":"supermarket","name":"Kroger","lng":-95.5655009,"lat":29.5636313,"sourceUrl":"https://www.openstreetmap.org/node/4227549173"},{"id":"osm-node-6655625789","category":"supermarket","name":"Kroger","lng":-95.5843055,"lat":29.5516946,"sourceUrl":"https://www.openstreetmap.org/node/6655625789"},{"id":"osm-way-169503168","category":"supermarket","name":"Kroger","lng":-95.6858697,"lat":29.7086386,"sourceUrl":"https://www.openstreetmap.org/way/169503168"},{"id":"osm-way-314352998","category":"supermarket","name":"Kroger","lng":-95.6053022,"lat":29.7524469,"sourceUrl":"https://www.openstreetmap.org/way/314352998"},{"id":"osm-way-314335687","category":"supermarket","name":"Kroger","lng":-95.6274609,"lat":29.7574967,"sourceUrl":"https://www.openstreetmap.org/way/314335687"},{"id":"osm-node-7995521916","category":"supermarket","name":"Kroger","lng":-95.5108212,"lat":29.5298455,"sourceUrl":"https://www.openstreetmap.org/node/7995521916"},{"id":"osm-way-50424508","category":"supermarket","name":"Kroger","lng":-95.5453618,"lat":29.7364463,"sourceUrl":"https://www.openstreetmap.org/way/50424508"},{"id":"osm-way-314260260","category":"supermarket","name":"Kroger","lng":-95.7537786,"lat":29.7355865,"sourceUrl":"https://www.openstreetmap.org/way/314260260"},{"id":"osm-way-383999053","category":"supermarket","name":"Kroger","lng":-95.4639635,"lat":29.6692874,"sourceUrl":"https://www.openstreetmap.org/way/383999053"},{"id":"osm-way-129728992","category":"supermarket","name":"Kroger","lng":-95.5001039,"lat":29.7482313,"sourceUrl":"https://www.openstreetmap.org/way/129728992"},{"id":"osm-node-3204058605","category":"supermarket","name":"Kroger","lng":-95.599194,"lat":29.7711432,"sourceUrl":"https://www.openstreetmap.org/node/3204058605"},{"id":"osm-way-483639212","category":"supermarket","name":"Kroger","lng":-95.8115133,"lat":29.7005985,"sourceUrl":"https://www.openstreetmap.org/way/483639212"},{"id":"osm-node-8882810737","category":"supermarket","name":"Kroger","lng":-95.5221864,"lat":29.7823174,"sourceUrl":"https://www.openstreetmap.org/node/8882810737"},{"id":"osm-way-314258872","category":"supermarket","name":"Kroger","lng":-95.7784454,"lat":29.7580245,"sourceUrl":"https://www.openstreetmap.org/way/314258872"},{"id":"osm-way-51901545","category":"supermarket","name":"Kroger","lng":-95.4155089,"lat":29.6959127,"sourceUrl":"https://www.openstreetmap.org/way/51901545"},{"id":"osm-way-784207272","category":"supermarket","name":"Kroger","lng":-95.8100139,"lat":29.7366647,"sourceUrl":"https://www.openstreetmap.org/way/784207272"},{"id":"osm-node-6299354185","category":"supermarket","name":"Kroger","lng":-95.4864439,"lat":29.7968241,"sourceUrl":"https://www.openstreetmap.org/node/6299354185"},{"id":"osm-way-231007641","category":"supermarket","name":"Kroger","lng":-95.4308882,"lat":29.7271776,"sourceUrl":"https://www.openstreetmap.org/way/231007641"},{"id":"osm-node-5246578669","category":"supermarket","name":"Kroger","lng":-95.7701896,"lat":29.8126507,"sourceUrl":"https://www.openstreetmap.org/node/5246578669"},{"id":"osm-way-226936280","category":"supermarket","name":"Kroger","lng":-95.4054769,"lat":29.7540874,"sourceUrl":"https://www.openstreetmap.org/way/226936280"},{"id":"osm-way-368086078","category":"supermarket","name":"Kroger","lng":-95.3897916,"lat":29.5831373,"sourceUrl":"https://www.openstreetmap.org/way/368086078"},{"id":"osm-way-605941362","category":"supermarket","name":"Kroger","lng":-95.3489422,"lat":29.5606885,"sourceUrl":"https://www.openstreetmap.org/way/605941362"},{"id":"osm-way-247867506","category":"supermarket","name":"Kroger","lng":-95.7217055,"lat":29.860078,"sourceUrl":"https://www.openstreetmap.org/way/247867506"},{"id":"osm-node-2699368507","category":"supermarket","name":"Kroger","lng":-95.4112065,"lat":29.7896319,"sourceUrl":"https://www.openstreetmap.org/node/2699368507"},{"id":"osm-way-314335389","category":"supermarket","name":"Kroger","lng":-95.6067814,"lat":29.8654219,"sourceUrl":"https://www.openstreetmap.org/way/314335389"},{"id":"osm-way-342028535","category":"supermarket","name":"Kroger","lng":-95.4320232,"lat":29.8288816,"sourceUrl":"https://www.openstreetmap.org/way/342028535"},{"id":"osm-way-438075553","category":"supermarket","name":"Kroger","lng":-95.3898464,"lat":29.7732922,"sourceUrl":"https://www.openstreetmap.org/way/438075553"},{"id":"osm-way-314284791","category":"supermarket","name":"Kroger","lng":-95.6855645,"lat":29.881461,"sourceUrl":"https://www.openstreetmap.org/way/314284791"},{"id":"osm-way-314333781","category":"supermarket","name":"Kroger","lng":-95.6317247,"lat":29.9025561,"sourceUrl":"https://www.openstreetmap.org/way/314333781"},{"id":"osm-way-375578541","category":"supermarket","name":"Kroger","lng":-95.3405001,"lat":29.7397273,"sourceUrl":"https://www.openstreetmap.org/way/375578541"},{"id":"osm-way-314359292","category":"supermarket","name":"Kroger","lng":-95.5556678,"lat":29.9040973,"sourceUrl":"https://www.openstreetmap.org/way/314359292"},{"id":"osm-way-314352248","category":"supermarket","name":"Kroger","lng":-95.5835716,"lat":29.9079165,"sourceUrl":"https://www.openstreetmap.org/way/314352248"},{"id":"osm-node-9866040327","category":"supermarket","name":"Kroger","lng":-95.2910328,"lat":29.6748622,"sourceUrl":"https://www.openstreetmap.org/node/9866040327"},{"id":"osm-way-314334335","category":"supermarket","name":"Kroger","lng":-95.6044476,"lat":29.9240496,"sourceUrl":"https://www.openstreetmap.org/way/314334335"},{"id":"osm-node-11796305344","category":"supermarket","name":"Kroger","lng":-95.2715022,"lat":29.5606099,"sourceUrl":"https://www.openstreetmap.org/node/11796305344"},{"id":"osm-way-398421311","category":"supermarket","name":"Kroger","lng":-95.4778844,"lat":29.912261,"sourceUrl":"https://www.openstreetmap.org/way/398421311"},{"id":"osm-way-314351906","category":"supermarket","name":"Kroger","lng":-95.5823595,"lat":29.9517978,"sourceUrl":"https://www.openstreetmap.org/way/314351906"},{"id":"osm-way-293769726","category":"supermarket","name":"Kroger","lng":-95.6901034,"lat":29.9709991,"sourceUrl":"https://www.openstreetmap.org/way/293769726"},{"id":"osm-way-404986383","category":"supermarket","name":"Kroger","lng":-95.205862,"lat":29.5356008,"sourceUrl":"https://www.openstreetmap.org/way/404986383"},{"id":"osm-way-314352457","category":"supermarket","name":"Kroger","lng":-95.5659242,"lat":29.9833087,"sourceUrl":"https://www.openstreetmap.org/way/314352457"},{"id":"osm-node-9795032378","category":"supermarket","name":"Kroger","lng":-95.2149315,"lat":29.603198,"sourceUrl":"https://www.openstreetmap.org/node/9795032378"},{"id":"osm-way-314361375","category":"supermarket","name":"Kroger","lng":-95.4915153,"lat":29.9767954,"sourceUrl":"https://www.openstreetmap.org/way/314361375"},{"id":"osm-way-254557655","category":"supermarket","name":"Kroger","lng":-95.6216267,"lat":29.9940564,"sourceUrl":"https://www.openstreetmap.org/way/254557655"},{"id":"osm-node-11796305342","category":"supermarket","name":"Kroger","lng":-95.1737224,"lat":29.6966036,"sourceUrl":"https://www.openstreetmap.org/node/11796305342"},{"id":"osm-way-314359723","category":"supermarket","name":"Kroger","lng":-95.5316099,"lat":30.0029408,"sourceUrl":"https://www.openstreetmap.org/way/314359723"},{"id":"osm-node-11796305341","category":"supermarket","name":"Kroger","lng":-95.1895964,"lat":29.6634041,"sourceUrl":"https://www.openstreetmap.org/node/11796305341"},{"id":"osm-node-11796305337","category":"supermarket","name":"Kroger","lng":-95.2493295,"lat":29.3983525,"sourceUrl":"https://www.openstreetmap.org/node/11796305337"},{"id":"osm-node-8619314589","category":"supermarket","name":"ALDI","lng":-95.6442046,"lat":29.6640076,"sourceUrl":"https://www.openstreetmap.org/node/8619314589"},{"id":"osm-node-5372620387","category":"supermarket","name":"ALDI","lng":-95.5827063,"lat":29.6464818,"sourceUrl":"https://www.openstreetmap.org/node/5372620387"},{"id":"osm-way-465940833","category":"supermarket","name":"ALDI","lng":-95.6430306,"lat":29.7180388,"sourceUrl":"https://www.openstreetmap.org/way/465940833"},{"id":"osm-node-4227614596","category":"supermarket","name":"Aldi","lng":-95.5481738,"lat":29.5431629,"sourceUrl":"https://www.openstreetmap.org/node/4227614596"},{"id":"osm-way-929437800","category":"supermarket","name":"ALDI","lng":-95.7410614,"lat":29.6639157,"sourceUrl":"https://www.openstreetmap.org/way/929437800"},{"id":"osm-way-929435102","category":"supermarket","name":"ALDI","lng":-95.7604668,"lat":29.5433602,"sourceUrl":"https://www.openstreetmap.org/way/929435102"},{"id":"osm-way-371183163","category":"supermarket","name":"Aldi","lng":-95.501558,"lat":29.689455,"sourceUrl":"https://www.openstreetmap.org/way/371183163"},{"id":"osm-node-8619801592","category":"supermarket","name":"ALDI","lng":-95.5335557,"lat":29.736257,"sourceUrl":"https://www.openstreetmap.org/node/8619801592"},{"id":"osm-node-8619415909","category":"supermarket","name":"ALDI","lng":-95.7502209,"lat":29.7495557,"sourceUrl":"https://www.openstreetmap.org/node/8619415909"},{"id":"osm-node-8619427420","category":"supermarket","name":"ALDI","lng":-95.8472445,"lat":29.7068749,"sourceUrl":"https://www.openstreetmap.org/node/8619427420"},{"id":"osm-node-8623735915","category":"supermarket","name":"ALDI","lng":-95.5447357,"lat":29.8180432,"sourceUrl":"https://www.openstreetmap.org/node/8623735915"},{"id":"osm-way-590272820","category":"supermarket","name":"ALDI","lng":-95.3988174,"lat":29.555112,"sourceUrl":"https://www.openstreetmap.org/way/590272820"},{"id":"osm-way-520606877","category":"supermarket","name":"ALDI","lng":-95.6464975,"lat":29.8615984,"sourceUrl":"https://www.openstreetmap.org/way/520606877"},{"id":"osm-way-518945866","category":"supermarket","name":"ALDI","lng":-95.3633575,"lat":29.7013695,"sourceUrl":"https://www.openstreetmap.org/way/518945866"},{"id":"osm-way-655731438","category":"supermarket","name":"ALDI","lng":-95.7182305,"lat":29.8579088,"sourceUrl":"https://www.openstreetmap.org/way/655731438"},{"id":"osm-node-4842212281","category":"supermarket","name":"ALDI","lng":-95.4097761,"lat":29.8229583,"sourceUrl":"https://www.openstreetmap.org/node/4842212281"},{"id":"osm-way-542527374","category":"supermarket","name":"ALDI","lng":-95.684607,"lat":29.9045256,"sourceUrl":"https://www.openstreetmap.org/way/542527374"},{"id":"osm-node-8623803023","category":"supermarket","name":"ALDI","lng":-95.5857979,"lat":29.9078721,"sourceUrl":"https://www.openstreetmap.org/node/8623803023"},{"id":"osm-node-8619313528","category":"supermarket","name":"ALDI","lng":-95.2768115,"lat":29.5605703,"sourceUrl":"https://www.openstreetmap.org/node/8619313528"},{"id":"osm-way-567421119","category":"supermarket","name":"ALDI","lng":-95.4857796,"lat":29.9161341,"sourceUrl":"https://www.openstreetmap.org/way/567421119"},{"id":"osm-way-929466657","category":"supermarket","name":"ALDI","lng":-95.2370634,"lat":29.6267715,"sourceUrl":"https://www.openstreetmap.org/way/929466657"},{"id":"osm-way-897512688","category":"supermarket","name":"ALDI","lng":-95.4096383,"lat":29.9144512,"sourceUrl":"https://www.openstreetmap.org/way/897512688"},{"id":"osm-way-671985490","category":"supermarket","name":"ALDI","lng":-95.4858917,"lat":29.9936761,"sourceUrl":"https://www.openstreetmap.org/way/671985490"},{"id":"osm-node-8623809141","category":"supermarket","name":"ALDI","lng":-95.5599323,"lat":30.0020036,"sourceUrl":"https://www.openstreetmap.org/node/8623809141"},{"id":"osm-way-929468197","category":"supermarket","name":"ALDI","lng":-95.1797221,"lat":29.6496821,"sourceUrl":"https://www.openstreetmap.org/way/929468197"},{"id":"osm-node-8619301885","category":"supermarket","name":"ALDI","lng":-95.2340563,"lat":29.4051675,"sourceUrl":"https://www.openstreetmap.org/node/8619301885"},{"id":"osm-node-8619319421","category":"supermarket","name":"ALDI","lng":-95.1600974,"lat":29.5235776,"sourceUrl":"https://www.openstreetmap.org/node/8619319421"},{"id":"osm-node-8619302696","category":"supermarket","name":"ALDI","lng":-95.1206663,"lat":29.5563709,"sourceUrl":"https://www.openstreetmap.org/node/8619302696"},{"id":"osm-way-521352667","category":"supermarket","name":"Aldi","lng":-95.5275133,"lat":30.074463,"sourceUrl":"https://www.openstreetmap.org/way/521352667"},{"id":"osm-way-929424061","category":"supermarket","name":"Aldi","lng":-95.0975144,"lat":29.6633157,"sourceUrl":"https://www.openstreetmap.org/way/929424061"},{"id":"osm-node-8620143175","category":"supermarket","name":"Aldi","lng":-95.2927199,"lat":30.0056875,"sourceUrl":"https://www.openstreetmap.org/node/8620143175"},{"id":"osm-way-707043803","category":"supermarket","name":"ALDI","lng":-95.4519319,"lat":30.0711164,"sourceUrl":"https://www.openstreetmap.org/way/707043803"},{"id":"osm-way-929952509","category":"supermarket","name":"ALDI","lng":-95.554505,"lat":30.1309922,"sourceUrl":"https://www.openstreetmap.org/way/929952509"},{"id":"osm-node-8619281149","category":"supermarket","name":"ALDI","lng":-95.0213367,"lat":29.5370918,"sourceUrl":"https://www.openstreetmap.org/node/8619281149"},{"id":"osm-node-5843069939","category":"supermarket","name":"ALDI","lng":-95.1736853,"lat":29.9968762,"sourceUrl":"https://www.openstreetmap.org/node/5843069939"},{"id":"osm-node-8620153723","category":"supermarket","name":"ALDI","lng":-95.4045948,"lat":30.1226827,"sourceUrl":"https://www.openstreetmap.org/node/8620153723"},{"id":"osm-node-8620139909","category":"supermarket","name":"ALDI","lng":-95.2352033,"lat":30.0501578,"sourceUrl":"https://www.openstreetmap.org/node/8620139909"},{"id":"osm-way-520602552","category":"supermarket","name":"Aldi","lng":-95.0622766,"lat":29.8928262,"sourceUrl":"https://www.openstreetmap.org/way/520602552"},{"id":"osm-way-929469828","category":"supermarket","name":"ALDI","lng":-94.9796531,"lat":29.7835421,"sourceUrl":"https://www.openstreetmap.org/way/929469828"},{"id":"osm-way-735050592","category":"supermarket","name":"ALDI","lng":-95.5623424,"lat":30.2238727,"sourceUrl":"https://www.openstreetmap.org/way/735050592"},{"id":"osm-node-8619298727","category":"supermarket","name":"ALDI","lng":-94.9480896,"lat":29.3966821,"sourceUrl":"https://www.openstreetmap.org/node/8619298727"}]}
+{
+  "source": "OpenStreetMap contributors via Photon",
+  "sourceUrl": "https://photon.komoot.io/",
+  "license": "ODbL-1.0",
+  "accessedAt": "2026-10-23T18:58:48.305Z",
+  "bounds": [
+    [-95.9906746513856, 29.21777696022573],
+    [-94.74892534861439, 30.30302303977427]
+  ],
+  "scope": "Name-search sample of schools, hospitals, supermarkets and pharmacies within the playable Greater Houston region. Photon caps each category response; this is not a complete amenity inventory. Nearest means nearest within this sample, using straight-line distance.",
+  "sources": [
+    {
+      "file": "houston-schools",
+      "sha256": "d90a453c9fa88c1c8966a66ee264c4eb2eb3a847c80fc59dc9ba0af883130d96",
+      "queryUrl": "https://photon.komoot.io/api/?q=school&osm_tag=amenity%3Aschool&lon=-95.3698&lat=29.7604&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "houston-hospitals",
+      "sha256": "ccf3915a7e5fe13a669bbd5e6f599f95438692598ff1c6c11f1d154e99ffbe39",
+      "queryUrl": "https://photon.komoot.io/api/?q=hospital&osm_tag=amenity%3Ahospital&lon=-95.3698&lat=29.7604&limit=50&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "houston-supermarkets",
+      "sha256": "fe83ba2a71a9da33d31b7a3b8e8ac1c4a6c273b748e6a2e4a9f063cf6aa599a3",
+      "queryUrl": "https://photon.komoot.io/api/?q=supermarket&osm_tag=shop%3Asupermarket&lon=-95.3698&lat=29.7604&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "houston-pharmacies",
+      "sha256": "51ff1361b10a95b35966df9cbbb589609e61cf062825978d341fa6a9dc1c1cdf",
+      "queryUrl": "https://photon.komoot.io/api/?q=pharmacy&osm_tag=amenity%3Apharmacy&lon=-95.3698&lat=29.7604&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "sugar-land-schools",
+      "sha256": "950ef30f979790f30426e66c33f1c9da3f5cdd8d74760d1d68ab4f415e432ad3",
+      "queryUrl": "https://photon.komoot.io/api/?q=school&osm_tag=amenity%3Aschool&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "sugar-land-hospitals",
+      "sha256": "1e2f662d6c0c2586e03c6dfa7f361d4ab4f5ca8faf8300e7f76141cd0846baa2",
+      "queryUrl": "https://photon.komoot.io/api/?q=hospital&osm_tag=amenity%3Ahospital&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "sugar-land-pharmacies",
+      "sha256": "620f359cd464e83db62fef1130a7678c6a7c0fdafd278af0bbc49eb8145e16b0",
+      "queryUrl": "https://photon.komoot.io/api/?q=pharmacy&osm_tag=amenity%3Apharmacy&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "sugar-land-heb",
+      "sha256": "7caae0850c4d4d8124dd2725beb3781ce671f54cbb0805a817c21e9d83e1107a",
+      "queryUrl": "https://photon.komoot.io/api/?q=H-E-B&osm_tag=shop%3Asupermarket&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "sugar-land-kroger",
+      "sha256": "7e4dbf733bc49303dac19d8fb788e4132c6dd1b4897d450138555012669c0022",
+      "queryUrl": "https://photon.komoot.io/api/?q=Kroger&osm_tag=shop%3Asupermarket&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    },
+    {
+      "file": "sugar-land-aldi",
+      "sha256": "db503b79a3bae47814e88402cc70cb1e10f0e184977d2991ffe9e08bc7aacfc9",
+      "queryUrl": "https://photon.komoot.io/api/?q=ALDI&osm_tag=shop%3Asupermarket&lon=-95.6349&lat=29.6197&limit=100&lang=en&bbox=-95.991%2C29.2178%2C-94.7486%2C30.3031"
+    }
+  ],
+  "facilities": [
+    {
+      "id": "osm-node-1935628499",
+      "category": "school",
+      "name": "School of the Woods",
+      "lng": -95.4855202,
+      "lat": 29.7936734,
+      "sourceUrl": "https://www.openstreetmap.org/node/1935628499"
+    },
+    {
+      "id": "osm-way-45767298",
+      "category": "school",
+      "name": "Yates High School",
+      "lng": -95.3538887,
+      "lat": 29.722801,
+      "sourceUrl": "https://www.openstreetmap.org/way/45767298"
+    },
+    {
+      "id": "osm-way-191511611",
+      "category": "school",
+      "name": "Wheatley High School",
+      "lng": -95.3202578,
+      "lat": 29.7712713,
+      "sourceUrl": "https://www.openstreetmap.org/way/191511611"
+    },
+    {
+      "id": "osm-way-230736630",
+      "category": "school",
+      "name": "Heights High School",
+      "lng": -95.3927102,
+      "lat": 29.794885,
+      "sourceUrl": "https://www.openstreetmap.org/way/230736630"
+    },
+    {
+      "id": "osm-way-585167455",
+      "category": "school",
+      "name": "Northside High School",
+      "lng": -95.3576253,
+      "lat": 29.7840935,
+      "sourceUrl": "https://www.openstreetmap.org/way/585167455"
+    },
+    {
+      "id": "osm-way-231661239",
+      "category": "school",
+      "name": "Austin High School",
+      "lng": -95.3320317,
+      "lat": 29.7316404,
+      "sourceUrl": "https://www.openstreetmap.org/way/231661239"
+    },
+    {
+      "id": "osm-way-610628249",
+      "category": "school",
+      "name": "Kashmere High School",
+      "lng": -95.3150983,
+      "lat": 29.8227324,
+      "sourceUrl": "https://www.openstreetmap.org/way/610628249"
+    },
+    {
+      "id": "osm-way-48131931",
+      "category": "school",
+      "name": "Milby High School",
+      "lng": -95.2762299,
+      "lat": 29.7105411,
+      "sourceUrl": "https://www.openstreetmap.org/way/48131931"
+    },
+    {
+      "id": "osm-way-316491998",
+      "category": "school",
+      "name": "Waltrip High School",
+      "lng": -95.4323189,
+      "lat": 29.8187625,
+      "sourceUrl": "https://www.openstreetmap.org/way/316491998"
+    },
+    {
+      "id": "osm-way-123419425",
+      "category": "school",
+      "name": "Saint Thomas High School",
+      "lng": -95.4075736,
+      "lat": 29.7635779,
+      "sourceUrl": "https://www.openstreetmap.org/way/123419425"
+    },
+    {
+      "id": "osm-node-356805489",
+      "category": "school",
+      "name": "High School for the Performing & Visual Arts",
+      "lng": -95.3884265,
+      "lat": 29.7369586,
+      "sourceUrl": "https://www.openstreetmap.org/node/356805489"
+    },
+    {
+      "id": "osm-way-438927606",
+      "category": "school",
+      "name": "Carnegie Vanguard High School",
+      "lng": -95.384837,
+      "lat": 29.7544044,
+      "sourceUrl": "https://www.openstreetmap.org/way/438927606"
+    },
+    {
+      "id": "osm-way-520285359",
+      "category": "school",
+      "name": "Lamar High School",
+      "lng": -95.4263076,
+      "lat": 29.7409401,
+      "sourceUrl": "https://www.openstreetmap.org/way/520285359"
+    },
+    {
+      "id": "osm-way-147080378",
+      "category": "school",
+      "name": "Margaret Long Wisdom High School",
+      "lng": -95.4985373,
+      "lat": 29.7288289,
+      "sourceUrl": "https://www.openstreetmap.org/way/147080378"
+    },
+    {
+      "id": "osm-way-144275855",
+      "category": "school",
+      "name": "Furr High School",
+      "lng": -95.2491296,
+      "lat": 29.7794628,
+      "sourceUrl": "https://www.openstreetmap.org/way/144275855"
+    },
+    {
+      "id": "osm-way-297982413",
+      "category": "school",
+      "name": "Scarborough High School",
+      "lng": -95.471089,
+      "lat": 29.8291503,
+      "sourceUrl": "https://www.openstreetmap.org/way/297982413"
+    },
+    {
+      "id": "osm-way-1360442510",
+      "category": "school",
+      "name": "Michael E. DeBakey High School for Health Professions",
+      "lng": -95.4082997,
+      "lat": 29.7049372,
+      "sourceUrl": "https://www.openstreetmap.org/way/1360442510"
+    },
+    {
+      "id": "osm-way-310069129",
+      "category": "school",
+      "name": "Sterling High School",
+      "lng": -95.3222848,
+      "lat": 29.6358352,
+      "sourceUrl": "https://www.openstreetmap.org/way/310069129"
+    },
+    {
+      "id": "osm-way-656841068",
+      "category": "school",
+      "name": "César E. Chávez High School",
+      "lng": -95.2564323,
+      "lat": 29.6879386,
+      "sourceUrl": "https://www.openstreetmap.org/way/656841068"
+    },
+    {
+      "id": "osm-way-309979052",
+      "category": "school",
+      "name": "Worthing High School",
+      "lng": -95.3665658,
+      "lat": 29.6570306,
+      "sourceUrl": "https://www.openstreetmap.org/way/309979052"
+    },
+    {
+      "id": "osm-way-53103721",
+      "category": "school",
+      "name": "Galena Park High School",
+      "lng": -95.2372358,
+      "lat": 29.7382323,
+      "sourceUrl": "https://www.openstreetmap.org/way/53103721"
+    },
+    {
+      "id": "osm-way-620141768",
+      "category": "school",
+      "name": "Sharpstown High School",
+      "lng": -95.5155624,
+      "lat": 29.6848622,
+      "sourceUrl": "https://www.openstreetmap.org/way/620141768"
+    },
+    {
+      "id": "osm-way-1393280670",
+      "category": "school",
+      "name": "East Early College High School",
+      "lng": -95.3335012,
+      "lat": 29.7520943,
+      "sourceUrl": "https://www.openstreetmap.org/way/1393280670"
+    },
+    {
+      "id": "osm-way-191640624",
+      "category": "school",
+      "name": "Eisenhower Senior High School",
+      "lng": -95.4707608,
+      "lat": 29.8821206,
+      "sourceUrl": "https://www.openstreetmap.org/way/191640624"
+    },
+    {
+      "id": "osm-way-1123567011",
+      "category": "school",
+      "name": "North Forest High School",
+      "lng": -95.260444,
+      "lat": 29.8672768,
+      "sourceUrl": "https://www.openstreetmap.org/way/1123567011"
+    },
+    {
+      "id": "osm-way-231640338",
+      "category": "school",
+      "name": "Energy Institute High School",
+      "lng": -95.3585397,
+      "lat": 29.7137236,
+      "sourceUrl": "https://www.openstreetmap.org/way/231640338"
+    },
+    {
+      "id": "osm-way-550433958",
+      "category": "school",
+      "name": "Episcopal High School",
+      "lng": -95.4582889,
+      "lat": 29.7143301,
+      "sourceUrl": "https://www.openstreetmap.org/way/550433958"
+    },
+    {
+      "id": "osm-way-218923244",
+      "category": "school",
+      "name": "Northbrook High School",
+      "lng": -95.5307938,
+      "lat": 29.8173395,
+      "sourceUrl": "https://www.openstreetmap.org/way/218923244"
+    },
+    {
+      "id": "osm-way-456460074",
+      "category": "school",
+      "name": "Aldine Senior High School",
+      "lng": -95.4089734,
+      "lat": 29.9165921,
+      "sourceUrl": "https://www.openstreetmap.org/way/456460074"
+    },
+    {
+      "id": "osm-way-725188194",
+      "category": "school",
+      "name": "Spring Woods High School",
+      "lng": -95.5470877,
+      "lat": 29.8109909,
+      "sourceUrl": "https://www.openstreetmap.org/way/725188194"
+    },
+    {
+      "id": "osm-node-356799014",
+      "category": "school",
+      "name": "Barbara Jordan High School",
+      "lng": -95.3339362,
+      "lat": 29.8157887,
+      "sourceUrl": "https://www.openstreetmap.org/node/356799014"
+    },
+    {
+      "id": "osm-way-48603308",
+      "category": "school",
+      "name": "Pasadena High School",
+      "lng": -95.2127377,
+      "lat": 29.7094745,
+      "sourceUrl": "https://www.openstreetmap.org/way/48603308"
+    },
+    {
+      "id": "osm-way-617432917",
+      "category": "school",
+      "name": "Saint Pius X High School",
+      "lng": -95.4137526,
+      "lat": 29.8428251,
+      "sourceUrl": "https://www.openstreetmap.org/way/617432917"
+    },
+    {
+      "id": "osm-way-620133194",
+      "category": "school",
+      "name": "T. H. Rogers School",
+      "lng": -95.4806468,
+      "lat": 29.7512807,
+      "sourceUrl": "https://www.openstreetmap.org/way/620133194"
+    },
+    {
+      "id": "osm-way-400863564",
+      "category": "school",
+      "name": "James Madison High School",
+      "lng": -95.4361742,
+      "lat": 29.6296202,
+      "sourceUrl": "https://www.openstreetmap.org/way/400863564"
+    },
+    {
+      "id": "osm-way-456856494",
+      "category": "school",
+      "name": "Nottingham Elementary School",
+      "lng": -95.6117941,
+      "lat": 29.7682851,
+      "sourceUrl": "https://www.openstreetmap.org/way/456856494"
+    },
+    {
+      "id": "osm-way-620982268",
+      "category": "school",
+      "name": "Booker T Washington High School",
+      "lng": -95.3979065,
+      "lat": 29.8231267,
+      "sourceUrl": "https://www.openstreetmap.org/way/620982268"
+    },
+    {
+      "id": "osm-way-503236461",
+      "category": "school",
+      "name": "C.E. King High School",
+      "lng": -95.2066858,
+      "lat": 29.8494254,
+      "sourceUrl": "https://www.openstreetmap.org/way/503236461"
+    },
+    {
+      "id": "osm-way-457272350",
+      "category": "school",
+      "name": "Alief Elsik High School",
+      "lng": -95.6024667,
+      "lat": 29.7091219,
+      "sourceUrl": "https://www.openstreetmap.org/way/457272350"
+    },
+    {
+      "id": "osm-way-457272345",
+      "category": "school",
+      "name": "Alief Hastings High School",
+      "lng": -95.5975651,
+      "lat": 29.7083952,
+      "sourceUrl": "https://www.openstreetmap.org/way/457272345"
+    },
+    {
+      "id": "osm-way-610071901",
+      "category": "school",
+      "name": "Sam Rayburn High School",
+      "lng": -95.1823807,
+      "lat": 29.6786817,
+      "sourceUrl": "https://www.openstreetmap.org/way/610071901"
+    },
+    {
+      "id": "osm-way-668524722",
+      "category": "school",
+      "name": "South Houston High School",
+      "lng": -95.2122554,
+      "lat": 29.6520246,
+      "sourceUrl": "https://www.openstreetmap.org/way/668524722"
+    },
+    {
+      "id": "osm-way-320851002",
+      "category": "school",
+      "name": "J. Frank Dobie High School",
+      "lng": -95.250606,
+      "lat": 29.5912006,
+      "sourceUrl": "https://www.openstreetmap.org/way/320851002"
+    },
+    {
+      "id": "osm-way-456856492",
+      "category": "school",
+      "name": "Stratford High School",
+      "lng": -95.604258,
+      "lat": 29.7730985,
+      "sourceUrl": "https://www.openstreetmap.org/way/456856492"
+    },
+    {
+      "id": "osm-way-458352038",
+      "category": "school",
+      "name": "Summer Creek High School",
+      "lng": -95.2087318,
+      "lat": 29.9259651,
+      "sourceUrl": "https://www.openstreetmap.org/way/458352038"
+    },
+    {
+      "id": "osm-way-262778800",
+      "category": "school",
+      "name": "Pasadena Memorial High School",
+      "lng": -95.174842,
+      "lat": 29.6376315,
+      "sourceUrl": "https://www.openstreetmap.org/way/262778800"
+    },
+    {
+      "id": "osm-way-260532245",
+      "category": "school",
+      "name": "Poe Elementary School",
+      "lng": -95.408006,
+      "lat": 29.7272024,
+      "sourceUrl": "https://www.openstreetmap.org/way/260532245"
+    },
+    {
+      "id": "osm-way-297368218",
+      "category": "school",
+      "name": "Deer Park High School - South Campus",
+      "lng": -95.128488,
+      "lat": 29.6878998,
+      "sourceUrl": "https://www.openstreetmap.org/way/297368218"
+    },
+    {
+      "id": "osm-way-456403824",
+      "category": "school",
+      "name": "Klein Forest High School",
+      "lng": -95.4991158,
+      "lat": 29.9650606,
+      "sourceUrl": "https://www.openstreetmap.org/way/456403824"
+    },
+    {
+      "id": "osm-way-52461152",
+      "category": "school",
+      "name": "Channelview High School",
+      "lng": -95.1217658,
+      "lat": 29.7965416,
+      "sourceUrl": "https://www.openstreetmap.org/way/52461152"
+    },
+    {
+      "id": "osm-way-597306771",
+      "category": "hospital",
+      "name": "Houston Methodist Hospital",
+      "lng": -95.399264,
+      "lat": 29.7108167,
+      "sourceUrl": "https://www.openstreetmap.org/way/597306771"
+    },
+    {
+      "id": "osm-way-43035587",
+      "category": "hospital",
+      "name": "Ben Taub General Hospital",
+      "lng": -95.3934046,
+      "lat": 29.7106052,
+      "sourceUrl": "https://www.openstreetmap.org/way/43035587"
+    },
+    {
+      "id": "osm-way-567983582",
+      "category": "hospital",
+      "name": "Memorial Hermann Southwest Hospital",
+      "lng": -95.5221634,
+      "lat": 29.6938503,
+      "sourceUrl": "https://www.openstreetmap.org/way/567983582"
+    },
+    {
+      "id": "osm-way-567918848",
+      "category": "hospital",
+      "name": "Memorial Hermann Katy Hospital",
+      "lng": -95.7852442,
+      "lat": 29.7875104,
+      "sourceUrl": "https://www.openstreetmap.org/way/567918848"
+    },
+    {
+      "id": "osm-way-129131939",
+      "category": "hospital",
+      "name": "The Woman's Hospital of Texas",
+      "lng": -95.4027926,
+      "lat": 29.6933775,
+      "sourceUrl": "https://www.openstreetmap.org/way/129131939"
+    },
+    {
+      "id": "osm-way-506737198",
+      "category": "hospital",
+      "name": "Houston Methodist Sugar Land Hospital",
+      "lng": -95.6303337,
+      "lat": 29.5896185,
+      "sourceUrl": "https://www.openstreetmap.org/way/506737198"
+    },
+    {
+      "id": "osm-way-229203752",
+      "category": "hospital",
+      "name": "US Pain & Spine Hospital",
+      "lng": -95.3840095,
+      "lat": 29.7242054,
+      "sourceUrl": "https://www.openstreetmap.org/way/229203752"
+    },
+    {
+      "id": "osm-way-567613307",
+      "category": "hospital",
+      "name": "Park Plaza Hospital",
+      "lng": -95.3870177,
+      "lat": 29.7234578,
+      "sourceUrl": "https://www.openstreetmap.org/way/567613307"
+    },
+    {
+      "id": "osm-node-356816038",
+      "category": "hospital",
+      "name": "Plaza Specialty Hospital",
+      "lng": -95.386876,
+      "lat": 29.7233769,
+      "sourceUrl": "https://www.openstreetmap.org/node/356816038"
+    },
+    {
+      "id": "osm-way-567588337",
+      "category": "hospital",
+      "name": "Quentin Mease Hospital",
+      "lng": -95.3594983,
+      "lat": 29.7112702,
+      "sourceUrl": "https://www.openstreetmap.org/way/567588337"
+    },
+    {
+      "id": "osm-way-51812681",
+      "category": "hospital",
+      "name": "Children's Memorial Hermann Hospital",
+      "lng": -95.3955032,
+      "lat": 29.7138173,
+      "sourceUrl": "https://www.openstreetmap.org/way/51812681"
+    },
+    {
+      "id": "osm-way-568022244",
+      "category": "hospital",
+      "name": "The Heights Hospital",
+      "lng": -95.4042191,
+      "lat": 29.8033906,
+      "sourceUrl": "https://www.openstreetmap.org/way/568022244"
+    },
+    {
+      "id": "osm-way-207815845",
+      "category": "hospital",
+      "name": "Kindred Hospital Houston Medical Center",
+      "lng": -95.3990926,
+      "lat": 29.7129629,
+      "sourceUrl": "https://www.openstreetmap.org/way/207815845"
+    },
+    {
+      "id": "osm-way-567866262",
+      "category": "hospital",
+      "name": "Texas Orthopedic Hospital",
+      "lng": -95.4090834,
+      "lat": 29.7002235,
+      "sourceUrl": "https://www.openstreetmap.org/way/567866262"
+    },
+    {
+      "id": "osm-way-568037942",
+      "category": "hospital",
+      "name": "Lyndon B. Johnson General Hospital",
+      "lng": -95.3130453,
+      "lat": 29.8115032,
+      "sourceUrl": "https://www.openstreetmap.org/way/568037942"
+    },
+    {
+      "id": "osm-way-568016147",
+      "category": "hospital",
+      "name": "Kindred Hospital The Heights",
+      "lng": -95.4308754,
+      "lat": 29.8089874,
+      "sourceUrl": "https://www.openstreetmap.org/way/568016147"
+    },
+    {
+      "id": "osm-way-267238505",
+      "category": "hospital",
+      "name": "Memorial Hermann Greater Heights Hospital",
+      "lng": -95.4313193,
+      "lat": 29.810626,
+      "sourceUrl": "https://www.openstreetmap.org/way/267238505"
+    },
+    {
+      "id": "osm-way-511771474",
+      "category": "hospital",
+      "name": "Houston Methodist Willowbrook Hospital",
+      "lng": -95.55113,
+      "lat": 29.9671381,
+      "sourceUrl": "https://www.openstreetmap.org/way/511771474"
+    },
+    {
+      "id": "osm-node-13986638445",
+      "category": "hospital",
+      "name": "Independence Heights Hospital",
+      "lng": -95.4084103,
+      "lat": 29.8479999,
+      "sourceUrl": "https://www.openstreetmap.org/node/13986638445"
+    },
+    {
+      "id": "osm-node-10917045362",
+      "category": "hospital",
+      "name": "First Surgical Hospital",
+      "lng": -95.4626713,
+      "lat": 29.7099774,
+      "sourceUrl": "https://www.openstreetmap.org/node/10917045362"
+    },
+    {
+      "id": "osm-way-693330110",
+      "category": "hospital",
+      "name": "Behavioral Hospital of Bellaire",
+      "lng": -95.4733724,
+      "lat": 29.708365,
+      "sourceUrl": "https://www.openstreetmap.org/way/693330110"
+    },
+    {
+      "id": "osm-node-356815851",
+      "category": "hospital",
+      "name": "Cornerstone Hospital Houston – Bellaire",
+      "lng": -95.47327,
+      "lat": 29.70801,
+      "sourceUrl": "https://www.openstreetmap.org/node/356815851"
+    },
+    {
+      "id": "osm-way-693331308",
+      "category": "hospital",
+      "name": "West Oaks Hospital",
+      "lng": -95.4979601,
+      "lat": 29.7095543,
+      "sourceUrl": "https://www.openstreetmap.org/way/693331308"
+    },
+    {
+      "id": "osm-way-602271176",
+      "category": "hospital",
+      "name": "Advanced Diagnostics East Hospital & 24 Hour Emergency Center",
+      "lng": -95.2004521,
+      "lat": 29.7707261,
+      "sourceUrl": "https://www.openstreetmap.org/way/602271176"
+    },
+    {
+      "id": "osm-way-568006578",
+      "category": "hospital",
+      "name": "Houston Behavioral Healthcare Hospital",
+      "lng": -95.5467544,
+      "lat": 29.8239329,
+      "sourceUrl": "https://www.openstreetmap.org/way/568006578"
+    },
+    {
+      "id": "osm-node-10917051808",
+      "category": "hospital",
+      "name": "West Chase Houston Hospital",
+      "lng": -95.5561649,
+      "lat": 29.7114513,
+      "sourceUrl": "https://www.openstreetmap.org/node/10917051808"
+    },
+    {
+      "id": "osm-way-598873005",
+      "category": "hospital",
+      "name": "Nexus Children's Hospital",
+      "lng": -95.5797148,
+      "lat": 29.7326357,
+      "sourceUrl": "https://www.openstreetmap.org/way/598873005"
+    },
+    {
+      "id": "osm-node-10917048870",
+      "category": "hospital",
+      "name": "Encompass Health Rehabilitation Hospital Of Pearland",
+      "lng": -95.3898333,
+      "lat": 29.5729058,
+      "sourceUrl": "https://www.openstreetmap.org/node/10917048870"
+    },
+    {
+      "id": "osm-node-10916919400",
+      "category": "hospital",
+      "name": "Oceans Behavioral Hospital Of Pasadena",
+      "lng": -95.1700085,
+      "lat": 29.6508561,
+      "sourceUrl": "https://www.openstreetmap.org/node/10916919400"
+    },
+    {
+      "id": "osm-way-567552123",
+      "category": "hospital",
+      "name": "Kindred Hospital (Bay Area)",
+      "lng": -95.1606986,
+      "lat": 29.6375276,
+      "sourceUrl": "https://www.openstreetmap.org/way/567552123"
+    },
+    {
+      "id": "osm-way-520636303",
+      "category": "hospital",
+      "name": "Memorial Hermann Southeast Hospital",
+      "lng": -95.2081997,
+      "lat": 29.5822951,
+      "sourceUrl": "https://www.openstreetmap.org/way/520636303"
+    },
+    {
+      "id": "osm-way-568498513",
+      "category": "hospital",
+      "name": "Houston Methodist The Woodlands Hospital",
+      "lng": -95.452096,
+      "lat": 30.2055971,
+      "sourceUrl": "https://www.openstreetmap.org/way/568498513"
+    },
+    {
+      "id": "osm-way-568266702",
+      "category": "hospital",
+      "name": "HealthSouth Rehabilitation Hospital of Humble",
+      "lng": -95.2775361,
+      "lat": 29.9934453,
+      "sourceUrl": "https://www.openstreetmap.org/way/568266702"
+    },
+    {
+      "id": "osm-way-568266703",
+      "category": "hospital",
+      "name": "Memorial Hermann Northeast Hospital",
+      "lng": -95.2765699,
+      "lat": 29.9953006,
+      "sourceUrl": "https://www.openstreetmap.org/way/568266703"
+    },
+    {
+      "id": "osm-way-568396887",
+      "category": "hospital",
+      "name": "Kindred Hospital (Houston Northwest)",
+      "lng": -95.5880278,
+      "lat": 29.9243915,
+      "sourceUrl": "https://www.openstreetmap.org/way/568396887"
+    },
+    {
+      "id": "osm-way-549599412",
+      "category": "hospital",
+      "name": "Bayou City ER & Hospital",
+      "lng": -95.2762927,
+      "lat": 29.9985909,
+      "sourceUrl": "https://www.openstreetmap.org/way/549599412"
+    },
+    {
+      "id": "osm-way-318219153",
+      "category": "hospital",
+      "name": "BMC North Hospital",
+      "lng": -95.4405904,
+      "lat": 30.0143944,
+      "sourceUrl": "https://www.openstreetmap.org/way/318219153"
+    },
+    {
+      "id": "osm-way-602573050",
+      "category": "hospital",
+      "name": "Townsen Memorial Hospital - Humble",
+      "lng": -95.2524437,
+      "lat": 30.0049057,
+      "sourceUrl": "https://www.openstreetmap.org/way/602573050"
+    },
+    {
+      "id": "osm-way-693690160",
+      "category": "hospital",
+      "name": "TOPS Surgical Specialty Hospital",
+      "lng": -95.4441335,
+      "lat": 30.0185245,
+      "sourceUrl": "https://www.openstreetmap.org/way/693690160"
+    },
+    {
+      "id": "osm-way-567896262",
+      "category": "hospital",
+      "name": "CHI Saint Luke's Health–Sugar Land Hospital",
+      "lng": -95.6201832,
+      "lat": 29.6051166,
+      "sourceUrl": "https://www.openstreetmap.org/way/567896262"
+    },
+    {
+      "id": "osm-way-840370690",
+      "category": "hospital",
+      "name": "Intracare North Hospital",
+      "lng": -95.4403049,
+      "lat": 30.0237245,
+      "sourceUrl": "https://www.openstreetmap.org/way/840370690"
+    },
+    {
+      "id": "osm-way-568335740",
+      "category": "hospital",
+      "name": "Kindred Hospital Spring",
+      "lng": -95.4357867,
+      "lat": 30.0252663,
+      "sourceUrl": "https://www.openstreetmap.org/way/568335740"
+    },
+    {
+      "id": "osm-way-568335750",
+      "category": "hospital",
+      "name": "Cypress Creek Hospital",
+      "lng": -95.4448608,
+      "lat": 30.024716,
+      "sourceUrl": "https://www.openstreetmap.org/way/568335750"
+    },
+    {
+      "id": "osm-node-14077642809",
+      "category": "hospital",
+      "name": "Texas Children's Hospital",
+      "lng": -95.188284,
+      "lat": 29.988884,
+      "sourceUrl": "https://www.openstreetmap.org/node/14077642809"
+    },
+    {
+      "id": "osm-way-567931772",
+      "category": "hospital",
+      "name": "Texas Children's Hospital West Campus",
+      "lng": -95.6916129,
+      "lat": 29.7872914,
+      "sourceUrl": "https://www.openstreetmap.org/way/567931772"
+    },
+    {
+      "id": "osm-way-567896261",
+      "category": "hospital",
+      "name": "Kindred Hospital Sugar Land",
+      "lng": -95.6381387,
+      "lat": 29.6004146,
+      "sourceUrl": "https://www.openstreetmap.org/way/567896261"
+    },
+    {
+      "id": "osm-way-567931778",
+      "category": "hospital",
+      "name": "Houston Methodist West Hospital",
+      "lng": -95.6981067,
+      "lat": 29.7872914,
+      "sourceUrl": "https://www.openstreetmap.org/way/567931778"
+    },
+    {
+      "id": "osm-way-543404992",
+      "category": "hospital",
+      "name": "CHI Saint Luke's Health - The Vintage Hospital",
+      "lng": -95.5683146,
+      "lat": 29.9892995,
+      "sourceUrl": "https://www.openstreetmap.org/way/543404992"
+    },
+    {
+      "id": "osm-way-597561726",
+      "category": "hospital",
+      "name": "Memorial Hermann Surgical Hospital First Colony",
+      "lng": -95.6361016,
+      "lat": 29.58991,
+      "sourceUrl": "https://www.openstreetmap.org/way/597561726"
+    },
+    {
+      "id": "osm-node-10916992315",
+      "category": "hospital",
+      "name": "PAM Health Rehabilitation Hospital of Sugar Land",
+      "lng": -95.642451,
+      "lat": 29.5878308,
+      "sourceUrl": "https://www.openstreetmap.org/node/10916992315"
+    },
+    {
+      "id": "osm-way-1083939984",
+      "category": "supermarket",
+      "name": "Sing-On Supermarket",
+      "lng": -95.3317164,
+      "lat": 29.80065,
+      "sourceUrl": "https://www.openstreetmap.org/way/1083939984"
+    },
+    {
+      "id": "osm-way-379430064",
+      "category": "supermarket",
+      "name": "El Ahorro Supermarket",
+      "lng": -95.3043261,
+      "lat": 29.734494,
+      "sourceUrl": "https://www.openstreetmap.org/way/379430064"
+    },
+    {
+      "id": "osm-way-315695424",
+      "category": "supermarket",
+      "name": "El Ahorro Supermarket",
+      "lng": -95.3859226,
+      "lat": 29.8606057,
+      "sourceUrl": "https://www.openstreetmap.org/way/315695424"
+    },
+    {
+      "id": "osm-way-771572288",
+      "category": "supermarket",
+      "name": "O-Lan O Supermarket",
+      "lng": -95.4211868,
+      "lat": 29.858226,
+      "sourceUrl": "https://www.openstreetmap.org/way/771572288"
+    },
+    {
+      "id": "osm-way-984985123",
+      "category": "supermarket",
+      "name": "Almadina Supermarket",
+      "lng": -95.5018056,
+      "lat": 29.730794,
+      "sourceUrl": "https://www.openstreetmap.org/way/984985123"
+    },
+    {
+      "id": "osm-node-11851106592",
+      "category": "supermarket",
+      "name": "El Ahorro Supermarket",
+      "lng": -95.5048882,
+      "lat": 29.8345011,
+      "sourceUrl": "https://www.openstreetmap.org/node/11851106592"
+    },
+    {
+      "id": "osm-way-1332484598",
+      "category": "supermarket",
+      "name": "Great Wall Supermarket",
+      "lng": -95.5543436,
+      "lat": 29.7029719,
+      "sourceUrl": "https://www.openstreetmap.org/way/1332484598"
+    },
+    {
+      "id": "osm-way-818633025",
+      "category": "supermarket",
+      "name": "A-1 Supermarket",
+      "lng": -95.2656303,
+      "lat": 29.9568773,
+      "sourceUrl": "https://www.openstreetmap.org/way/818633025"
+    },
+    {
+      "id": "osm-node-7076543858",
+      "category": "supermarket",
+      "name": "Jusgo Supermarket",
+      "lng": -95.5999945,
+      "lat": 29.5888138,
+      "sourceUrl": "https://www.openstreetmap.org/node/7076543858"
+    },
+    {
+      "id": "osm-node-3004832757",
+      "category": "supermarket",
+      "name": "Food Fair Supermarket",
+      "lng": -95.3883542,
+      "lat": 30.0486965,
+      "sourceUrl": "https://www.openstreetmap.org/node/3004832757"
+    },
+    {
+      "id": "osm-node-4297111829",
+      "category": "supermarket",
+      "name": "Texas Food Supermarket",
+      "lng": -95.70857,
+      "lat": 29.8316729,
+      "sourceUrl": "https://www.openstreetmap.org/node/4297111829"
+    },
+    {
+      "id": "osm-way-129485673",
+      "category": "supermarket",
+      "name": "Katy Supermarket",
+      "lng": -95.7498669,
+      "lat": 29.759726,
+      "sourceUrl": "https://www.openstreetmap.org/way/129485673"
+    },
+    {
+      "id": "osm-node-9765882245",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3628385,
+      "lat": 29.7632412,
+      "sourceUrl": "https://www.openstreetmap.org/node/9765882245"
+    },
+    {
+      "id": "osm-node-3198079052",
+      "category": "pharmacy",
+      "name": "Randalls Pharmacy",
+      "lng": -95.3748243,
+      "lat": 29.7489076,
+      "sourceUrl": "https://www.openstreetmap.org/node/3198079052"
+    },
+    {
+      "id": "osm-node-3782651017",
+      "category": "pharmacy",
+      "name": "Mid Town Specialty RX Pharmacy",
+      "lng": -95.3655938,
+      "lat": 29.7444269,
+      "sourceUrl": "https://www.openstreetmap.org/node/3782651017"
+    },
+    {
+      "id": "osm-node-7160970955",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3850593,
+      "lat": 29.7740478,
+      "sourceUrl": "https://www.openstreetmap.org/node/7160970955"
+    },
+    {
+      "id": "osm-node-3782607316",
+      "category": "pharmacy",
+      "name": "Elgin Pharmacy",
+      "lng": -95.3752504,
+      "lat": 29.7401037,
+      "sourceUrl": "https://www.openstreetmap.org/node/3782607316"
+    },
+    {
+      "id": "osm-node-9509504134",
+      "category": "pharmacy",
+      "name": "Iridium Pharmacy",
+      "lng": -95.3475537,
+      "lat": 29.7578023,
+      "sourceUrl": "https://www.openstreetmap.org/node/9509504134"
+    },
+    {
+      "id": "osm-node-6818164814",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3974451,
+      "lat": 29.756967,
+      "sourceUrl": "https://www.openstreetmap.org/node/6818164814"
+    },
+    {
+      "id": "osm-node-7103799259",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.3966627,
+      "lat": 29.7687258,
+      "sourceUrl": "https://www.openstreetmap.org/node/7103799259"
+    },
+    {
+      "id": "osm-node-6983086172",
+      "category": "pharmacy",
+      "name": "Walmart Pharmacy",
+      "lng": -95.4010032,
+      "lat": 29.7732205,
+      "sourceUrl": "https://www.openstreetmap.org/node/6983086172"
+    },
+    {
+      "id": "osm-node-1569261269",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3915423,
+      "lat": 29.7337441,
+      "sourceUrl": "https://www.openstreetmap.org/node/1569261269"
+    },
+    {
+      "id": "osm-way-375333625",
+      "category": "pharmacy",
+      "name": "Mobile Care Pharmacy",
+      "lng": -95.342027,
+      "lat": 29.7378795,
+      "sourceUrl": "https://www.openstreetmap.org/way/375333625"
+    },
+    {
+      "id": "osm-node-2642233544",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.4031022,
+      "lat": 29.737967,
+      "sourceUrl": "https://www.openstreetmap.org/node/2642233544"
+    },
+    {
+      "id": "osm-node-8095770651",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3298651,
+      "lat": 29.742905,
+      "sourceUrl": "https://www.openstreetmap.org/node/8095770651"
+    },
+    {
+      "id": "osm-node-9518889974",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4099016,
+      "lat": 29.7412122,
+      "sourceUrl": "https://www.openstreetmap.org/node/9518889974"
+    },
+    {
+      "id": "osm-node-9903514220",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.411472,
+      "lat": 29.7381741,
+      "sourceUrl": "https://www.openstreetmap.org/node/9903514220"
+    },
+    {
+      "id": "osm-node-11419445619",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4169542,
+      "lat": 29.7701229,
+      "sourceUrl": "https://www.openstreetmap.org/node/11419445619"
+    },
+    {
+      "id": "osm-node-11569524540",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3604436,
+      "lat": 29.8037678,
+      "sourceUrl": "https://www.openstreetmap.org/node/11569524540"
+    },
+    {
+      "id": "osm-node-7103761935",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.3764494,
+      "lat": 29.7141767,
+      "sourceUrl": "https://www.openstreetmap.org/node/7103761935"
+    },
+    {
+      "id": "osm-node-11308510643",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4218942,
+      "lat": 29.7425863,
+      "sourceUrl": "https://www.openstreetmap.org/node/11308510643"
+    },
+    {
+      "id": "osm-node-7045314354",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3989221,
+      "lat": 29.8035615,
+      "sourceUrl": "https://www.openstreetmap.org/node/7045314354"
+    },
+    {
+      "id": "osm-way-311017315",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4192405,
+      "lat": 29.7296916,
+      "sourceUrl": "https://www.openstreetmap.org/way/311017315"
+    },
+    {
+      "id": "osm-node-6252570644",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.4088301,
+      "lat": 29.8072402,
+      "sourceUrl": "https://www.openstreetmap.org/node/6252570644"
+    },
+    {
+      "id": "osm-node-9748078240",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3603008,
+      "lat": 29.7027804,
+      "sourceUrl": "https://www.openstreetmap.org/node/9748078240"
+    },
+    {
+      "id": "osm-node-1975476326",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4014478,
+      "lat": 29.7093604,
+      "sourceUrl": "https://www.openstreetmap.org/node/1975476326"
+    },
+    {
+      "id": "osm-node-7719107612",
+      "category": "pharmacy",
+      "name": "Essentials Pharmacy",
+      "lng": -95.3562135,
+      "lat": 29.7021404,
+      "sourceUrl": "https://www.openstreetmap.org/node/7719107612"
+    },
+    {
+      "id": "osm-way-1083946136",
+      "category": "pharmacy",
+      "name": "East End Pharmacy",
+      "lng": -95.3027873,
+      "lat": 29.744765,
+      "sourceUrl": "https://www.openstreetmap.org/way/1083946136"
+    },
+    {
+      "id": "osm-node-3702278989",
+      "category": "pharmacy",
+      "name": "Cullen Care Pharmacy",
+      "lng": -95.3450811,
+      "lat": 29.7045315,
+      "sourceUrl": "https://www.openstreetmap.org/node/3702278989"
+    },
+    {
+      "id": "osm-node-2641614795",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.4268225,
+      "lat": 29.7268006,
+      "sourceUrl": "https://www.openstreetmap.org/node/2641614795"
+    },
+    {
+      "id": "osm-node-10028418267",
+      "category": "pharmacy",
+      "name": "Costco Pharmacy",
+      "lng": -95.4391439,
+      "lat": 29.7342063,
+      "sourceUrl": "https://www.openstreetmap.org/node/10028418267"
+    },
+    {
+      "id": "osm-node-1975638982",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.412015,
+      "lat": 29.70681,
+      "sourceUrl": "https://www.openstreetmap.org/node/1975638982"
+    },
+    {
+      "id": "osm-node-7140176397",
+      "category": "pharmacy",
+      "name": "Loving Care Pharmacy",
+      "lng": -95.3839445,
+      "lat": 29.829955,
+      "sourceUrl": "https://www.openstreetmap.org/node/7140176397"
+    },
+    {
+      "id": "osm-node-3198074653",
+      "category": "pharmacy",
+      "name": "Randalls Pharmacy",
+      "lng": -95.4257078,
+      "lat": 29.7050017,
+      "sourceUrl": "https://www.openstreetmap.org/node/3198074653"
+    },
+    {
+      "id": "osm-node-4040987267",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4286264,
+      "lat": 29.8117779,
+      "sourceUrl": "https://www.openstreetmap.org/node/4040987267"
+    },
+    {
+      "id": "osm-node-8049554353",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4527754,
+      "lat": 29.7445797,
+      "sourceUrl": "https://www.openstreetmap.org/node/8049554353"
+    },
+    {
+      "id": "osm-way-378141087",
+      "category": "pharmacy",
+      "name": "Southside Pharmacy",
+      "lng": -95.4130526,
+      "lat": 29.6967582,
+      "sourceUrl": "https://www.openstreetmap.org/way/378141087"
+    },
+    {
+      "id": "osm-node-3198055533",
+      "category": "pharmacy",
+      "name": "Randalls Pharmacy",
+      "lng": -95.4422632,
+      "lat": 29.7215167,
+      "sourceUrl": "https://www.openstreetmap.org/node/3198055533"
+    },
+    {
+      "id": "osm-node-7176618084",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4097708,
+      "lat": 29.8268471,
+      "sourceUrl": "https://www.openstreetmap.org/node/7176618084"
+    },
+    {
+      "id": "osm-node-6983065767",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4574173,
+      "lat": 29.7402601,
+      "sourceUrl": "https://www.openstreetmap.org/node/6983065767"
+    },
+    {
+      "id": "osm-node-8637653161",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.2954571,
+      "lat": 29.7166053,
+      "sourceUrl": "https://www.openstreetmap.org/node/8637653161"
+    },
+    {
+      "id": "osm-node-10909821301",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4188268,
+      "lat": 29.6932951,
+      "sourceUrl": "https://www.openstreetmap.org/node/10909821301"
+    },
+    {
+      "id": "osm-node-7122288482",
+      "category": "pharmacy",
+      "name": "Cedra Pharmacy",
+      "lng": -95.4626579,
+      "lat": 29.7512595,
+      "sourceUrl": "https://www.openstreetmap.org/node/7122288482"
+    },
+    {
+      "id": "osm-way-229323150",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4396742,
+      "lat": 29.7053562,
+      "sourceUrl": "https://www.openstreetmap.org/way/229323150"
+    },
+    {
+      "id": "osm-node-3198067914",
+      "category": "pharmacy",
+      "name": "Randalls Pharmacy",
+      "lng": -95.4656019,
+      "lat": 29.7489292,
+      "sourceUrl": "https://www.openstreetmap.org/node/3198067914"
+    },
+    {
+      "id": "osm-node-7624221195",
+      "category": "pharmacy",
+      "name": "Tidwell Professional Pharmacy",
+      "lng": -95.3493185,
+      "lat": 29.8477316,
+      "sourceUrl": "https://www.openstreetmap.org/node/7624221195"
+    },
+    {
+      "id": "osm-node-815003126",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.467379,
+      "lat": 29.7320188,
+      "sourceUrl": "https://www.openstreetmap.org/node/815003126"
+    },
+    {
+      "id": "osm-node-2641610263",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.2949338,
+      "lat": 29.6988948,
+      "sourceUrl": "https://www.openstreetmap.org/node/2641610263"
+    },
+    {
+      "id": "osm-node-9913142433",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4712679,
+      "lat": 29.7397869,
+      "sourceUrl": "https://www.openstreetmap.org/node/9913142433"
+    },
+    {
+      "id": "osm-node-12495528878",
+      "category": "pharmacy",
+      "name": "Walmart Pharmacy",
+      "lng": -95.4653952,
+      "lat": 29.722365,
+      "sourceUrl": "https://www.openstreetmap.org/node/12495528878"
+    },
+    {
+      "id": "osm-node-12016134990",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.3354385,
+      "lat": 29.8492735,
+      "sourceUrl": "https://www.openstreetmap.org/node/12016134990"
+    },
+    {
+      "id": "osm-node-4419638797",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.484647,
+      "lat": 29.7482233,
+      "sourceUrl": "https://www.openstreetmap.org/node/4419638797"
+    },
+    {
+      "id": "osm-relation-20692550",
+      "category": "school",
+      "name": "Kempner High School",
+      "lng": -95.6452863,
+      "lat": 29.641768,
+      "sourceUrl": "https://www.openstreetmap.org/relation/20692550"
+    },
+    {
+      "id": "osm-way-293308150",
+      "category": "school",
+      "name": "Clements High School",
+      "lng": -95.6334224,
+      "lat": 29.5752422,
+      "sourceUrl": "https://www.openstreetmap.org/way/293308150"
+    },
+    {
+      "id": "osm-way-457328707",
+      "category": "school",
+      "name": "Dulles High School",
+      "lng": -95.5846641,
+      "lat": 29.6192118,
+      "sourceUrl": "https://www.openstreetmap.org/way/457328707"
+    },
+    {
+      "id": "osm-way-204419677",
+      "category": "school",
+      "name": "Taylor High School",
+      "lng": -95.6315165,
+      "lat": 29.6945417,
+      "sourceUrl": "https://www.openstreetmap.org/way/204419677"
+    },
+    {
+      "id": "osm-way-293308174",
+      "category": "school",
+      "name": "Elkins High School",
+      "lng": -95.5584121,
+      "lat": 29.5468568,
+      "sourceUrl": "https://www.openstreetmap.org/way/293308174"
+    },
+    {
+      "id": "osm-way-457328709",
+      "category": "school",
+      "name": "Bush High School",
+      "lng": -95.6846318,
+      "lat": 29.7054307,
+      "sourceUrl": "https://www.openstreetmap.org/way/457328709"
+    },
+    {
+      "id": "osm-way-661818043",
+      "category": "school",
+      "name": "George Ranch High School",
+      "lng": -95.6896531,
+      "lat": 29.51692,
+      "sourceUrl": "https://www.openstreetmap.org/way/661818043"
+    },
+    {
+      "id": "osm-way-457328706",
+      "category": "school",
+      "name": "Hightower High School",
+      "lng": -95.4970055,
+      "lat": 29.5323264,
+      "sourceUrl": "https://www.openstreetmap.org/way/457328706"
+    },
+    {
+      "id": "osm-way-661881358",
+      "category": "school",
+      "name": "Lamar Consolidated High School",
+      "lng": -95.7801148,
+      "lat": 29.5600929,
+      "sourceUrl": "https://www.openstreetmap.org/way/661881358"
+    },
+    {
+      "id": "osm-relation-1985374",
+      "category": "school",
+      "name": "James E Taylor High School",
+      "lng": -95.7317842,
+      "lat": 29.7769666,
+      "sourceUrl": "https://www.openstreetmap.org/relation/1985374"
+    },
+    {
+      "id": "osm-way-567914684",
+      "category": "school",
+      "name": "B. F. Terry High School",
+      "lng": -95.77513,
+      "lat": 29.545436,
+      "sourceUrl": "https://www.openstreetmap.org/way/567914684"
+    },
+    {
+      "id": "osm-way-116061922",
+      "category": "school",
+      "name": "Seven Lakes High School",
+      "lng": -95.8076432,
+      "lat": 29.706545,
+      "sourceUrl": "https://www.openstreetmap.org/way/116061922"
+    },
+    {
+      "id": "osm-relation-13117566",
+      "category": "school",
+      "name": "Mayde Creek High School",
+      "lng": -95.6956943,
+      "lat": 29.8067914,
+      "sourceUrl": "https://www.openstreetmap.org/relation/13117566"
+    },
+    {
+      "id": "osm-way-457328705",
+      "category": "school",
+      "name": "Ridge Point High School",
+      "lng": -95.5149635,
+      "lat": 29.4838774,
+      "sourceUrl": "https://www.openstreetmap.org/way/457328705"
+    },
+    {
+      "id": "osm-way-116291041",
+      "category": "school",
+      "name": "Morton Ranch High School",
+      "lng": -95.745331,
+      "lat": 29.804448,
+      "sourceUrl": "https://www.openstreetmap.org/way/116291041"
+    },
+    {
+      "id": "osm-way-106994433",
+      "category": "school",
+      "name": "Cinco Ranch High School",
+      "lng": -95.7777117,
+      "lat": 29.7466408,
+      "sourceUrl": "https://www.openstreetmap.org/way/106994433"
+    },
+    {
+      "id": "osm-relation-4453793",
+      "category": "school",
+      "name": "Obra D. Tompkins High School",
+      "lng": -95.8149659,
+      "lat": 29.7355177,
+      "sourceUrl": "https://www.openstreetmap.org/relation/4453793"
+    },
+    {
+      "id": "osm-way-457272354",
+      "category": "school",
+      "name": "Alief Early College High School",
+      "lng": -95.574438,
+      "lat": 29.7342564,
+      "sourceUrl": "https://www.openstreetmap.org/way/457272354"
+    },
+    {
+      "id": "osm-way-608428081",
+      "category": "school",
+      "name": "Memorial Private High School",
+      "lng": -95.5981179,
+      "lat": 29.7743628,
+      "sourceUrl": "https://www.openstreetmap.org/way/608428081"
+    },
+    {
+      "id": "osm-way-620145414",
+      "category": "school",
+      "name": "Sharpstown International School",
+      "lng": -95.5316894,
+      "lat": 29.6988483,
+      "sourceUrl": "https://www.openstreetmap.org/way/620145414"
+    },
+    {
+      "id": "osm-way-116288271",
+      "category": "school",
+      "name": "Katy High School",
+      "lng": -95.8333504,
+      "lat": 29.783063,
+      "sourceUrl": "https://www.openstreetmap.org/way/116288271"
+    },
+    {
+      "id": "osm-way-1122683023",
+      "category": "school",
+      "name": "Almeta Crawford High School",
+      "lng": -95.4636866,
+      "lat": 29.4746872,
+      "sourceUrl": "https://www.openstreetmap.org/way/1122683023"
+    },
+    {
+      "id": "osm-way-1350783858",
+      "category": "school",
+      "name": "Jordan High School",
+      "lng": -95.8555543,
+      "lat": 29.7234223,
+      "sourceUrl": "https://www.openstreetmap.org/way/1350783858"
+    },
+    {
+      "id": "osm-way-126160809",
+      "category": "school",
+      "name": "Houston Christian High School",
+      "lng": -95.56111,
+      "lat": 29.8203997,
+      "sourceUrl": "https://www.openstreetmap.org/way/126160809"
+    },
+    {
+      "id": "osm-way-396267256",
+      "category": "school",
+      "name": "Bellaire High School",
+      "lng": -95.4698567,
+      "lat": 29.6920998,
+      "sourceUrl": "https://www.openstreetmap.org/way/396267256"
+    },
+    {
+      "id": "osm-way-1360378068",
+      "category": "school",
+      "name": "Fulshear High School",
+      "lng": -95.8858117,
+      "lat": 29.6975231,
+      "sourceUrl": "https://www.openstreetmap.org/way/1360378068"
+    },
+    {
+      "id": "osm-way-399464969",
+      "category": "school",
+      "name": "Glenda Dawson High School",
+      "lng": -95.3534265,
+      "lat": 29.5731385,
+      "sourceUrl": "https://www.openstreetmap.org/way/399464969"
+    },
+    {
+      "id": "osm-way-48727031",
+      "category": "hospital",
+      "name": "Memorial Hermann Sugar Land Hospital",
+      "lng": -95.6903101,
+      "lat": 29.5652376,
+      "sourceUrl": "https://www.openstreetmap.org/way/48727031"
+    },
+    {
+      "id": "osm-way-567931781",
+      "category": "hospital",
+      "name": "Houston Methodist Saint Catherine Hospital",
+      "lng": -95.7158733,
+      "lat": 29.7772315,
+      "sourceUrl": "https://www.openstreetmap.org/way/567931781"
+    },
+    {
+      "id": "osm-node-10917030811",
+      "category": "hospital",
+      "name": "Memorial Hermann Rehabilitation Hospital Katy",
+      "lng": -95.7457993,
+      "lat": 29.7757655,
+      "sourceUrl": "https://www.openstreetmap.org/node/10917030811"
+    },
+    {
+      "id": "osm-node-10916981577",
+      "category": "hospital",
+      "name": "Oceans Behavioral Hospital Of Katy",
+      "lng": -95.7485405,
+      "lat": 29.7779641,
+      "sourceUrl": "https://www.openstreetmap.org/node/10916981577"
+    },
+    {
+      "id": "osm-node-13724313501",
+      "category": "hospital",
+      "name": "Houston Methodist Cypress Hospital",
+      "lng": -95.6817787,
+      "lat": 29.9612605,
+      "sourceUrl": "https://www.openstreetmap.org/node/13724313501"
+    },
+    {
+      "id": "osm-way-568408539",
+      "category": "hospital",
+      "name": "Memorial Hermann Cypress Hospital",
+      "lng": -95.7325752,
+      "lat": 29.9868063,
+      "sourceUrl": "https://www.openstreetmap.org/way/568408539"
+    },
+    {
+      "id": "osm-way-600323650",
+      "category": "hospital",
+      "name": "Memorial Hermann Tomball Hospital",
+      "lng": -95.6062041,
+      "lat": 30.0370359,
+      "sourceUrl": "https://www.openstreetmap.org/way/600323650"
+    },
+    {
+      "id": "osm-node-2641609426",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.6452284,
+      "lat": 29.6076732,
+      "sourceUrl": "https://www.openstreetmap.org/node/2641609426"
+    },
+    {
+      "id": "osm-node-8591858835",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.6275615,
+      "lat": 29.5960685,
+      "sourceUrl": "https://www.openstreetmap.org/node/8591858835"
+    },
+    {
+      "id": "osm-node-4515613744",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.5988879,
+      "lat": 29.6213873,
+      "sourceUrl": "https://www.openstreetmap.org/node/4515613744"
+    },
+    {
+      "id": "osm-node-12607693970",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.6230389,
+      "lat": 29.5880656,
+      "sourceUrl": "https://www.openstreetmap.org/node/12607693970"
+    },
+    {
+      "id": "osm-node-12604694260",
+      "category": "pharmacy",
+      "name": "MediOAK Pharmacy",
+      "lng": -95.6070404,
+      "lat": 29.5933959,
+      "sourceUrl": "https://www.openstreetmap.org/node/12604694260"
+    },
+    {
+      "id": "osm-way-229952056",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.6770807,
+      "lat": 29.5909357,
+      "sourceUrl": "https://www.openstreetmap.org/way/229952056"
+    },
+    {
+      "id": "osm-way-1352238591",
+      "category": "pharmacy",
+      "name": "Relicare Pharmacy",
+      "lng": -95.6778277,
+      "lat": 29.6483459,
+      "sourceUrl": "https://www.openstreetmap.org/way/1352238591"
+    },
+    {
+      "id": "osm-way-468655948",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.6440543,
+      "lat": 29.6675985,
+      "sourceUrl": "https://www.openstreetmap.org/way/468655948"
+    },
+    {
+      "id": "osm-node-2641607010",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.5821301,
+      "lat": 29.5785367,
+      "sourceUrl": "https://www.openstreetmap.org/node/2641607010"
+    },
+    {
+      "id": "osm-node-1559985040",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.6848656,
+      "lat": 29.5647124,
+      "sourceUrl": "https://www.openstreetmap.org/node/1559985040"
+    },
+    {
+      "id": "osm-way-1320818006",
+      "category": "pharmacy",
+      "name": "Meta RX Pharmacy",
+      "lng": -95.7067824,
+      "lat": 29.6518361,
+      "sourceUrl": "https://www.openstreetmap.org/way/1320818006"
+    },
+    {
+      "id": "osm-node-6981749754",
+      "category": "pharmacy",
+      "name": "Walmart Pharmacy",
+      "lng": -95.5683292,
+      "lat": 29.5739917,
+      "sourceUrl": "https://www.openstreetmap.org/node/6981749754"
+    },
+    {
+      "id": "osm-node-9861962717",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.5681586,
+      "lat": 29.5659266,
+      "sourceUrl": "https://www.openstreetmap.org/node/9861962717"
+    },
+    {
+      "id": "osm-node-6299470907",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.7139674,
+      "lat": 29.6598513,
+      "sourceUrl": "https://www.openstreetmap.org/node/6299470907"
+    },
+    {
+      "id": "osm-node-8372605075",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.5859027,
+      "lat": 29.5478983,
+      "sourceUrl": "https://www.openstreetmap.org/node/8372605075"
+    },
+    {
+      "id": "osm-node-12814137676",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.5859014,
+      "lat": 29.5478539,
+      "sourceUrl": "https://www.openstreetmap.org/node/12814137676"
+    },
+    {
+      "id": "osm-node-3199560972",
+      "category": "pharmacy",
+      "name": "Randalls Pharmacy",
+      "lng": -95.7425948,
+      "lat": 29.6222103,
+      "sourceUrl": "https://www.openstreetmap.org/node/3199560972"
+    },
+    {
+      "id": "osm-node-2641611368",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.5593592,
+      "lat": 29.6911403,
+      "sourceUrl": "https://www.openstreetmap.org/node/2641611368"
+    },
+    {
+      "id": "osm-way-426513592",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.5268244,
+      "lat": 29.584145,
+      "sourceUrl": "https://www.openstreetmap.org/way/426513592"
+    },
+    {
+      "id": "osm-node-1806646854",
+      "category": "pharmacy",
+      "name": "Kroger Pharmacy",
+      "lng": -95.6860677,
+      "lat": 29.7083045,
+      "sourceUrl": "https://www.openstreetmap.org/node/1806646854"
+    },
+    {
+      "id": "osm-node-12543011007",
+      "category": "pharmacy",
+      "name": "Sterling Pharmacy",
+      "lng": -95.5562621,
+      "lat": 29.7065315,
+      "sourceUrl": "https://www.openstreetmap.org/node/12543011007"
+    },
+    {
+      "id": "osm-node-9536809068",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.6270661,
+      "lat": 29.7328663,
+      "sourceUrl": "https://www.openstreetmap.org/node/9536809068"
+    },
+    {
+      "id": "osm-node-12540894199",
+      "category": "pharmacy",
+      "name": "Park Place Pharmacy",
+      "lng": -95.5463898,
+      "lat": 29.7053204,
+      "sourceUrl": "https://www.openstreetmap.org/node/12540894199"
+    },
+    {
+      "id": "osm-node-12540894198",
+      "category": "pharmacy",
+      "name": "Evergreen Pharmacy",
+      "lng": -95.544923,
+      "lat": 29.7066023,
+      "sourceUrl": "https://www.openstreetmap.org/node/12540894198"
+    },
+    {
+      "id": "osm-node-5595009169",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.7480231,
+      "lat": 29.5514584,
+      "sourceUrl": "https://www.openstreetmap.org/node/5595009169"
+    },
+    {
+      "id": "osm-node-2641609941",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.5358082,
+      "lat": 29.5365496,
+      "sourceUrl": "https://www.openstreetmap.org/node/2641609941"
+    },
+    {
+      "id": "osm-node-2641601448",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.5866853,
+      "lat": 29.7353057,
+      "sourceUrl": "https://www.openstreetmap.org/node/2641601448"
+    },
+    {
+      "id": "osm-node-8267827503",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.7513803,
+      "lat": 29.5481899,
+      "sourceUrl": "https://www.openstreetmap.org/node/8267827503"
+    },
+    {
+      "id": "osm-node-10711715695",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.5109393,
+      "lat": 29.6927009,
+      "sourceUrl": "https://www.openstreetmap.org/node/10711715695"
+    },
+    {
+      "id": "osm-node-9847083779",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.5674202,
+      "lat": 29.7351418,
+      "sourceUrl": "https://www.openstreetmap.org/node/9847083779"
+    },
+    {
+      "id": "osm-way-792472360",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.7729187,
+      "lat": 29.5588587,
+      "sourceUrl": "https://www.openstreetmap.org/way/792472360"
+    },
+    {
+      "id": "osm-node-7925067420",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.6054011,
+      "lat": 29.7544045,
+      "sourceUrl": "https://www.openstreetmap.org/node/7925067420"
+    },
+    {
+      "id": "osm-node-3198054061",
+      "category": "pharmacy",
+      "name": "Randalls Pharmacy",
+      "lng": -95.53687,
+      "lat": 29.7384997,
+      "sourceUrl": "https://www.openstreetmap.org/node/3198054061"
+    },
+    {
+      "id": "osm-way-1386631947",
+      "category": "pharmacy",
+      "name": "Vallbona Pharmacy",
+      "lng": -95.5001508,
+      "lat": 29.7082844,
+      "sourceUrl": "https://www.openstreetmap.org/way/1386631947"
+    },
+    {
+      "id": "osm-node-9941249921",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.52549,
+      "lat": 29.7380542,
+      "sourceUrl": "https://www.openstreetmap.org/node/9941249921"
+    },
+    {
+      "id": "osm-node-3198088966",
+      "category": "pharmacy",
+      "name": "Randalls Pharmacy",
+      "lng": -95.6069406,
+      "lat": 29.7714759,
+      "sourceUrl": "https://www.openstreetmap.org/node/3198088966"
+    },
+    {
+      "id": "osm-node-3114183243",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.775178,
+      "lat": 29.7126272,
+      "sourceUrl": "https://www.openstreetmap.org/node/3114183243"
+    },
+    {
+      "id": "osm-node-9434507268",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.5180684,
+      "lat": 29.7349659,
+      "sourceUrl": "https://www.openstreetmap.org/node/9434507268"
+    },
+    {
+      "id": "osm-way-848788208",
+      "category": "pharmacy",
+      "name": "Piney Point Pharmacy",
+      "lng": -95.5216696,
+      "lat": 29.7392125,
+      "sourceUrl": "https://www.openstreetmap.org/way/848788208"
+    },
+    {
+      "id": "osm-way-1088029492",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.4638547,
+      "lat": 29.6708245,
+      "sourceUrl": "https://www.openstreetmap.org/way/1088029492"
+    },
+    {
+      "id": "osm-way-609645262",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.6187834,
+      "lat": 29.77877,
+      "sourceUrl": "https://www.openstreetmap.org/way/609645262"
+    },
+    {
+      "id": "osm-node-2916278501",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.475731,
+      "lat": 29.704422,
+      "sourceUrl": "https://www.openstreetmap.org/node/2916278501"
+    },
+    {
+      "id": "osm-node-7215102835",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.4639306,
+      "lat": 29.6885083,
+      "sourceUrl": "https://www.openstreetmap.org/node/7215102835"
+    },
+    {
+      "id": "osm-node-5881936654",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.4700166,
+      "lat": 29.7075368,
+      "sourceUrl": "https://www.openstreetmap.org/node/5881936654"
+    },
+    {
+      "id": "osm-node-3198089204",
+      "category": "pharmacy",
+      "name": "Randalls Pharmacy",
+      "lng": -95.5595341,
+      "lat": 29.7735146,
+      "sourceUrl": "https://www.openstreetmap.org/node/3198089204"
+    },
+    {
+      "id": "osm-node-11142476616",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.8135517,
+      "lat": 29.6851881,
+      "sourceUrl": "https://www.openstreetmap.org/node/11142476616"
+    },
+    {
+      "id": "osm-node-8591836525",
+      "category": "pharmacy",
+      "name": "CVS Pharmacy",
+      "lng": -95.7755149,
+      "lat": 29.7364146,
+      "sourceUrl": "https://www.openstreetmap.org/node/8591836525"
+    },
+    {
+      "id": "osm-way-609628256",
+      "category": "pharmacy",
+      "name": "MCA Pharmacy",
+      "lng": -95.6617566,
+      "lat": 29.7861587,
+      "sourceUrl": "https://www.openstreetmap.org/way/609628256"
+    },
+    {
+      "id": "osm-node-2641605609",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.7508656,
+      "lat": 29.7571781,
+      "sourceUrl": "https://www.openstreetmap.org/node/2641605609"
+    },
+    {
+      "id": "osm-node-7828209272",
+      "category": "pharmacy",
+      "name": "H-E-B Pharmacy",
+      "lng": -95.8159912,
+      "lat": 29.6960378,
+      "sourceUrl": "https://www.openstreetmap.org/node/7828209272"
+    },
+    {
+      "id": "osm-way-850505505",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.645919,
+      "lat": 29.6079805,
+      "sourceUrl": "https://www.openstreetmap.org/way/850505505"
+    },
+    {
+      "id": "osm-node-12695453859",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.5826764,
+      "lat": 29.5785263,
+      "sourceUrl": "https://www.openstreetmap.org/node/12695453859"
+    },
+    {
+      "id": "osm-way-209292903",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.6852717,
+      "lat": 29.5651051,
+      "sourceUrl": "https://www.openstreetmap.org/way/209292903"
+    },
+    {
+      "id": "osm-way-503510975",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.713376,
+      "lat": 29.6599404,
+      "sourceUrl": "https://www.openstreetmap.org/way/503510975"
+    },
+    {
+      "id": "osm-way-543835680",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.6416255,
+      "lat": 29.705946,
+      "sourceUrl": "https://www.openstreetmap.org/way/543835680"
+    },
+    {
+      "id": "osm-way-306783734",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.5598224,
+      "lat": 29.6911797,
+      "sourceUrl": "https://www.openstreetmap.org/way/306783734"
+    },
+    {
+      "id": "osm-way-308679505",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.5365054,
+      "lat": 29.5367317,
+      "sourceUrl": "https://www.openstreetmap.org/way/308679505"
+    },
+    {
+      "id": "osm-way-658338903",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.7476173,
+      "lat": 29.5518978,
+      "sourceUrl": "https://www.openstreetmap.org/way/658338903"
+    },
+    {
+      "id": "osm-way-49418509",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.5872591,
+      "lat": 29.7351335,
+      "sourceUrl": "https://www.openstreetmap.org/way/49418509"
+    },
+    {
+      "id": "osm-way-615216975",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.4640853,
+      "lat": 29.6885871,
+      "sourceUrl": "https://www.openstreetmap.org/way/615216975"
+    },
+    {
+      "id": "osm-way-280287748",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.4697763,
+      "lat": 29.7073672,
+      "sourceUrl": "https://www.openstreetmap.org/way/280287748"
+    },
+    {
+      "id": "osm-way-257038638",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.7504436,
+      "lat": 29.7569997,
+      "sourceUrl": "https://www.openstreetmap.org/way/257038638"
+    },
+    {
+      "id": "osm-node-3905103773",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.7167418,
+      "lat": 29.7892877,
+      "sourceUrl": "https://www.openstreetmap.org/node/3905103773"
+    },
+    {
+      "id": "osm-way-129370941",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.5324549,
+      "lat": 29.7878089,
+      "sourceUrl": "https://www.openstreetmap.org/way/129370941"
+    },
+    {
+      "id": "osm-way-221922460",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.4271669,
+      "lat": 29.727043,
+      "sourceUrl": "https://www.openstreetmap.org/way/221922460"
+    },
+    {
+      "id": "osm-way-851949728",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.8484201,
+      "lat": 29.7197961,
+      "sourceUrl": "https://www.openstreetmap.org/way/851949728"
+    },
+    {
+      "id": "osm-way-123415134",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.5473612,
+      "lat": 29.821398,
+      "sourceUrl": "https://www.openstreetmap.org/way/123415134"
+    },
+    {
+      "id": "osm-way-257524046",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.3903881,
+      "lat": 29.559269,
+      "sourceUrl": "https://www.openstreetmap.org/way/257524046"
+    },
+    {
+      "id": "osm-way-257110581",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.8224297,
+      "lat": 29.773357,
+      "sourceUrl": "https://www.openstreetmap.org/way/257110581"
+    },
+    {
+      "id": "osm-way-428980716",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.6476744,
+      "lat": 29.8472686,
+      "sourceUrl": "https://www.openstreetmap.org/way/428980716"
+    },
+    {
+      "id": "osm-way-175042793",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.4027673,
+      "lat": 29.7380441,
+      "sourceUrl": "https://www.openstreetmap.org/way/175042793"
+    },
+    {
+      "id": "osm-way-1366382930",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.4058166,
+      "lat": 29.4864182,
+      "sourceUrl": "https://www.openstreetmap.org/way/1366382930"
+    },
+    {
+      "id": "osm-way-826816157",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.3768317,
+      "lat": 29.7139677,
+      "sourceUrl": "https://www.openstreetmap.org/way/826816157"
+    },
+    {
+      "id": "osm-way-1259173759",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.8055331,
+      "lat": 29.8189295,
+      "sourceUrl": "https://www.openstreetmap.org/way/1259173759"
+    },
+    {
+      "id": "osm-node-14142568001",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.882885,
+      "lat": 29.753849,
+      "sourceUrl": "https://www.openstreetmap.org/node/14142568001"
+    },
+    {
+      "id": "osm-node-6840644122",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.3966726,
+      "lat": 29.7688039,
+      "sourceUrl": "https://www.openstreetmap.org/node/6840644122"
+    },
+    {
+      "id": "osm-node-6252570645",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.4088622,
+      "lat": 29.8073613,
+      "sourceUrl": "https://www.openstreetmap.org/node/6252570645"
+    },
+    {
+      "id": "osm-way-308673109",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.586036,
+      "lat": 29.9109634,
+      "sourceUrl": "https://www.openstreetmap.org/way/308673109"
+    },
+    {
+      "id": "osm-way-45493255",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.294894,
+      "lat": 29.6984809,
+      "sourceUrl": "https://www.openstreetmap.org/way/45493255"
+    },
+    {
+      "id": "osm-way-621646896",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.7251895,
+      "lat": 29.92709,
+      "sourceUrl": "https://www.openstreetmap.org/way/621646896"
+    },
+    {
+      "id": "osm-way-602724576",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.2649776,
+      "lat": 29.5582043,
+      "sourceUrl": "https://www.openstreetmap.org/way/602724576"
+    },
+    {
+      "id": "osm-way-257047336",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.2501689,
+      "lat": 29.6017771,
+      "sourceUrl": "https://www.openstreetmap.org/way/257047336"
+    },
+    {
+      "id": "osm-way-1356236811",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.7601017,
+      "lat": 29.9393202,
+      "sourceUrl": "https://www.openstreetmap.org/way/1356236811"
+    },
+    {
+      "id": "osm-way-293729626",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.6733408,
+      "lat": 29.9576583,
+      "sourceUrl": "https://www.openstreetmap.org/way/293729626"
+    },
+    {
+      "id": "osm-way-228678949",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.57623,
+      "lat": 29.9953234,
+      "sourceUrl": "https://www.openstreetmap.org/way/228678949"
+    },
+    {
+      "id": "osm-way-265697553",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.7444884,
+      "lat": 29.9925408,
+      "sourceUrl": "https://www.openstreetmap.org/way/265697553"
+    },
+    {
+      "id": "osm-way-256389390",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.2425303,
+      "lat": 29.410036,
+      "sourceUrl": "https://www.openstreetmap.org/way/256389390"
+    },
+    {
+      "id": "osm-way-256986701",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.1909084,
+      "lat": 29.5054496,
+      "sourceUrl": "https://www.openstreetmap.org/way/256986701"
+    },
+    {
+      "id": "osm-way-847364920",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.5273891,
+      "lat": 30.0223761,
+      "sourceUrl": "https://www.openstreetmap.org/way/847364920"
+    },
+    {
+      "id": "osm-way-257323890",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.1444313,
+      "lat": 29.6486347,
+      "sourceUrl": "https://www.openstreetmap.org/way/257323890"
+    },
+    {
+      "id": "osm-way-1080833054",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.1486376,
+      "lat": 29.5525298,
+      "sourceUrl": "https://www.openstreetmap.org/way/1080833054"
+    },
+    {
+      "id": "osm-way-257489227",
+      "category": "supermarket",
+      "name": "H-E-B Plus!",
+      "lng": -95.7758771,
+      "lat": 29.7127645,
+      "sourceUrl": "https://www.openstreetmap.org/way/257489227"
+    },
+    {
+      "id": "osm-way-759085631",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.1268658,
+      "lat": 29.6062686,
+      "sourceUrl": "https://www.openstreetmap.org/way/759085631"
+    },
+    {
+      "id": "osm-way-706808181",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.5018275,
+      "lat": 30.0717641,
+      "sourceUrl": "https://www.openstreetmap.org/way/706808181"
+    },
+    {
+      "id": "osm-way-257708003",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.6291742,
+      "lat": 30.0886326,
+      "sourceUrl": "https://www.openstreetmap.org/way/257708003"
+    },
+    {
+      "id": "osm-way-851665938",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.0967963,
+      "lat": 29.6669507,
+      "sourceUrl": "https://www.openstreetmap.org/way/851665938"
+    },
+    {
+      "id": "osm-way-257705675",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.4498978,
+      "lat": 30.0687022,
+      "sourceUrl": "https://www.openstreetmap.org/way/257705675"
+    },
+    {
+      "id": "osm-way-173380102",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.1969807,
+      "lat": 29.9228665,
+      "sourceUrl": "https://www.openstreetmap.org/way/173380102"
+    },
+    {
+      "id": "osm-way-302446191",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.0944778,
+      "lat": 29.4662344,
+      "sourceUrl": "https://www.openstreetmap.org/way/302446191"
+    },
+    {
+      "id": "osm-node-13936855947",
+      "category": "supermarket",
+      "name": "H-E-B",
+      "lng": -95.2072633,
+      "lat": 29.9573283,
+      "sourceUrl": "https://www.openstreetmap.org/node/13936855947"
+    },
+    {
+      "id": "osm-way-314352698",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6493973,
+      "lat": 29.6479558,
+      "sourceUrl": "https://www.openstreetmap.org/way/314352698"
+    },
+    {
+      "id": "osm-way-314359398",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.633233,
+      "lat": 29.5853135,
+      "sourceUrl": "https://www.openstreetmap.org/way/314359398"
+    },
+    {
+      "id": "osm-way-314341833",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6410218,
+      "lat": 29.6782696,
+      "sourceUrl": "https://www.openstreetmap.org/way/314341833"
+    },
+    {
+      "id": "osm-node-4227549173",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5655009,
+      "lat": 29.5636313,
+      "sourceUrl": "https://www.openstreetmap.org/node/4227549173"
+    },
+    {
+      "id": "osm-node-6655625789",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5843055,
+      "lat": 29.5516946,
+      "sourceUrl": "https://www.openstreetmap.org/node/6655625789"
+    },
+    {
+      "id": "osm-way-169503168",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6858697,
+      "lat": 29.7086386,
+      "sourceUrl": "https://www.openstreetmap.org/way/169503168"
+    },
+    {
+      "id": "osm-way-314352998",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6053022,
+      "lat": 29.7524469,
+      "sourceUrl": "https://www.openstreetmap.org/way/314352998"
+    },
+    {
+      "id": "osm-way-314335687",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6274609,
+      "lat": 29.7574967,
+      "sourceUrl": "https://www.openstreetmap.org/way/314335687"
+    },
+    {
+      "id": "osm-node-7995521916",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5108212,
+      "lat": 29.5298455,
+      "sourceUrl": "https://www.openstreetmap.org/node/7995521916"
+    },
+    {
+      "id": "osm-way-50424508",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5453618,
+      "lat": 29.7364463,
+      "sourceUrl": "https://www.openstreetmap.org/way/50424508"
+    },
+    {
+      "id": "osm-way-314260260",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.7537786,
+      "lat": 29.7355865,
+      "sourceUrl": "https://www.openstreetmap.org/way/314260260"
+    },
+    {
+      "id": "osm-way-383999053",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4639635,
+      "lat": 29.6692874,
+      "sourceUrl": "https://www.openstreetmap.org/way/383999053"
+    },
+    {
+      "id": "osm-way-129728992",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5001039,
+      "lat": 29.7482313,
+      "sourceUrl": "https://www.openstreetmap.org/way/129728992"
+    },
+    {
+      "id": "osm-node-3204058605",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.599194,
+      "lat": 29.7711432,
+      "sourceUrl": "https://www.openstreetmap.org/node/3204058605"
+    },
+    {
+      "id": "osm-way-483639212",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.8115133,
+      "lat": 29.7005985,
+      "sourceUrl": "https://www.openstreetmap.org/way/483639212"
+    },
+    {
+      "id": "osm-node-8882810737",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5221864,
+      "lat": 29.7823174,
+      "sourceUrl": "https://www.openstreetmap.org/node/8882810737"
+    },
+    {
+      "id": "osm-way-314258872",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.7784454,
+      "lat": 29.7580245,
+      "sourceUrl": "https://www.openstreetmap.org/way/314258872"
+    },
+    {
+      "id": "osm-way-51901545",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4155089,
+      "lat": 29.6959127,
+      "sourceUrl": "https://www.openstreetmap.org/way/51901545"
+    },
+    {
+      "id": "osm-way-784207272",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.8100139,
+      "lat": 29.7366647,
+      "sourceUrl": "https://www.openstreetmap.org/way/784207272"
+    },
+    {
+      "id": "osm-node-6299354185",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4864439,
+      "lat": 29.7968241,
+      "sourceUrl": "https://www.openstreetmap.org/node/6299354185"
+    },
+    {
+      "id": "osm-way-231007641",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4308882,
+      "lat": 29.7271776,
+      "sourceUrl": "https://www.openstreetmap.org/way/231007641"
+    },
+    {
+      "id": "osm-node-5246578669",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.7701896,
+      "lat": 29.8126507,
+      "sourceUrl": "https://www.openstreetmap.org/node/5246578669"
+    },
+    {
+      "id": "osm-way-226936280",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4054769,
+      "lat": 29.7540874,
+      "sourceUrl": "https://www.openstreetmap.org/way/226936280"
+    },
+    {
+      "id": "osm-way-368086078",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.3897916,
+      "lat": 29.5831373,
+      "sourceUrl": "https://www.openstreetmap.org/way/368086078"
+    },
+    {
+      "id": "osm-way-605941362",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.3489422,
+      "lat": 29.5606885,
+      "sourceUrl": "https://www.openstreetmap.org/way/605941362"
+    },
+    {
+      "id": "osm-way-247867506",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.7217055,
+      "lat": 29.860078,
+      "sourceUrl": "https://www.openstreetmap.org/way/247867506"
+    },
+    {
+      "id": "osm-node-2699368507",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4112065,
+      "lat": 29.7896319,
+      "sourceUrl": "https://www.openstreetmap.org/node/2699368507"
+    },
+    {
+      "id": "osm-way-314335389",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6067814,
+      "lat": 29.8654219,
+      "sourceUrl": "https://www.openstreetmap.org/way/314335389"
+    },
+    {
+      "id": "osm-way-342028535",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4320232,
+      "lat": 29.8288816,
+      "sourceUrl": "https://www.openstreetmap.org/way/342028535"
+    },
+    {
+      "id": "osm-way-438075553",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.3898464,
+      "lat": 29.7732922,
+      "sourceUrl": "https://www.openstreetmap.org/way/438075553"
+    },
+    {
+      "id": "osm-way-314284791",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6855645,
+      "lat": 29.881461,
+      "sourceUrl": "https://www.openstreetmap.org/way/314284791"
+    },
+    {
+      "id": "osm-way-314333781",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6317247,
+      "lat": 29.9025561,
+      "sourceUrl": "https://www.openstreetmap.org/way/314333781"
+    },
+    {
+      "id": "osm-way-375578541",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.3405001,
+      "lat": 29.7397273,
+      "sourceUrl": "https://www.openstreetmap.org/way/375578541"
+    },
+    {
+      "id": "osm-way-314359292",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5556678,
+      "lat": 29.9040973,
+      "sourceUrl": "https://www.openstreetmap.org/way/314359292"
+    },
+    {
+      "id": "osm-way-314352248",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5835716,
+      "lat": 29.9079165,
+      "sourceUrl": "https://www.openstreetmap.org/way/314352248"
+    },
+    {
+      "id": "osm-node-9866040327",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.2910328,
+      "lat": 29.6748622,
+      "sourceUrl": "https://www.openstreetmap.org/node/9866040327"
+    },
+    {
+      "id": "osm-way-314334335",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6044476,
+      "lat": 29.9240496,
+      "sourceUrl": "https://www.openstreetmap.org/way/314334335"
+    },
+    {
+      "id": "osm-node-11796305344",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.2715022,
+      "lat": 29.5606099,
+      "sourceUrl": "https://www.openstreetmap.org/node/11796305344"
+    },
+    {
+      "id": "osm-way-398421311",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4778844,
+      "lat": 29.912261,
+      "sourceUrl": "https://www.openstreetmap.org/way/398421311"
+    },
+    {
+      "id": "osm-way-314351906",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5823595,
+      "lat": 29.9517978,
+      "sourceUrl": "https://www.openstreetmap.org/way/314351906"
+    },
+    {
+      "id": "osm-way-293769726",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6901034,
+      "lat": 29.9709991,
+      "sourceUrl": "https://www.openstreetmap.org/way/293769726"
+    },
+    {
+      "id": "osm-way-404986383",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.205862,
+      "lat": 29.5356008,
+      "sourceUrl": "https://www.openstreetmap.org/way/404986383"
+    },
+    {
+      "id": "osm-way-314352457",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5659242,
+      "lat": 29.9833087,
+      "sourceUrl": "https://www.openstreetmap.org/way/314352457"
+    },
+    {
+      "id": "osm-node-9795032378",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.2149315,
+      "lat": 29.603198,
+      "sourceUrl": "https://www.openstreetmap.org/node/9795032378"
+    },
+    {
+      "id": "osm-way-314361375",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.4915153,
+      "lat": 29.9767954,
+      "sourceUrl": "https://www.openstreetmap.org/way/314361375"
+    },
+    {
+      "id": "osm-way-254557655",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.6216267,
+      "lat": 29.9940564,
+      "sourceUrl": "https://www.openstreetmap.org/way/254557655"
+    },
+    {
+      "id": "osm-node-11796305342",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.1737224,
+      "lat": 29.6966036,
+      "sourceUrl": "https://www.openstreetmap.org/node/11796305342"
+    },
+    {
+      "id": "osm-way-314359723",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.5316099,
+      "lat": 30.0029408,
+      "sourceUrl": "https://www.openstreetmap.org/way/314359723"
+    },
+    {
+      "id": "osm-node-11796305341",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.1895964,
+      "lat": 29.6634041,
+      "sourceUrl": "https://www.openstreetmap.org/node/11796305341"
+    },
+    {
+      "id": "osm-node-11796305337",
+      "category": "supermarket",
+      "name": "Kroger",
+      "lng": -95.2493295,
+      "lat": 29.3983525,
+      "sourceUrl": "https://www.openstreetmap.org/node/11796305337"
+    },
+    {
+      "id": "osm-node-8619314589",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.6442046,
+      "lat": 29.6640076,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619314589"
+    },
+    {
+      "id": "osm-node-5372620387",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.5827063,
+      "lat": 29.6464818,
+      "sourceUrl": "https://www.openstreetmap.org/node/5372620387"
+    },
+    {
+      "id": "osm-way-465940833",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.6430306,
+      "lat": 29.7180388,
+      "sourceUrl": "https://www.openstreetmap.org/way/465940833"
+    },
+    {
+      "id": "osm-node-4227614596",
+      "category": "supermarket",
+      "name": "Aldi",
+      "lng": -95.5481738,
+      "lat": 29.5431629,
+      "sourceUrl": "https://www.openstreetmap.org/node/4227614596"
+    },
+    {
+      "id": "osm-way-929437800",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.7410614,
+      "lat": 29.6639157,
+      "sourceUrl": "https://www.openstreetmap.org/way/929437800"
+    },
+    {
+      "id": "osm-way-929435102",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.7604668,
+      "lat": 29.5433602,
+      "sourceUrl": "https://www.openstreetmap.org/way/929435102"
+    },
+    {
+      "id": "osm-way-371183163",
+      "category": "supermarket",
+      "name": "Aldi",
+      "lng": -95.501558,
+      "lat": 29.689455,
+      "sourceUrl": "https://www.openstreetmap.org/way/371183163"
+    },
+    {
+      "id": "osm-node-8619801592",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.5335557,
+      "lat": 29.736257,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619801592"
+    },
+    {
+      "id": "osm-node-8619415909",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.7502209,
+      "lat": 29.7495557,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619415909"
+    },
+    {
+      "id": "osm-node-8619427420",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.8472445,
+      "lat": 29.7068749,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619427420"
+    },
+    {
+      "id": "osm-node-8623735915",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.5447357,
+      "lat": 29.8180432,
+      "sourceUrl": "https://www.openstreetmap.org/node/8623735915"
+    },
+    {
+      "id": "osm-way-590272820",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.3988174,
+      "lat": 29.555112,
+      "sourceUrl": "https://www.openstreetmap.org/way/590272820"
+    },
+    {
+      "id": "osm-way-520606877",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.6464975,
+      "lat": 29.8615984,
+      "sourceUrl": "https://www.openstreetmap.org/way/520606877"
+    },
+    {
+      "id": "osm-way-518945866",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.3633575,
+      "lat": 29.7013695,
+      "sourceUrl": "https://www.openstreetmap.org/way/518945866"
+    },
+    {
+      "id": "osm-way-655731438",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.7182305,
+      "lat": 29.8579088,
+      "sourceUrl": "https://www.openstreetmap.org/way/655731438"
+    },
+    {
+      "id": "osm-node-4842212281",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.4097761,
+      "lat": 29.8229583,
+      "sourceUrl": "https://www.openstreetmap.org/node/4842212281"
+    },
+    {
+      "id": "osm-way-542527374",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.684607,
+      "lat": 29.9045256,
+      "sourceUrl": "https://www.openstreetmap.org/way/542527374"
+    },
+    {
+      "id": "osm-node-8623803023",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.5857979,
+      "lat": 29.9078721,
+      "sourceUrl": "https://www.openstreetmap.org/node/8623803023"
+    },
+    {
+      "id": "osm-node-8619313528",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.2768115,
+      "lat": 29.5605703,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619313528"
+    },
+    {
+      "id": "osm-way-567421119",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.4857796,
+      "lat": 29.9161341,
+      "sourceUrl": "https://www.openstreetmap.org/way/567421119"
+    },
+    {
+      "id": "osm-way-929466657",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.2370634,
+      "lat": 29.6267715,
+      "sourceUrl": "https://www.openstreetmap.org/way/929466657"
+    },
+    {
+      "id": "osm-way-897512688",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.4096383,
+      "lat": 29.9144512,
+      "sourceUrl": "https://www.openstreetmap.org/way/897512688"
+    },
+    {
+      "id": "osm-way-671985490",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.4858917,
+      "lat": 29.9936761,
+      "sourceUrl": "https://www.openstreetmap.org/way/671985490"
+    },
+    {
+      "id": "osm-node-8623809141",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.5599323,
+      "lat": 30.0020036,
+      "sourceUrl": "https://www.openstreetmap.org/node/8623809141"
+    },
+    {
+      "id": "osm-way-929468197",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.1797221,
+      "lat": 29.6496821,
+      "sourceUrl": "https://www.openstreetmap.org/way/929468197"
+    },
+    {
+      "id": "osm-node-8619301885",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.2340563,
+      "lat": 29.4051675,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619301885"
+    },
+    {
+      "id": "osm-node-8619319421",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.1600974,
+      "lat": 29.5235776,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619319421"
+    },
+    {
+      "id": "osm-node-8619302696",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.1206663,
+      "lat": 29.5563709,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619302696"
+    },
+    {
+      "id": "osm-way-521352667",
+      "category": "supermarket",
+      "name": "Aldi",
+      "lng": -95.5275133,
+      "lat": 30.074463,
+      "sourceUrl": "https://www.openstreetmap.org/way/521352667"
+    },
+    {
+      "id": "osm-way-929424061",
+      "category": "supermarket",
+      "name": "Aldi",
+      "lng": -95.0975144,
+      "lat": 29.6633157,
+      "sourceUrl": "https://www.openstreetmap.org/way/929424061"
+    },
+    {
+      "id": "osm-node-8620143175",
+      "category": "supermarket",
+      "name": "Aldi",
+      "lng": -95.2927199,
+      "lat": 30.0056875,
+      "sourceUrl": "https://www.openstreetmap.org/node/8620143175"
+    },
+    {
+      "id": "osm-way-707043803",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.4519319,
+      "lat": 30.0711164,
+      "sourceUrl": "https://www.openstreetmap.org/way/707043803"
+    },
+    {
+      "id": "osm-way-929952509",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.554505,
+      "lat": 30.1309922,
+      "sourceUrl": "https://www.openstreetmap.org/way/929952509"
+    },
+    {
+      "id": "osm-node-8619281149",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.0213367,
+      "lat": 29.5370918,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619281149"
+    },
+    {
+      "id": "osm-node-5843069939",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.1736853,
+      "lat": 29.9968762,
+      "sourceUrl": "https://www.openstreetmap.org/node/5843069939"
+    },
+    {
+      "id": "osm-node-8620153723",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.4045948,
+      "lat": 30.1226827,
+      "sourceUrl": "https://www.openstreetmap.org/node/8620153723"
+    },
+    {
+      "id": "osm-node-8620139909",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.2352033,
+      "lat": 30.0501578,
+      "sourceUrl": "https://www.openstreetmap.org/node/8620139909"
+    },
+    {
+      "id": "osm-way-520602552",
+      "category": "supermarket",
+      "name": "Aldi",
+      "lng": -95.0622766,
+      "lat": 29.8928262,
+      "sourceUrl": "https://www.openstreetmap.org/way/520602552"
+    },
+    {
+      "id": "osm-way-929469828",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -94.9796531,
+      "lat": 29.7835421,
+      "sourceUrl": "https://www.openstreetmap.org/way/929469828"
+    },
+    {
+      "id": "osm-way-735050592",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -95.5623424,
+      "lat": 30.2238727,
+      "sourceUrl": "https://www.openstreetmap.org/way/735050592"
+    },
+    {
+      "id": "osm-node-8619298727",
+      "category": "supermarket",
+      "name": "ALDI",
+      "lng": -94.9480896,
+      "lat": 29.3966821,
+      "sourceUrl": "https://www.openstreetmap.org/node/8619298727"
+    }
+  ]
+}

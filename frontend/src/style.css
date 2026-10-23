@@ -1749,3 +1749,74 @@ input:focus-visible {
     max-height: 55dvh;
   }
 }
+
+/* ---- PermitWatch-style map key (dark glass legend) ---- */
+.map-key {
+  position: absolute;
+  z-index: 12;
+  left: 25px;
+  bottom: 60px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgb(10 13 18 / 0.82);
+  backdrop-filter: blur(10px);
+  color: #e5e7eb;
+  font-size: 11px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.35);
+  pointer-events: none;
+}
+.map-key ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 5px;
+}
+.map-key li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.key-title {
+  margin: 0 0 6px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+.key-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+.key-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.key-sep {
+  height: 1px;
+  background: rgb(255 255 255 / 0.12);
+  margin: 2px 0;
+}
+.key-note {
+  color: #9ca3af;
+  font-size: 9.5px;
+}
+/* the deals panel uses the same corner */
+#deals-panel:not([hidden]) ~ .map-key {
+  display: none;
+}
+@media (max-width: 720px) {
+  .map-key {
+    display: none;
+  }
+}
+/* dark basemap: keep David's bottom-left status text readable */
+.map-meta,
+.placement-hint {
+  color: #cbd5e1;
+}

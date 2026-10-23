@@ -1,7 +1,7 @@
 // "Deals" dock panel: filter the model-scored listings layer by deal / max price, and summarize what's in view.
 import {
   DEAL_COLORS,
-  LISTING_LAYER,
+  LISTING_LAYERS,
   listingById,
   listingsMeta,
 } from './listings.js'
@@ -39,8 +39,8 @@ export function createDealsPanel(map, { onPick }) {
   let max = 0
 
   function applyFilter() {
-    if (map.getLayer(LISTING_LAYER))
-      map.setFilter(LISTING_LAYER, dealFilter(deal, max))
+    for (const id of LISTING_LAYERS)
+      if (map.getLayer(id)) map.setFilter(id, dealFilter(deal, max))
   }
 
   function refresh() {
