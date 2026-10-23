@@ -1,3 +1,5 @@
+import { listingById } from './listings.js'
+import { estimateBuild, livingAreaFromSite } from './build-estimate.js'
 import { hideModelExtras, renderModelExtras } from './model-card.js'
 export const ESSENTIAL_TYPES = [
   { key: 'school', label: 'School', icon: '▤' },
@@ -90,7 +92,23 @@ export function createPropertyDetails() {
   function render(building) {
     setLabels(building.listing ? 'model' : 'demo')
     if (building.listing) renderModel(building)
-    else {
+    else if (building.type === 'house' && building.site && listingById.size) {
+      // A house the user built: comps estimate from the model's scored homes (no listing exists yet).
+      const sqft = livingAreaFromSite(building.site.area)
+      const est = estimateBuild([...listingById.values()], building, sqft)
+      hideModelExtras($('model-extras'))
+      if (est) {
+        setLabels('build')
+        $('suggested-price').textContent = money.format(est.price)
+        $('price-range').textContent =
+          `80% range ${money.format(est.low)} – ${money.format(est.high)} · ~${sqft.toLocaleString()} sqft house · from the ${est.comps} nearest single-family homes (within ${est.radiusMiles.toFixed(1)} mi)`
+      } else {
+        const estimates = mockPrice(building)
+        $('suggested-price').textContent = money.format(estimates.price)
+        $('price-range').textContent =
+          `Demo range ${money.format(estimates.low)} – ${money.format(estimates.high)}`
+      }
+    } else {
       const estimates = mockPrice(building)
       $('suggested-price').textContent = money.format(estimates.price)
       $('price-range').textContent =

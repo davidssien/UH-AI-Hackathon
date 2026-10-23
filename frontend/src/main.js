@@ -223,14 +223,27 @@ const locationSearch = createLocationSearch(map, {
   onNavigate: (place) => {
     setSearchedAddress(place)
     setBuildMode(false)
-    selectBuilding(
-      place.listingId && listingById.has(place.listingId)
-        ? place.listingId
-        : null,
-    )
+    selectBuilding(nearestListingId(place))
   },
   onReject: notifyScope,
 })
+// Search: an exact listing opens its card; any other address opens the nearest scored home within ~0.1 mi.
+function nearestListingId(place) {
+  if (place.listingId && listingById.has(place.listingId))
+    return place.listingId
+  let best = null
+  let bestD = 0.1
+  for (const l of listingById.values()) {
+    const dy = (l.lat - place.lat) * 69
+    const dx = (l.lng - place.lng) * 60
+    const dist = Math.hypot(dx, dy)
+    if (dist < bestD) {
+      bestD = dist
+      best = l.id
+    }
+  }
+  return best
+}
 function zoomToBuilding(b) {
   if (!b) return
   selectBuilding(b.id)
@@ -644,6 +657,7 @@ $('layers-button').addEventListener('click', () => {
     String(!$('layers-panel').hidden),
   )
 })
+window.__hwMap = map // handle for automated UI checks
 // Fair-price model: Deals panel (filters + what's in view) and the listings layer toggle.
 const deals = createDealsPanel(map, {
   onPick: (id) => zoomToBuilding(listingById.get(id)),
