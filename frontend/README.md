@@ -56,3 +56,11 @@ Double-click a proposed icon or mapped home to center and zoom into it. Basemap 
 Numbered addresses now use the [US Census Geocoder](https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html), with address suggestions after a 750 ms pause and direct resolution on Enter. A street-only query defaults to Houston, TX; include city and ZIP for addresses in other Greater Houston communities. Each resolved coordinate still passes the playable-area check. Census uses address-range interpolation, so its location may not be an exact rooftop. Named-place search continues to use Photon. Requests are cached in memory, cancelled when replaced, and time out; there is no saved address history. Census's documented JSONP format enables static browser clients without a backend API key or a development-only proxy.
 
 The first search row is **Current address**, describing the current map center (not device GPS). It uses the last searched address or a nearby mapped house record, then Photon reverse geocoding as a fallback. When no nearby recorded house address exists, it shows the center coordinates and says no address is mapped. Selecting the row returns to that map point. A resolved searched address stays in the title while zoomed in near its destination.
+
+## Fair-price model (HomeWatch features)
+
+`public/data/listings.json`: 22,764 real Houston for-sale homes scored by the team's model
+(regenerate with `python src/export_frontend.py` in the model repo). Map layer `listings-points`: green underpriced,
+gray fair, red overpriced. **Deals** (dock): filter by deal / max price, market summary for the map view, best deals in
+view. Clicking a listing shows the out-of-fold fair price (the model never saw that home), calibrated 80% range bar,
+top SHAP factors, true monthly cost (interest rate is the user's input) and an offer-letter drafter.

@@ -1,3 +1,4 @@
+import { hideModelExtras, renderModelExtras } from './model-card.js'
 export const ESSENTIAL_TYPES = [
   { key: 'school', label: 'School', icon: '▤' },
   { key: 'hospital', label: 'Hospital', icon: '✚' },
@@ -52,11 +53,50 @@ export function createPropertyDetails() {
     loading,
     current = null,
     disposed = false
-  function render(building) {
-    const estimates = mockPrice(building)
-    $('suggested-price').textContent = money.format(estimates.price)
+  function renderModel(building) {
+    // Real listing: model fair price + calibrated 80% range; full model card below the price.
+    $('suggested-price').textContent = money.format(building.fair)
+    const gap =
+      building.gap == null
+        ? ''
+        : ` (${building.gap > 0 ? '+' : ''}${building.gap}%)`
     $('price-range').textContent =
-      `Demo range ${money.format(estimates.low)} – ${money.format(estimates.high)}`
+      `80% fair range ${money.format(building.p10)} – ${money.format(building.p90)} · listed ${money.format(building.list)}${gap}`
+    renderModelExtras($('model-extras'), building)
+  }
+  const LABELS = {
+    demo: [
+      'SUGGESTED PRICE',
+      'MOCK ESTIMATE',
+      'Demo pricing · not a valuation or listing price',
+    ],
+    model: [
+      'FAIR PRICE',
+      'MODEL ESTIMATE',
+      'Out-of-fold model estimate · not an appraisal',
+    ],
+  }
+  function setLabels(kind) {
+    const card = document.querySelector('.price-card')
+    if (!card) return
+    const [title, tag, note] = LABELS[kind]
+    const head = card.querySelector('div span'),
+      small = card.querySelector('div small'),
+      disc = card.querySelector('.price-disclaimer')
+    if (head) head.textContent = title
+    if (small) small.textContent = tag
+    if (disc) disc.textContent = note
+  }
+  function render(building) {
+    setLabels(building.listing ? 'model' : 'demo')
+    if (building.listing) renderModel(building)
+    else {
+      const estimates = mockPrice(building)
+      $('suggested-price').textContent = money.format(estimates.price)
+      $('price-range').textContent =
+        `Demo range ${money.format(estimates.low)} – ${money.format(estimates.high)}`
+      hideModelExtras($('model-extras'))
+    }
     $('essentials-status').textContent = facilities
       ? 'OSM · straight-line'
       : 'Loading mapped places…'

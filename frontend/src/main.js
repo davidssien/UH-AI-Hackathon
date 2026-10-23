@@ -23,6 +23,8 @@ import { createSiteSelector } from './site-selector.js'
 import { updateLocation, setSearchedAddress } from './location.js'
 import { createLocationSearch } from './search.js'
 import { createPropertyDetails } from './property-details.js'
+import { installListings, listingById, LISTING_LAYER } from './listings.js'
+import { createDealsPanel } from './deals.js'
 setWorkerUrl(workerUrl)
 
 // CONFIG / STATE
@@ -297,7 +299,7 @@ function selectBuilding(id) {
   }
   selectedId = id
   const entry = buildingMarkers.get(id)
-  const b = entry?.building || homeById.get(id)
+  const b = entry?.building || homeById.get(id) || listingById.get(id)
   selectedToolsMarker?.remove()
   selectedToolsMarker = null
   if (b?.site && !buildMode)
@@ -320,6 +322,10 @@ function selectBuilding(id) {
   propertyDetails.show(b)
   entry?.el.classList.add('is-selected')
   entry?.el.setAttribute('aria-pressed', 'true')
+  if (b.listing) {
+    showListing(b)
+    return
+  }
   $('selection-title').textContent =
     b.existing && b.address ? b.address : TYPES[b.type].label
   $('selection-description').textContent = b.existing
@@ -340,6 +346,27 @@ function selectBuilding(id) {
   $('source-record').hidden = !b.existing
   if (b.existing) $('source-record').href = b.sourceUrl
   $('edit-site-button').hidden = !b.site
+}
+// Real listing scored by the model: honest out-of-fold fair price, not the demo estimate.
+function showListing(b) {
+  const fmt = (v, unit) => (v == null ? '—' : `${v.toLocaleString()}${unit}`)
+  $('selection-title').textContent = b.address
+  $('selection-description').textContent = [
+    b.homeType.replaceAll('_', ' ').toLowerCase(),
+    `${fmt(b.beds, ' bd')} · ${fmt(b.baths, ' ba')}`,
+    fmt(b.sqft, ' sqft'),
+    b.year ? `built ${b.year}` : null,
+  ]
+    .filter(Boolean)
+    .join(' · ')
+  $('selection-coords').textContent =
+    `${b.lat.toFixed(5)}° N · ${Math.abs(b.lng).toFixed(5)}° W`
+  $('selection-kind').textContent = `FOR SALE · ${b.deal}`
+  $('selection-note').textContent =
+    'Fair price is our model’s out-of-fold estimate (it never saw this home); range is a calibrated 80% interval. Not an appraisal.'
+  $('source-record').hidden = !b.url
+  if (b.url) $('source-record').href = b.url
+  $('edit-site-button').hidden = true
 }
 function updateNearbyBuildings() {
   if (!ready || map.isMoving()) return
@@ -444,8 +471,8 @@ function setBuildMode(value) {
 }
 map.on('click', (event) => {
   if (!ready || buildMode) return
-  const layers = [...DEMO_LAYERS, 'proposed-sites-fill'].filter((id) =>
-    map.getLayer(id),
+  const layers = [...DEMO_LAYERS, LISTING_LAYER, 'proposed-sites-fill'].filter(
+    (id) => map.getLayer(id),
   )
   const hit = map.queryRenderedFeatures(event.point, { layers })[0]
   selectBuilding(hit?.properties.id || null)
@@ -454,15 +481,19 @@ map.on('dblclick', (event) => {
   if (!ready || buildMode) return
   const hits = map.queryRenderedFeatures(event.point)
   const home = hits.find((f) =>
-    [...DEMO_LAYERS, 'demo-selected', 'proposed-sites-fill'].includes(
-      f.layer.id,
-    ),
+    [
+      ...DEMO_LAYERS,
+      LISTING_LAYER,
+      'demo-selected',
+      'proposed-sites-fill',
+    ].includes(f.layer.id),
   )
   if (home) {
     event.preventDefault()
     zoomToBuilding(
       buildingMarkers.get(home.properties.id)?.building ||
-        homeById.get(home.properties.id),
+        homeById.get(home.properties.id) ||
+        listingById.get(home.properties.id),
     )
     return
   }
@@ -571,6 +602,7 @@ document.addEventListener('keydown', (event) => {
     setBuildMode(false)
     $('layers-panel').hidden = true
     $('layers-button').setAttribute('aria-expanded', 'false')
+    deals.setOpen(false)
     map.getCanvas().focus()
   }
 })
@@ -598,6 +630,18 @@ $('layers-button').addEventListener('click', () => {
     'aria-expanded',
     String(!$('layers-panel').hidden),
   )
+})
+// Fair-price model: Deals panel (filters + what's in view) and the listings layer toggle.
+const deals = createDealsPanel(map, {
+  onPick: (id) => zoomToBuilding(listingById.get(id)),
+})
+$('listings-toggle').addEventListener('change', () => {
+  if (map.getLayer(LISTING_LAYER))
+    map.setLayoutProperty(
+      LISTING_LAYER,
+      'visibility',
+      $('listings-toggle').checked ? 'visible' : 'none',
+    )
 })
 $('demo-toggle').addEventListener('change', () => {
   setDemoVisibility(map, $('demo-toggle').checked)
@@ -682,6 +726,17 @@ map.on('style.load', () => {
       console.warn(error)
       $('map-status').textContent = 'Mapped homes unavailable · demo map ready'
     })
+  installListings(map)
+    .then(() => {
+      deals.applyFilter()
+      deals.refresh()
+      map.setLayoutProperty(
+        LISTING_LAYER,
+        'visibility',
+        $('listings-toggle').checked ? 'visible' : 'none',
+      )
+    })
+    .catch((error) => console.warn(error))
   loadPlanning()
 })
 

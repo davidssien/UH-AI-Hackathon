@@ -136,10 +136,75 @@
             ></span
           ><input id="demo-toggle" type="checkbox" checked
         /></label>
+        <label
+          ><span
+            >Homes for sale (fair-price model)<small
+              >Green underpriced · gray fair · red overpriced</small
+            ></span
+          ><input id="listings-toggle" type="checkbox" checked
+        /></label>
         <p class="layer-note">
           Super Neighborhood boundaries are planning districts, not zoning.
           Sugar Land pins link to OpenStreetMap records. Other neighborhoods
           contain demo houses.
+        </p>
+      </section>
+      <section
+        id="deals-panel"
+        class="floating-panel deals-panel"
+        hidden
+        aria-label="Fair-price deals"
+      >
+        <button id="close-deals" class="panel-close" aria-label="Close deals">
+          ×
+        </button>
+        <p class="eyebrow">FAIR-PRICE MODEL · HOMES FOR SALE</p>
+        <h2 class="deals-title">Is it fairly priced?</h2>
+        <p class="deals-sub">
+          22,764 real Houston listings scored by our model. Pan or search the
+          map; this panel follows what you see.
+        </p>
+        <div class="deal-chips" role="group" aria-label="Filter by deal">
+          <button class="deal-chip" data-deal="" aria-pressed="true">
+            All
+          </button>
+          <button
+            class="deal-chip under"
+            data-deal="UNDERPRICED"
+            aria-pressed="false"
+          >
+            Underpriced
+          </button>
+          <button class="deal-chip fair" data-deal="FAIR" aria-pressed="false">
+            Fair
+          </button>
+          <button
+            class="deal-chip over"
+            data-deal="OVERPRICED"
+            aria-pressed="false"
+          >
+            Overpriced
+          </button>
+        </div>
+        <label class="deal-max"
+          >Max price
+          <select id="deal-max">
+            <option value="">Any</option>
+            <option value="200000">$200K</option>
+            <option value="300000">$300K</option>
+            <option value="400000">$400K</option>
+            <option value="500000">$500K</option>
+            <option value="750000">$750K</option>
+            <option value="1000000">$1M</option>
+          </select></label
+        >
+        <div id="deals-market" class="deals-market"></div>
+        <h3 class="deals-list-title">Best deals in view</h3>
+        <div id="deals-list" class="deals-list"></div>
+        <p class="layer-note">
+          Fair price = out-of-fold model estimate (the model never saw that
+          home). Typical error <b id="deals-mdape">—</b> (median). Not an
+          appraisal.
         </p>
       </section>
       <section
@@ -167,6 +232,7 @@
             Demo pricing · not a valuation or listing price
           </p>
         </div>
+        <div id="model-extras" class="model-extras" hidden></div>
         <div class="essentials-heading">
           <h3>Everyday essentials</h3>
           <span id="essentials-status">Mapped places</span>
@@ -239,6 +305,16 @@
           aria-controls="layers-panel"
         >
           <span aria-hidden="true">▱</span><small>Layers</small>
+        </button>
+        <div class="dock-divider"></div>
+        <button
+          id="deals-button"
+          class="dock-button deals-dock"
+          aria-expanded="false"
+          aria-controls="deals-panel"
+          title="Fair-price model: find underpriced homes"
+        >
+          <span aria-hidden="true">◈</span><small>Deals</small>
         </button>
       </div>
       <div class="placement-hint">
