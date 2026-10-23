@@ -1,6 +1,15 @@
-import { demoBuildings, homeById } from './buildings.js'
+import { homeById } from './buildings.js'
+import { prepareHousing } from './housing-data.js'
 import { createPinReveal } from './pin-reveal.js'
-let displayedHomes = demoBuildings
+let displayedHomes = []
+let activeFilter = () => true
+export function filterHistoricalHomes(map, predicate) {
+  activeFilter = predicate
+  map
+    .getSource('demo-houses')
+    .setData(homesGeoJSON(displayedHomes.filter(activeFilter)))
+  reveal?.refresh()
+}
 let reveal
 export function refreshHouseReveal() {
   reveal?.refresh()
@@ -8,15 +17,16 @@ export function refreshHouseReveal() {
 export function destroyHouseReveal() {
   reveal?.destroy()
 }
-export async function loadSugarLandHomes(map) {
-  const response = await fetch('/data/sugar-land-homes.json')
-  if (!response.ok) throw new Error('Mapped homes could not be loaded')
-  const data = await response.json()
+export async function loadHistoricalHomes(map, fetchImpl = fetch) {
+  const response = await fetchImpl('/houston-homes.json', {
+    signal: AbortSignal.timeout(15000),
+  })
+  if (!response.ok)
+    throw new Error('Historical housing snapshot could not be loaded')
+  const data = prepareHousing(await response.json())
+  homeById.clear()
   for (const home of data.homes) homeById.set(home.id, home)
-  displayedHomes = [
-    ...demoBuildings.filter((b) => !/^demo-(20|21|22|23)-/.test(b.id)),
-    ...data.homes,
-  ]
+  displayedHomes = data.homes
   map.getSource('demo-houses').setData(homesGeoJSON(displayedHomes))
   reveal?.refresh()
   return data
@@ -144,7 +154,9 @@ export function installDemoLayer(map, beforeId) {
     },
     beforeId,
   )
-  reveal = createPinReveal(map, pinImage(), () => displayedHomes)
+  reveal = createPinReveal(map, pinImage(), () =>
+    displayedHomes.filter(activeFilter),
+  )
 }
 export function setDemoVisibility(map, visible) {
   reveal?.setEnabled(visible)

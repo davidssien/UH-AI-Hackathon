@@ -1,3 +1,4 @@
+import { hideModelExtras, renderModelExtras } from './model-card.js'
 export const ESSENTIAL_TYPES = [
   { key: 'school', label: 'School', icon: '▤' },
   { key: 'hospital', label: 'Hospital', icon: '✚' },
@@ -41,6 +42,51 @@ export function mockPrice(building) {
     high: Math.round((price * 1.1) / 5000) * 5000,
   }
 }
+export function pricePresentation(building) {
+  if (building.listing)
+    return {
+      price: building.fair,
+      label: 'Model fair price',
+      low: building.p10,
+      high: building.p90,
+      note: 'Out-of-fold estimate · historical asking price · not an appraisal or verified active listing.',
+    }
+  if (building.historical)
+    return {
+      price: null,
+      label: 'Estimate unavailable',
+      range: 'Saved model estimates are not connected yet.',
+      note: 'Historical observation · not a current listing or appraisal.',
+    }
+  return {
+    ...mockPrice(building),
+    label: 'Mock estimate',
+    note: 'Demo pricing · not a valuation or listing price',
+  }
+}
+export function propertyFacts(building) {
+  return [
+    ['Bedrooms', building.beds],
+    ['Bathrooms', building.baths],
+    [
+      'Living area',
+      building.livingArea == null
+        ? null
+        : `${building.livingArea.toLocaleString()} sqft`,
+    ],
+    [
+      'Lot area',
+      building.lotSqft == null
+        ? null
+        : `${building.lotSqft.toLocaleString()} sqft`,
+    ],
+    ['Year built', building.yearBuilt],
+    ['ZIP', building.zip],
+  ].map(([label, value]) => [
+    label,
+    value == null || value === '' ? 'Unknown' : String(value),
+  ])
+}
 export function createPropertyDetails() {
   const $ = (id) => document.getElementById(id)
   const money = new Intl.NumberFormat('en-US', {
@@ -53,10 +99,36 @@ export function createPropertyDetails() {
     current = null,
     disposed = false
   function render(building) {
-    const estimates = mockPrice(building)
-    $('suggested-price').textContent = money.format(estimates.price)
+    const estimates = pricePresentation(building)
+    $('price-label').textContent = estimates.label
+    $('suggested-price').textContent =
+      estimates.price == null ? 'Unavailable' : money.format(estimates.price)
     $('price-range').textContent =
-      `Demo range ${money.format(estimates.low)} – ${money.format(estimates.high)}`
+      estimates.range ||
+      `${building.listing ? '80% fair range' : 'Demo range'} ${money.format(estimates.low)} – ${money.format(estimates.high)}`
+    $('price-disclaimer').textContent = estimates.note
+    // Amenity loading rerenders facts; preserve calculator inputs and offer drafts.
+    const extras = $('model-extras')
+    if (building.listing) {
+      if (extras.dataset.home !== building.id) {
+        renderModelExtras(extras, building)
+        extras.dataset.home = building.id
+      }
+    } else {
+      hideModelExtras(extras)
+      delete extras.dataset.home
+    }
+    const facts = $('property-facts')
+    facts.replaceChildren()
+    facts.hidden = !building.historical
+    if (building.historical)
+      for (const [label, value] of propertyFacts(building)) {
+        const term = document.createElement('dt'),
+          definition = document.createElement('dd')
+        term.textContent = label
+        definition.textContent = value
+        facts.append(term, definition)
+      }
     $('essentials-status').textContent = facilities
       ? 'OSM · straight-line'
       : 'Loading mapped places…'

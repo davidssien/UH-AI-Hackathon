@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { selectedSite, areaLabel } from '../src/sites.js'
 import { PLAY_BOUNDS, inside } from '../src/geo.js'
-import { demoBuildings } from '../src/buildings.js'
+import { demoBuildings } from './fixtures/demo-buildings.js'
 
 test('selection is identical when drawn in either direction', () => {
   const a = [-95.39, 29.77],

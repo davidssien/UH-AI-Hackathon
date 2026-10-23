@@ -39,7 +39,7 @@ export function localSuggestions(query) {
     .map((h) => ({
       ...h,
       label: h.address,
-      detail: 'Sugar Land · Mapped address',
+      detail: `${h.city || 'Greater Houston'} · Recorded address`,
       zoom: 18,
     }))
   const seen = new Set()

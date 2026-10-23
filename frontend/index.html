@@ -131,17 +131,76 @@
         /></label>
         <label
           ><span
-            >Mapped & demo houses<small id="demo-status"
-              >Demo houses appear at neighborhood zoom</small
+            >Historical housing<small id="demo-status"
+              >Historical records appear at neighborhood zoom</small
             ></span
           ><input id="demo-toggle" type="checkbox" checked
         /></label>
         <p class="layer-note">
-          Super Neighborhood boundaries are planning districts, not zoning.
-          Sugar Land pins link to OpenStreetMap records. Other neighborhoods
-          contain demo houses.
+          Super Neighborhood boundaries are planning districts, not zoning. Pins
+          show historical Houston housing records from the 2024 dataset. They
+          are not verified active listings.
         </p>
       </section>
+      <section
+        id="deals-panel"
+        class="floating-panel deals-panel"
+        hidden
+        aria-label="Fair-price deals"
+      >
+        <button id="close-deals" class="panel-close" aria-label="Close deals">
+          ×
+        </button>
+        <p class="eyebrow">FAIR-PRICE MODEL · HISTORICAL DATA</p>
+        <h2 class="deals-title">Is it fairly priced?</h2>
+        <p class="deals-sub">
+          22,764 historical Houston homes scored by the model. Pan or search the
+          map; this panel follows what you see.
+        </p>
+        <div class="deal-chips" role="group" aria-label="Filter by deal">
+          <button class="deal-chip" data-deal="" aria-pressed="true">
+            All
+          </button>
+          <button
+            class="deal-chip under"
+            data-deal="UNDERPRICED"
+            aria-pressed="false"
+          >
+            Underpriced
+          </button>
+          <button class="deal-chip fair" data-deal="FAIR" aria-pressed="false">
+            Fair
+          </button>
+          <button
+            class="deal-chip over"
+            data-deal="OVERPRICED"
+            aria-pressed="false"
+          >
+            Overpriced
+          </button>
+        </div>
+        <label class="deal-max"
+          >Max price
+          <select id="deal-max">
+            <option value="">Any</option>
+            <option value="200000">$200K</option>
+            <option value="300000">$300K</option>
+            <option value="400000">$400K</option>
+            <option value="500000">$500K</option>
+            <option value="750000">$750K</option>
+            <option value="1000000">$1M</option>
+          </select></label
+        >
+        <div id="deals-market" class="deals-market"></div>
+        <h3 class="deals-list-title">Best deals in view</h3>
+        <div id="deals-list" class="deals-list"></div>
+        <p class="layer-note">
+          Fair price = out-of-fold model estimate (the model never saw that
+          home). Typical error <b id="deals-mdape">—</b> (median). Not an
+          appraisal.
+        </p>
+      </section>
+
       <section
         id="selection"
         class="floating-panel selection-panel"
@@ -159,14 +218,23 @@
         <h2 id="selection-title"></h2>
         <p id="selection-description"></p>
         <p id="selection-coords" class="coordinates"></p>
+        <div id="observation-chooser" hidden>
+          <label for="observation-select">Records at this location</label>
+          <select id="observation-select"></select>
+        </div>
+        <dl id="property-facts" class="property-facts" hidden></dl>
         <div class="price-card">
-          <div><span>SUGGESTED PRICE</span><small>MOCK ESTIMATE</small></div>
+          <div>
+            <span>SUGGESTED PRICE</span
+            ><small id="price-label">ESTIMATE UNAVAILABLE</small>
+          </div>
           <strong id="suggested-price">—</strong>
           <p id="price-range"></p>
-          <p class="price-disclaimer">
+          <p id="price-disclaimer" class="price-disclaimer">
             Demo pricing · not a valuation or listing price
           </p>
         </div>
+        <div id="model-extras" class="model-extras" hidden></div>
         <div class="essentials-heading">
           <h3>Everyday essentials</h3>
           <span id="essentials-status">Mapped places</span>
@@ -211,7 +279,7 @@
         <button
           id="neighborhood-button"
           class="dock-button"
-          title="Explore real Sugar Land houses"
+          title="Explore historical Houston housing"
         >
           <span aria-hidden="true">⌖</span><small>Explore</small>
         </button>
@@ -239,6 +307,15 @@
           aria-controls="layers-panel"
         >
           <span aria-hidden="true">▱</span><small>Layers</small>
+        </button>
+        <button
+          id="deals-button"
+          class="dock-button deals-dock"
+          aria-expanded="false"
+          aria-controls="deals-panel"
+          title="Find historical fair-price deals"
+        >
+          <span aria-hidden="true">◈</span><small>Deals</small>
         </button>
       </div>
       <div class="placement-hint">

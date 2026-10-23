@@ -74,7 +74,7 @@ export function updateLocation(map) {
       : null
   const locality =
     nearbyHome?.distance < 200
-      ? 'Sugar Land'
+      ? nearbyHome.home.city || 'Unknown city'
       : city
         ? nameOf(city.f.properties)
         : 'Houston'
@@ -121,7 +121,7 @@ export function updateLocation(map) {
     )
     if (nearbyHome?.distance < 25 && nearbyHome.home.address) {
       title = nearbyHome.home.address
-      detail = 'SUGAR LAND, TX · NEARBY MAPPED ADDRESS'
+      detail = `${locality.toUpperCase()}, TX · NEARBY RECORDED ADDRESS`
     } else if (address) {
       const p = address.properties
       title = p['addr:full'] || `${p['addr:housenumber']} ${p['addr:street']}`

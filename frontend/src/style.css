@@ -1365,3 +1365,33 @@ input:focus-visible {
   outline: 2px solid #9eb989;
   outline-offset: 2px;
 }
+
+/* Recorded property facts share the existing selection panel. */
+.property-facts:not([hidden]) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 12px;
+  margin: 14px 0;
+  font-size: 12px;
+}
+.property-facts dt {
+  color: #626b60;
+}
+.property-facts dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+}
+#observation-chooser {
+  margin: 12px 0;
+  font-size: 12px;
+}
+#observation-select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 7px;
+  border: 1px solid #bdc7b9;
+  border-radius: 6px;
+  background: #fffef6;
+}

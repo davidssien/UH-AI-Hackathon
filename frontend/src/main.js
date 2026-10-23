@@ -1,4 +1,5 @@
 import './style.css'
+import './model.css'
 import {
   Map as MapLibreMap,
   Marker,
@@ -11,18 +12,26 @@ import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { HOUSTON, minimumZoom, constrainCenter, squareFeature } from './geo.js'
 import { homeById } from './buildings.js'
 import {
+  homesAtLocation,
+  housingExploreCenter,
+  housingTitle,
+} from './housing-data.js'
+import {
   DEMO_LAYERS,
   installDemoLayer,
   setDemoVisibility,
-  loadSugarLandHomes,
+  loadHistoricalHomes,
   refreshHouseReveal,
   destroyHouseReveal,
+  filterHistoricalHomes,
 } from './demo-layer.js'
 import { areaLabel, installSiteLayers, highlightSite } from './sites.js'
 import { createSiteSelector } from './site-selector.js'
 import { updateLocation, setSearchedAddress } from './location.js'
 import { createLocationSearch } from './search.js'
 import { createPropertyDetails } from './property-details.js'
+import { loadScores, listingById } from './listings.js'
+import { createDealsPanel, passes } from './deals.js'
 setWorkerUrl(workerUrl)
 
 // CONFIG / STATE
@@ -109,6 +118,7 @@ function transformCamera(next) {
 }
 // Use a separate binding to permit callbacks during constructor initialization.
 let map
+let dealsPanel
 map = new MapLibreMap({
   container: 'map',
   style: 'https://tiles.openfreemap.org/styles/positron',
@@ -125,6 +135,35 @@ map = new MapLibreMap({
   attributionControl: { compact: true },
 })
 map.touchZoomRotate.disableRotation()
+dealsPanel = createDealsPanel(map, {
+  onPick(id) {
+    const home = listingById.get(id)
+    if (!home) return
+    dealsPanel.setOpen(false)
+    $('demo-toggle').checked = true
+    setDemoVisibility(map, true)
+    map.once('moveend', () => selectBuilding(id))
+    map.easeTo({
+      center: [home.lng, home.lat],
+      zoom: 17,
+      duration: reducedMotion ? 0 : 700,
+    })
+  },
+  onFilter(deal, max) {
+    selectBuilding(null)
+    if (map.getSource('demo-houses'))
+      filterHistoricalHomes(
+        map,
+        (h) => (!deal && !max) || (h.listing && passes(h, deal, max)),
+      )
+  },
+  onOpen() {
+    selectBuilding(null)
+    $('layers-panel').hidden = true
+    $('layers-button').setAttribute('aria-expanded', 'false')
+    setBuildMode(false)
+  },
+})
 map.touchPitch.disable()
 map.addControl(new NavigationControl({ showCompass: false }), 'bottom-right')
 map.addControl(
@@ -220,6 +259,7 @@ const locationSearch = createLocationSearch(map, {
 })
 function zoomToBuilding(b) {
   if (!b) return
+  dealsPanel?.setOpen(false)
   selectBuilding(b.id)
   // Finish MapLibre's double-click handler before starting the custom flight.
   requestAnimationFrame(() =>
@@ -318,44 +358,58 @@ function selectBuilding(id) {
     ])
   if (!b) return
   propertyDetails.show(b)
+  dealsPanel?.setOpen(false)
   entry?.el.classList.add('is-selected')
   entry?.el.setAttribute('aria-pressed', 'true')
-  $('selection-title').textContent =
-    b.existing && b.address ? b.address : TYPES[b.type].label
-  $('selection-description').textContent = b.existing
-    ? `Sugar Land, TX · mapped ${b.building.replaceAll('_', ' ')}`
+  $('selection-title').textContent = b.historical
+    ? housingTitle(b)
+    : TYPES[b.type].label
+  $('selection-description').textContent = b.historical
+    ? `${b.city || 'Unknown city'}, TX · ${b.homeType?.replaceAll('_', ' ').toLowerCase() || 'Unknown property type'}`
     : TYPES[b.type].description
   $('selection-coords').textContent =
     `${b.lat.toFixed(5)}° N · ${Math.abs(b.lng).toFixed(5)}° W`
-  $('selection-kind').textContent = b.existing
-    ? 'OPENSTREETMAP · MAPPED HOME'
-    : b.demo
-      ? 'EXISTING · DEMO'
-      : 'PROPOSED DEVELOPMENT'
-  $('selection-note').textContent = b.existing
-    ? `${b.address ? 'Address as recorded in OpenStreetMap.' : 'No street address recorded for this building.'} Community-mapped building location; not a property listing.`
-    : b.demo
-      ? 'Illustrative house location, not a verified parcel.'
-      : `${areaLabel(b.site.area)} development site. Highlighted area is your proposed footprint.`
-  $('source-record').hidden = !b.existing
-  if (b.existing) $('source-record').href = b.sourceUrl
+  $('selection-kind').textContent = b.historical
+    ? `HISTORICAL HOUSING · ${b.listing ? b.deal : '2024 DATASET'}`
+    : 'PROPOSED DEVELOPMENT'
+  $('selection-note').textContent = b.historical
+    ? `${b.address ? 'Recorded source address.' : 'No street address recorded.'} Historical observation #${b.rowId}; current availability, photos, and observation date are unverified.`
+    : `${areaLabel(b.site.area)} development site. Highlighted area is your proposed footprint.`
+  $('source-record').hidden = !b.historical
+  if (b.historical) {
+    $('source-record').href = b.sourceUrl
+    $('source-record').textContent = 'View housing dataset source ↗'
+  }
+  const colocated = b.historical ? homesAtLocation(b, homeById.values()) : []
+  $('observation-chooser').hidden = colocated.length < 2
+  const choices = $('observation-select')
+  choices.replaceChildren()
+  if (colocated.length > 1) {
+    for (const home of colocated) {
+      const option = document.createElement('option')
+      option.value = home.id
+      option.textContent = `${housingTitle(home)} · #${home.rowId} · ${home.beds ?? '?'} beds`
+      option.selected = home.id === b.id
+      choices.append(option)
+    }
+  }
   $('edit-site-button').hidden = !b.site
 }
+$('observation-select').addEventListener('change', (event) =>
+  selectBuilding(event.target.value),
+)
 function updateNearbyBuildings() {
   if (!ready || map.isMoving()) return
   const features = demoVisible
     ? map.queryRenderedFeatures({ layers: DEMO_LAYERS })
     : []
   const count = new Set(features.map((f) => f.properties.id)).size
-  const mapped = new Set(
-    features.filter((f) => f.properties.mapped).map((f) => f.properties.id),
-  ).size
   $('tip-title').textContent = count
-    ? `${mapped} mapped · ${count - mapped} demo homes`
-    : 'Explore Sugar Land homes'
+    ? `${count.toLocaleString()} historical pins in view`
+    : 'Explore historical housing'
   $('tip-copy').textContent = count
-    ? 'Select a pin to see its details and source.'
-    : 'Explore jumps to real mapped homes.'
+    ? 'Select a pin for recorded facts. Shared locations offer a record selector.'
+    : 'Explore jumps to historical records. Zoom in for more pins.'
 }
 function updateZoomUI() {
   demoVisible = map.getZoom() >= BUILDINGS_MIN_ZOOM && $('demo-toggle').checked
@@ -363,7 +417,7 @@ function updateZoomUI() {
   $('zoom-level').textContent = map.getZoom().toFixed(1)
   $('demo-status').textContent =
     map.getZoom() >= 16
-      ? 'All available homes visible at this zoom'
+      ? 'All recorded locations available · shared pins may overlap'
       : 'More pins at zoom 14 · all homes at 16'
 }
 map.on('zoom', updateZoomUI)
@@ -430,6 +484,7 @@ siteSelector = createSiteSelector(map, {
   },
 })
 function setBuildMode(value) {
+  if (value) dealsPanel?.setOpen(false)
   buildMode = value
   editingId = null
   $('confirm-area').textContent = 'Choose building →'
@@ -568,6 +623,7 @@ for (const button of document.querySelectorAll('.build-option'))
   })
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
+    dealsPanel.setOpen(false)
     setBuildMode(false)
     $('layers-panel').hidden = true
     $('layers-button').setAttribute('aria-expanded', 'false')
@@ -587,12 +643,13 @@ $('home-button').addEventListener('click', () => {
 $('neighborhood-button').addEventListener('click', () => {
   setBuildMode(false)
   map.easeTo({
-    center: [-95.6046, 29.6508],
+    center: housingExploreCenter(homeById.values()),
     zoom: 16.5,
     duration: reducedMotion ? 0 : 900,
   })
 })
 $('layers-button').addEventListener('click', () => {
+  dealsPanel.setOpen(false)
   $('layers-panel').hidden = !$('layers-panel').hidden
   $('layers-button').setAttribute(
     'aria-expanded',
@@ -672,15 +729,30 @@ map.on('style.load', () => {
   $('map-status').textContent = 'Ready to explore'
   updateZoomUI()
   updateNearbyBuildings()
-  loadSugarLandHomes(map)
-    .then((data) => {
+  loadHistoricalHomes(map)
+    .then(async (data) => {
       $('map-status').textContent =
-        `${data.homes.length.toLocaleString()} Sugar Land homes mapped`
+        `${data.homes.length.toLocaleString()} historical records · ${data.outsideCount} outside map bounds`
       map.once('idle', refreshHouseReveal)
+      try {
+        const scores = await loadScores(data.homes)
+        $('map-status').textContent =
+          `${data.homes.length.toLocaleString()} historical records · ${scores.matched.toLocaleString()} model estimates`
+        const priorSelection = selectedId
+        dealsPanel.applyFilter()
+        dealsPanel.refresh()
+        if (priorSelection) selectBuilding(priorSelection)
+      } catch (error) {
+        console.warn(error)
+        $('map-status').textContent =
+          'Historical housing ready · model estimates unavailable'
+        dealsPanel.setUnavailable()
+      }
     })
     .catch((error) => {
       console.warn(error)
-      $('map-status').textContent = 'Mapped homes unavailable · demo map ready'
+      $('map-status').textContent =
+        'Historical housing unavailable · reload to retry'
     })
   loadPlanning()
 })
