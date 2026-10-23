@@ -223,7 +223,11 @@ const locationSearch = createLocationSearch(map, {
   onNavigate: (place) => {
     setSearchedAddress(place)
     setBuildMode(false)
-    selectBuilding(null)
+    selectBuilding(
+      place.listingId && listingById.has(place.listingId)
+        ? place.listingId
+        : null,
+    )
   },
   onReject: notifyScope,
 })

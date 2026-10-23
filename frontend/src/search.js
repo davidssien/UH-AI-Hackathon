@@ -1,5 +1,6 @@
 import { HOUSTON, PLAY_BOUNDS, inside } from './geo.js'
 import { homeById } from './buildings.js'
+import { listingById } from './listings.js'
 import { looksLikeAddress, lookupAddress } from './address-search.js'
 
 export const normalizeQuery = (value) =>
@@ -42,8 +43,23 @@ export function localSuggestions(query) {
       detail: 'Sugar Land · Mapped address',
       zoom: 18,
     }))
+  // Model-scored homes for sale: a typed address that is a real listing opens its full fair-price card.
+  const listings =
+    q.length >= 3
+      ? [...listingById.values()]
+          .filter((l) => normalizeQuery(l.address).includes(q))
+          .slice(0, 6)
+          .map((l) => ({
+            label: l.address,
+            lat: l.lat,
+            lng: l.lng,
+            zoom: 18,
+            listingId: l.id,
+            detail: `For sale · ${l.deal.toLowerCase()} · scored by our model`,
+          }))
+      : []
   const seen = new Set()
-  return [...places, ...homes]
+  return [...listings, ...places, ...homes]
     .filter((p) => {
       const key = normalizeQuery(p.label)
       if (!inSearchScope(p) || (q && !key.includes(q)) || seen.has(key))
