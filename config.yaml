@@ -1,0 +1,58 @@
+# ---- Track A: tabular regression ----
+DATA_DIR: data
+TRAIN: train.csv
+TEST: test.csv
+SAMPLE_SUB: sample_submission.csv
+ID_COL: id
+TARGET: target
+METRIC: rmse            # rmse | mae | rmsle | r2
+N_FOLDS: 5
+SEED: 42
+CV: kfold               # kfold | stratified (binned target) | group | time
+GROUP_COL: null         # for CV=group
+TIME_COL: null          # for CV=time (train sorted by this col)
+CAT_COLS: auto          # auto = object/category/bool dtypes, or a list
+DROP_COLS: []
+RATIO_PAIRS: []         # [[a, b], ...] -> a/b features (fe=ratios)
+GROUP_AGG: []           # [[cat_col, num_col], ...] -> mean/std/rank (fe=grpagg)
+
+# ---- Track B: NLP fine-tuning ----
+NLP:
+  DATA_DIR: data/nlp
+  TRAIN: train.csv
+  TEST: test.csv
+  SAMPLE_SUB: sample_submission.csv
+  ID_COL: id
+  TEXT_COLS: [text]     # multiple cols are joined with the tokenizer sep token
+  LABEL_COL: label
+  TASK: cls             # cls | reg
+  METRIC: accuracy      # accuracy | f1_macro | auc | rmse | mae
+  MODEL: microsoft/deberta-v3-base
+  N_FOLDS: 5
+
+# ---- Houston housing (FINAL_PROMPT.md) ----
+HOU:
+  SOURCE: teammate                     # raw | teammate  (switch to teammate when data/houses_clean.csv lands)
+  RAW: data/raw/properties_clean_v2.csv
+  TEAMMATE: data/houses_clean.csv
+  CLEAN: data/houses.parquet
+  COLS:                           # real column names -> our names (verified on load 2026-10-23)
+    id: zpid
+    price: price
+    beds: bedrooms
+    baths: bathrooms
+    living_area: livingArea
+    lot: lotAreaValue             # raw: <100 = acres, else sqft (no unit column)
+    year_built: yearBuilt
+    home_type: homeType
+    lat: latitude
+    lon: longitude
+    zip: zipcode
+    city: city
+    zestimate: zestimate          # BENCHMARK ONLY, never a feature
+    has_zestimate: has_zestimate
+  # median-imputed placeholders in the Kaggle "clean" file -> NaN
+  IMPUTED:
+    lot: {CONDO: 3.9775, SINGLE_FAMILY: 6050.484, TOWNHOUSE: 1869.5}
+    year_built: {LOT: 2001.5}
+  FORBIDDEN: [zestimate, rentZestimate, pricePerSquareFoot, has_zestimate, has_rent_zestimate, daysOnZillow, price]
