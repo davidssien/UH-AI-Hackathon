@@ -27,6 +27,7 @@ import {
   installListings,
   listingById,
   LISTING_LAYERS,
+  ALL_LISTING_LAYERS,
   renderMapKey,
 } from './listings.js'
 import { createDealsPanel } from './deals.js'
@@ -644,7 +645,7 @@ const deals = createDealsPanel(map, {
   onPick: (id) => zoomToBuilding(listingById.get(id)),
 })
 function setListingsVisible(visible) {
-  for (const id of LISTING_LAYERS)
+  for (const id of ALL_LISTING_LAYERS)
     if (map.getLayer(id))
       map.setLayoutProperty(id, 'visibility', visible ? 'visible' : 'none')
   $('map-key').hidden = !visible

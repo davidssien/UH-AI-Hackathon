@@ -1,15 +1,23 @@
 // Real Houston listings scored by our model (public/data/listings.json, exported from artifacts/ by
 // src/export_frontend.py). Fair price is an out-of-fold estimate: the model never saw that home.
 //
-// Map look follows PermitWatch: dark basemap, glowing deal-colored markers. Zoomed out they are glowing dots;
-// zoomed in each home becomes an icon of its residence type, tinted by deal.
-export const LISTING_LAYER = 'listings-points'
-export const LISTING_LAYERS = [
-  'listings-glow',
-  'listings-points',
-  'listings-icons',
+// Map look follows PermitWatch: dark basemap, glowing deal-colored markers. Zoomed out, homes are clustered into
+// count bubbles (ring color = deal mix); zoomed in each home is an icon of its residence type, tinted by deal.
+export const LISTING_LAYER = 'listings-icons'
+/** Clickable home layers (clusters are handled separately: they zoom in). */
+export const LISTING_LAYERS = ['listings-glow', 'listings-icons']
+export const ALL_LISTING_LAYERS = [
+  'listings-clusters',
+  'listings-cluster-count',
+  ...LISTING_LAYERS,
 ]
-export const ICON_MIN_ZOOM = 12.5
+let allListings = []
+
+/** Deal / price filter: re-cluster only the matching homes so bubble counts stay correct. */
+export function setListingsFilter(map, pass) {
+  const src = map.getSource('listings')
+  if (src) src.setData(listingsGeoJSON(allListings.filter(pass)))
+}
 
 /** Card / panel colors (light UI). */
 export const DEAL_COLORS = {
@@ -166,85 +174,105 @@ export async function installListings(map) {
   const listings = data.rows.map((row) => rowToListing(data.meta.fields, row))
   for (const l of listings) listingById.set(l.id, l)
   if (map.getSource('listings')) return listings
+  allListings = listings
   map.addSource('listings', {
     type: 'geojson',
     data: listingsGeoJSON(listings),
+    cluster: true,
+    clusterMaxZoom: 12,
+    clusterRadius: 50,
+    clusterProperties: {
+      under: ['+', ['case', ['==', ['get', 'deal'], 'UNDERPRICED'], 1, 0]],
+      over: ['+', ['case', ['==', ['get', 'deal'], 'OVERPRICED'], 1, 0]],
+    },
   })
   addResidenceIcons(map)
   const before = map.getLayer('outside-gray') ? 'outside-gray' : undefined
-  // Soft glow under every home (PermitWatch-style halo).
+  const single = ['!', ['has', 'point_count']]
+  // Zoomed out: count bubbles (PermitWatch-style), ring colored by the deal mix inside.
+  map.addLayer(
+    {
+      id: 'listings-clusters',
+      type: 'circle',
+      source: 'listings',
+      filter: ['has', 'point_count'],
+      paint: {
+        'circle-color': 'rgba(12,16,22,0.88)',
+        'circle-radius': [
+          'step',
+          ['get', 'point_count'],
+          15,
+          25,
+          19,
+          100,
+          24,
+          400,
+          30,
+          1500,
+          36,
+        ],
+        'circle-stroke-width': 3,
+        'circle-stroke-color': [
+          'case',
+          ['>', ['get', 'under'], ['*', 1.5, ['get', 'over']]],
+          MAP_COLORS.UNDERPRICED,
+          ['>', ['get', 'over'], ['*', 1.5, ['get', 'under']]],
+          MAP_COLORS.OVERPRICED,
+          '#cbd5e1',
+        ],
+        'circle-blur': 0.05,
+      },
+    },
+    before,
+  )
+  map.addLayer(
+    {
+      id: 'listings-cluster-count',
+      type: 'symbol',
+      source: 'listings',
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': ['get', 'point_count_abbreviated'],
+        'text-size': 12,
+        'text-font': ['Noto Sans Bold'],
+        'text-allow-overlap': true,
+      },
+      paint: { 'text-color': '#ffffff' },
+    },
+    before,
+  )
+  // Zoomed in: soft glow + residence-type icon tinted by deal.
   map.addLayer(
     {
       id: 'listings-glow',
       type: 'circle',
       source: 'listings',
+      filter: single,
       paint: {
         'circle-color': dealColor(MAP_COLORS),
         'circle-radius': [
           'interpolate',
           ['linear'],
           ['zoom'],
-          9,
-          4,
-          13,
-          9,
-          17,
+          11,
+          10,
+          15,
+          16,
           18,
+          24,
         ],
         'circle-blur': 1,
-        'circle-opacity': [
-          'interpolate',
-          ['linear'],
-          ['zoom'],
-          9,
-          0.35,
-          14,
-          0.45,
-        ],
+        'circle-opacity': 0.45,
       },
     },
     before,
   )
-  // Zoomed out: glowing dots.
-  map.addLayer(
-    {
-      id: LISTING_LAYER,
-      type: 'circle',
-      source: 'listings',
-      maxzoom: ICON_MIN_ZOOM,
-      paint: {
-        'circle-color': dealColor(MAP_COLORS),
-        'circle-radius': [
-          'interpolate',
-          ['linear'],
-          ['zoom'],
-          9,
-          1.8,
-          12.5,
-          3.6,
-        ],
-        'circle-stroke-color': '#0b0f14',
-        'circle-stroke-width': [
-          'interpolate',
-          ['linear'],
-          ['zoom'],
-          9,
-          0,
-          12,
-          0.8,
-        ],
-        'circle-opacity': 0.95,
-      },
-    },
-    before,
-  )
-  // Zoomed in: residence-type icons tinted by deal.
   map.addLayer(
     {
       id: 'listings-icons',
       type: 'symbol',
       source: 'listings',
-      minzoom: ICON_MIN_ZOOM,
+      filter: single,
       layout: {
         'icon-image': [
           'match',
@@ -256,12 +284,12 @@ export async function installListings(map) {
           'interpolate',
           ['linear'],
           ['zoom'],
-          12.5,
-          0.55,
+          11,
+          0.75,
           15,
-          0.8,
+          1.0,
           18,
-          1.15,
+          1.35,
         ],
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
@@ -269,10 +297,31 @@ export async function installListings(map) {
       paint: {
         'icon-color': dealColor(MAP_COLORS),
         'icon-halo-color': '#0b0f14',
-        'icon-halo-width': 1.4,
+        'icon-halo-width': 1.6,
       },
     },
     before,
+  )
+  map.on('click', 'listings-clusters', async (e) => {
+    const f = e.features?.[0]
+    if (!f) return
+    const zoom = await map
+      .getSource('listings')
+      .getClusterExpansionZoom(f.properties.cluster_id)
+    map.easeTo({
+      center: f.geometry.coordinates,
+      zoom: Math.min(zoom + 0.3, 17),
+    })
+  })
+  map.on(
+    'mouseenter',
+    'listings-clusters',
+    () => (map.getCanvas().style.cursor = 'pointer'),
+  )
+  map.on(
+    'mouseleave',
+    'listings-clusters',
+    () => (map.getCanvas().style.cursor = ''),
   )
   return listings
 }
@@ -310,7 +359,7 @@ export function renderMapKey(container) {
   }
   const note = document.createElement('li')
   note.className = 'key-note'
-  note.textContent = 'Icons appear as you zoom in'
+  note.textContent = 'Bubbles = number of homes · click to zoom in'
   list.append(note)
   container.append(list)
   container.hidden = false
