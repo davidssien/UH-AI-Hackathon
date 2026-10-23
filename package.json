@@ -1,0 +1,23 @@
+{
+  "name": "uh-ai-hackathon",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write frontend vite.config.js package.json .prettierrc.json",
+    "format:check": "prettier --check frontend vite.config.js package.json .prettierrc.json",
+    "test": "node --test frontend/tests/*.test.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "maplibre-gl": "^6.13.0"
+  }
+}

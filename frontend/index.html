@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f5f2" />
+    <meta
+      name="description"
+      content="Explore Greater Houston and sketch your next development. An interactive urban planning sandbox."
+    />
+    <title>Greater Houston · Development Simulator</title>
+  </head>
+  <body>
+    <main id="app" class="relative h-dvh w-screen overflow-hidden">
+      <div id="map" class="absolute inset-0"></div>
+      <div id="location-heading" class="location-heading">
+        <button
+          id="location-trigger"
+          class="location-trigger"
+          aria-label="Search a location in Greater Houston"
+          aria-expanded="false"
+          aria-controls="location-search"
+        >
+          <h1 id="location-title">Greater Houston, Texas</h1>
+          <p id="location-detail">REGION VIEW</p>
+          <span class="location-search-glyph" aria-hidden="true">⌕</span>
+        </button>
+        <form
+          id="location-search"
+          hidden
+          role="search"
+          aria-label="Search Greater Houston"
+        >
+          <div class="search-input-row">
+            <span aria-hidden="true">⌕</span
+            ><input
+              id="location-input"
+              type="text"
+              role="combobox"
+              aria-label="Location search"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="location-results"
+              placeholder="Search a home address or place"
+              autocomplete="off"
+              spellcheck="false"
+            /><button
+              id="close-search"
+              type="button"
+              aria-label="Close location search"
+            >
+              ×
+            </button>
+          </div>
+          <div class="search-scope">
+            GREATER HOUSTON <span>Places · streets · addresses</span>
+          </div>
+          <button id="current-address" class="current-address" type="button">
+            <span aria-hidden="true">⌖</span
+            ><span
+              ><b>Current address</b
+              ><small id="current-address-value"
+                >Finding address at map center…</small
+              ></span
+            >
+          </button>
+          <ul
+            id="location-results"
+            role="listbox"
+            aria-label="Location suggestions"
+          ></ul>
+          <p id="search-status" role="status"></p>
+          <a
+            class="search-credit"
+            href="https://photon.komoot.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Place search: Photon / OpenStreetMap ↗</a
+          >
+          <a
+            class="search-credit"
+            href="https://geocoding.geo.census.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Address search: US Census Geocoder ↗</a
+          >
+        </form>
+      </div>
+      <div id="scope-toast" class="scope-toast" role="alert" hidden>
+        <span aria-hidden="true">!</span>
+        <div>
+          <b id="scope-toast-title">Out of scope</b
+          ><small id="scope-toast-copy"
+            >Choose a location inside Greater Houston.</small
+          >
+        </div>
+      </div>
+      <div class="build-score" title="Developments placed this session">
+        <span aria-hidden="true">✦</span><b id="proposal-count">0</b
+        ><span>ideas built</span>
+      </div>
+      <div class="discovery-tip">
+        <span class="tip-icon" aria-hidden="true">⌖</span>
+        <div>
+          <b id="tip-title">Explore the neighborhood</b>
+          <p id="tip-copy">More houses appear as you zoom in.</p>
+        </div>
+      </div>
+      <div id="map-status" class="map-status" role="status">
+        Loading Houston…
+      </div>
+      <div id="build-toast" class="build-toast" role="status" hidden>
+        <span aria-hidden="true">✦</span>
+        <div>
+          <b id="toast-title"></b><small>One more idea on the map.</small>
+        </div>
+      </div>
+      <section
+        id="layers-panel"
+        class="floating-panel layers-panel"
+        hidden
+        aria-label="Map layers"
+      >
+        <p class="eyebrow">MAP DETAILS</p>
+        <label
+          ><span
+            >Planning boundaries<small id="planning-status"
+              >Loading City of Houston data…</small
+            ></span
+          ><input id="planning-toggle" type="checkbox" checked
+        /></label>
+        <label
+          ><span
+            >Mapped & demo houses<small id="demo-status"
+              >Demo houses appear at neighborhood zoom</small
+            ></span
+          ><input id="demo-toggle" type="checkbox" checked
+        /></label>
+        <p class="layer-note">
+          Super Neighborhood boundaries are planning districts, not zoning.
+          Sugar Land pins link to OpenStreetMap records. Other neighborhoods
+          contain demo houses.
+        </p>
+      </section>
+      <section
+        id="selection"
+        class="floating-panel selection-panel"
+        hidden
+        aria-label="Selected development"
+      >
+        <button
+          id="close-selection"
+          class="panel-close"
+          aria-label="Close development details"
+        >
+          ×
+        </button>
+        <p id="selection-kind" class="eyebrow"></p>
+        <h2 id="selection-title"></h2>
+        <p id="selection-description"></p>
+        <p id="selection-coords" class="coordinates"></p>
+        <div class="price-card">
+          <div><span>SUGGESTED PRICE</span><small>MOCK ESTIMATE</small></div>
+          <strong id="suggested-price">—</strong>
+          <p id="price-range"></p>
+          <p class="price-disclaimer">
+            Demo pricing · not a valuation or listing price
+          </p>
+        </div>
+        <div class="essentials-heading">
+          <h3>Everyday essentials</h3>
+          <span id="essentials-status">Mapped places</span>
+        </div>
+        <div id="nearby-essentials" class="nearby-essentials"></div>
+        <p class="essentials-footnote">
+          Nearest in our mapped dataset · straight-line distance, not travel
+          time. Coverage may be incomplete.
+        </p>
+        <div id="selection-note" class="selection-note"></div>
+        <a
+          id="source-record"
+          class="source-record"
+          target="_blank"
+          rel="noopener noreferrer"
+          hidden
+          >View OpenStreetMap record ↗</a
+        >
+        <button id="edit-site-button" class="editor-action" hidden>
+          Edit boundary
+        </button>
+      </section>
+      <div
+        id="area-editor"
+        class="area-editor"
+        hidden
+        aria-label="Boundary editor"
+      >
+        <div>
+          <b id="editor-summary">4 corners</b
+          ><small>Drag corners · + adds a vertex · drag inside to move</small>
+        </div>
+        <div class="editor-actions">
+          <button id="undo-area" title="Undo boundary edit">↶ Undo</button
+          ><button id="redraw-area">Redraw</button
+          ><button id="confirm-area" class="editor-primary">
+            Choose building →
+          </button>
+        </div>
+      </div>
+      <div class="game-dock" role="toolbar" aria-label="Map tools">
+        <button
+          id="neighborhood-button"
+          class="dock-button"
+          title="Explore real Sugar Land houses"
+        >
+          <span aria-hidden="true">⌖</span><small>Explore</small>
+        </button>
+        <button
+          id="build-mode-button"
+          class="dock-button build-mode"
+          aria-pressed="false"
+          title="Select a development area"
+        >
+          <span aria-hidden="true">▧</span><small>Build</small>
+        </button>
+        <div class="dock-divider"></div>
+        <button
+          id="home-button"
+          class="dock-button"
+          title="Return to Houston overview"
+          aria-label="Return to Houston overview"
+        >
+          <span aria-hidden="true">◎</span><small>World</small>
+        </button>
+        <button
+          id="layers-button"
+          class="dock-button"
+          aria-expanded="false"
+          aria-controls="layers-panel"
+        >
+          <span aria-hidden="true">▱</span><small>Layers</small>
+        </button>
+      </div>
+      <div class="placement-hint">
+        <span id="mode-hint"
+          >Explore the map. Select Build to choose an area.</span
+        ><kbd>ESC</kbd>
+      </div>
+      <div class="map-meta">
+        <span class="status-dot"></span>Concept planning
+        <span class="meta-divider">/</span>
+        <span>Zoom <b id="zoom-level">—</b></span>
+      </div>
+      <section
+        id="build-menu"
+        role="dialog"
+        aria-labelledby="build-title"
+        class="absolute z-30 hidden w-72 overflow-hidden rounded-2xl border border-black/5 bg-white shadow-xl shadow-black/10"
+      >
+        <div
+          class="flex items-start justify-between border-b border-neutral-100 px-4 py-3"
+        >
+          <div>
+            <p class="eyebrow">AREA SELECTED</p>
+            <h2
+              id="build-title"
+              class="m-0 mt-1 text-sm font-semibold text-neutral-800"
+            >
+              Build in this area
+            </h2>
+            <p
+              id="build-location"
+              class="m-0 mt-1 text-[10px] text-neutral-400"
+            ></p>
+          </div>
+          <button
+            id="close-build-menu"
+            type="button"
+            aria-label="Close add development"
+            class="panel-close"
+          >
+            ×
+          </button>
+        </div>
+        <div class="grid grid-cols-2 gap-2 p-3">
+          <button data-building="house" type="button" class="build-option">
+            <span class="build-symbol">⌂</span><b>House</b
+            ><small>Single-family</small>
+          </button>
+          <button data-building="apartment" type="button" class="build-option">
+            <span class="build-symbol">▥</span><b>Apartment</b
+            ><small>Multi-family</small>
+          </button>
+          <button data-building="factory" type="button" class="build-option">
+            <span class="build-symbol">▲</span><b>Factory</b
+            ><small>Industrial</small>
+          </button>
+          <button data-building="school" type="button" class="build-option">
+            <span class="build-symbol">■</span><b>School</b
+            ><small>Community</small>
+          </button>
+        </div>
+        <p class="menu-footnote">Your selected area stays highlighted.</p>
+      </section>
+      <div id="announcement" class="sr-only" aria-live="polite"></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
